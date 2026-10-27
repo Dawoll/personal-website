@@ -1,8 +1,50 @@
-main h2 {
-    color: #ffffff;
+@font-face { 
+    font-family: "UpHeavtt";
+    src: url("../assets/fonts/upheavtt.ttf") format("truetype");
+    font-display: swap;
 }
 
+@font-face {
+    font-family: "Oxanium";
+    src: url("../assets/fonts/Oxanium-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.profile-picture {
+    max-width: 250px;
+    margin-left: 210px;
+    border-radius: 50%;
+    filter: drop-shadow(6px 6px 12px rgba(255, 255, 255, 0.5));
+}
+
+.profile {
+    font-family: "UpHeavtt", sans-serif;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile h1 {
+    filter: drop-shadow(2px 4px 4px rgba(255, 255, 255, 0.5));
+    -webkit-text-stroke: 0.25px black;
+}
+
+
 .page {
+    font-family: "Inter", sans-serif;
     max-width: 960px;
     margin: 40px auto;
     padding: 32px;
@@ -11,20 +53,75 @@ main h2 {
     border-radius: 3%;
 }
 
+.section-title {
+    font-family: "Oxanium", sans-serif;
+    font-size: 35px;
+    border-left: 4px solid #ffffff;
+    padding-left: 8px;
+    margin-left: -2px;
+}
+
+
+.Github-icon {
+    max-width: 50px;
+    padding-left: 4px;
+}
+.Gmail-icon {
+    max-width: 60px;
+}
+
+.iconArea {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.information {
+    border-left: 1px dashed #ffffff; 
+    font-size: 18px;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.moreInfo {
+    line-height: 0.5;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
 body {
     background-color: #2b2c36;
 }
 
-.icon {
-    max-width: 40px;
+main p {
+    color: #6f6f6f;
+    padding-left: 12px;
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 4px;
 }
 
-p {
-    color: #919090;
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+    font-weight: 1000;
 }
 
-a {
+main h2, .page h1 {
         color: #ffffff;
         font-weight: 1000;
         text-decoration: none;
+}
+
+main a, #kontakt a {
+    color: #ffffff;
+        font-weight: 400;
+        text-decoration: none;
+}
+
+.contact-label {
+    color: #6f6f6f;
 }

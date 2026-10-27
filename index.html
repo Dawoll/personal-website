@@ -8,47 +8,107 @@
 </head>
 <body>
     <header> 
-        <h1> Dawid Głowacki — strona osobista </h1>
-        <nav>
+        <nav class="navbar" aria-label="Nawigacja główna">
+            <a class="navbar-brand" href="index.html">D4WOL</a>
+            <ul class="navbar-links">
+                <li><a href="index.html" aria-current="page">Start</a></li>
+                <li><a href="cs.html">Counter-Strike</a></li>
+                <li><a href="muzyka.html">Muzyka</a></li>
+                <li><a href="mygame.html">Moja gra</a></li>
+            </ul>
 
+            <div class="navbar-tools">
+                <a class="navbar-github"
+                href="https://github.com/Dawoll"
+                target="_blank"
+                rel="noopener"
+                aria-label="Mój profil GitHub — otwiera nową kartę">
+                    <img src="assets/icons/github_white_icon.svg" alt="">
+                </a>
+
+                <button id="language-toggle" type="button"
+                        aria-label="Zmień język na angielski">
+                    EN
+                </button>
+
+                <button id="theme-toggle" type="button"
+                        aria-label="Włącz jasny motyw">
+                    Jasny motyw
+                </button>
+            </div>
         </nav>
-    </header>
-    
+
     <main>
         <div class = "page">
+        <section class="profile"n>
+            <img src = "assets/photos/profile_picture.png" alt = "Profile picture" class = "profile-picture">
+            <h1> D4WOL </h1>
+        </section>
+
         <section id = "o-mnie"> 
-            <h2> O mnie </h2>
-            <p> Nazywam się Dawid Głowacki i jestem studentem III roku informatyki na <a href="https://pollub.pl/"> Politechnice Lubelskiej</a>. </p>
-            <p>W wolnym czasie gram w gry komputerowe, słucham muzyki rockowej i uczę się grać na gitarze. </p>
-            <p> Stawiam również pierwsze kroki w tworzeniu własnej gry.</p>
+            <h1 class="section-title""> O mnie </h1>
+
+            <div class="information">
+                <p> Nazywam się Dawid Głowacki i jestem studentem III roku informatyki na <a href="https://pollub.pl/" target="_blank" rel="noopener">
+                    Politechnice Lubelskiej</a>. </p>
+                <p> W wolnym czasie gram w gry komputerowe, słucham muzyki rockowej i uczę się grać na gitarze. </p>
+                <p> Stawiam również pierwsze kroki w tworzeniu własnej gry komputerowej.</p>
+            </div>
+
         </section>
         
         <section id = "zainteresowania">
-            <h2> Zainteresowania </h2>
-            <p> Jak wcześniej wspomniałem, lubię spędzać wolny czas grając w gry komputerowe w szczególności  w gry Competetive </p>
-            <p> Zdecydowanie najwięcej czasu spędziłem w grze <a href="https://store.steampowered.com/app/730/CounterStrike_2/">Counter-Strike 2</a> </section> </p>
-            <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych oraz publikowałem krótkie materiały w internecie </p>
+            <h1 class="section-title""> Zainteresowania </h1>
 
-            <p> <a href = "cs.html"> Więcej o mojej pasji do Counter-Strike</a> </p>
+            <div class="information">
+                <p> Jak wcześniej wspomniałem, lubię spędzać wolny czas grając w gry komputerowe w szczególności w gry Competetive. </p>
+                <p> Zdecydowanie najwięcej czasu spędziłem w grze <a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener">Counter-Strike 2</a>. </p>
+                <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych oraz publikowałem krótkie materiały w internecie. </p>
+                <p class="moreInfo"> <a href = "cs.html"> Więcej o mojej pasji do Counter-Strike</a> </p>
+
+                <p> Praktycznie codziennie słucham muzyki rockowej. </p>
+                <p class="moreInfo"> <a href = "cs.html"> Moje ulubione piosenki i albumy</a> </p>
+            </div>
+
         </section>
 
         <section id = "projekty">
-            <h2> Projekty </h2>
-            <p> Stawiam pierwsze kroki w tworzeniu własnej gry 2D, gatunku RogueLike. </p>
-            <p> Swoją grę tworzę w języku C# na silniku Unity. </p>
-            <p> <a href="mygame.html"> Więcej o projekcie mojej gry</a></p>
+            <h1 class="section-title"> Projekty </h1>
+
+            <div class="information">
+                <p> Stawiam pierwsze kroki w tworzeniu własnej gry <span class="white-text">2D</span>, gatunku <a href="https://en.wikipedia.org/wiki/Roguelike" target="_blank" rel="noopener">RogueLike</a>. </p>
+                <p> Swoją grę tworzę w języku <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank" rel="noopener"> C# </a>
+                    na silniku <a href = "https://en.wikipedia.org/wiki/Unity_(game_engine)" target="_blank" rel="noopener"> Unity</a>,
+                    a grafiki staram się tworzyć w programie <a href="https://en.wikipedia.org/wiki/Aseprite" target="_blank" rel="noopener"> Aseprite</a>. </p>
+                <p class="moreInfo"> <a href="mygame.html"> Więcej o projekcie mojej gry</a></p>
+            </div>
+
         </section>
 
         <section id = "kontakt">
-            <h2> Kontakt </h2>
-            <p> <img class="icon" src="assets/icons/gmail_white_icon.svg" alt="Email" class="email-icon"> <b> Email: </b> dawid.glowacki1337 (at) gmail.com </p>
-            <p> <img class="icon" src="assets/icons/github_white_icon.svg" alt="GitHub" class="github-icon"> <b> GitHub: </b> <a href="https://github.com/Dawoll"> dawoll </a> </p>
+            <h1 class="section-title"> Kontakt </h1>
+
+            <div class="information">  
+                <p class="iconArea"> 
+                    <img class="Gmail-icon" src="assets/icons/gmail_white_icon.svg" alt="Email"> Email:<span class="white-text"> dawid.glowacki1337(at)gmail.com </span>
+                </p>
+
+                <p class="iconArea"> 
+                    <a class="iconArea" href="https://github.com/Dawoll" target="_blank" rel="noopener">
+                        <img class="Github-icon" src="assets/icons/github_white_icon.svg" alt="">
+                        <span><span class="contact-label">&nbsp;GitHub:</span> dawoll</span>
+                    </a>
+                </p>
+
+            </div>
+
         </section>
-        </div>
+        </div>  
     </main>
 
     <footer>
         <p><b>&copy; </b> 2026 Dawid Głowacki</p>
     </footer>
+
 </body>
 </html>
