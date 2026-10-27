@@ -1,0 +1,30 @@
+main h2 {
+    color: #ffffff;
+}
+
+.page {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #191a1e;
+    box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.8);
+    border-radius: 3%;
+}
+
+body {
+    background-color: #2b2c36;
+}
+
+.icon {
+    max-width: 40px;
+}
+
+p {
+    color: #919090;
+}
+
+a {
+        color: #ffffff;
+        font-weight: 1000;
+        text-decoration: none;
+}
