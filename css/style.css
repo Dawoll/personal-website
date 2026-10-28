@@ -1,127 +1,196 @@
-@font-face { 
+@font-face {
     font-family: "UpHeavtt";
     src: url("../assets/fonts/upheavtt.ttf") format("truetype");
     font-display: swap;
 }
-
 @font-face {
     font-family: "Oxanium";
     src: url("../assets/fonts/Oxanium-SemiBold.ttf") format("truetype");
     font-weight: 600;
-    font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: "Inter";
-    src: url("../assets/fonts/Inter-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+    src: url("../assets/fonts/InterVariable.ttf") format("truetype");
+    font-weight: 100 900;
     font-display: swap;
 }
 
-
-
-.profile-picture {
-    max-width: 250px;
-    margin-left: 210px;
-    border-radius: 50%;
-    filter: drop-shadow(6px 6px 12px rgba(255, 255, 255, 0.5));
+body {
+    background: #2b2c36;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
 }
 
-.profile {
-    font-family: "UpHeavtt", sans-serif;
-    font-size: 40px;
+a, .white-text { 
+    color: #ffffff; 
+}
+
+a { 
+    text-decoration: none; 
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    }
+
+main p, .contact-label { 
+    color: #6f6f6f; 
+}
+
+main p { 
+    margin: 0 0 4px; 
+    padding-left: 12px; 
+    line-height: 1.5; 
+}
+
+.navbar, .page {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 16px 32px;
+    background: #191a1e;
+    border-radius: 15px;
+    box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.8);
+}
+
+.profile, .iconArea, .navbar, .navbar-links, .navbar-tools {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.navbar, .navbar-links, .navbar-tools { 
+    flex-wrap: wrap; 
+    gap: 16px; 
+}
+
+.navbar-links { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar-tools { 
+    margin-left: auto; 
+}
+
+.navbar-brand, .profile { 
+    font-family: "UpHeavtt", sans-serif; 
+}
+
+.navbar-brand { 
+    font-size: 28px; 
+}
+
+.navbar-github { 
+    display: flex; 
+    align-items: center; 
+    min-height: 44px; 
+}
+
+.navbar-github img { 
+    width: 32px; 
+}
+
+
+.navbar button {
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.navbar a:hover, .navbar button:hover { 
+    opacity: 0.7; 
+}
+
+.navbar a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offset: 4px; }
+
+.profile { 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.profile-picture {
+    width: min(250px, 100%);
+    border-radius: 50%;
+    filter: drop-shadow(6px 6px 12px rgba(255, 255, 255, 0.5));
+}
+
 .profile h1 {
+    font-size: clamp(40px, 8vw, 80px);
     filter: drop-shadow(2px 4px 4px rgba(255, 255, 255, 0.5));
     -webkit-text-stroke: 0.25px black;
 }
 
-
-.page {
-    font-family: "Inter", sans-serif;
-    max-width: 960px;
-    margin: 40px auto;
-    padding: 32px;
-    background-color: #191a1e;
-    box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.8);
-    border-radius: 3%;
-}
-
 .section-title {
-    font-family: "Oxanium", sans-serif;
-    font-size: 35px;
+    font: 600 35px "Oxanium", sans-serif;
     border-left: 4px solid #ffffff;
     padding-left: 8px;
     margin-left: -2px;
 }
 
-
-.Github-icon {
-    max-width: 50px;
-    padding-left: 4px;
-}
-.Gmail-icon {
-    max-width: 60px;
-}
-
-.iconArea {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
 .information {
-    border-left: 1px dashed #ffffff; 
+    display: flow-root;
+    border-left: 1px dashed #ffffff;
     font-size: 18px;
 }
 
-.white-text {
-    color: #ffffff;
+.information .moreInfo { 
+    margin: 10px 0 30px; 
 }
 
-.moreInfo {
-    line-height: 0.5;
-    margin-bottom: 30px;
-    margin-top: 10px;
+.iconArea { 
+    gap: 5px; 
+    min-width: 0; 
 }
 
-body {
-    background-color: #2b2c36;
+.iconArea .white-text { 
+    min-width: 0; 
+    overflow-wrap: anywhere; 
 }
 
-main p {
-    color: #6f6f6f;
-    padding-left: 12px;
-    line-height: 1.5;
-    margin-top: 0px;
-    margin-bottom: 4px;
+.Github-icon, .Gmail-icon { 
+    flex-shrink: 0; 
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #ffffff;
-    font-weight: 1000;
+.Github-icon { 
+    width: 50px; 
+    padding-left: 4px; 
 }
 
-main h2, .page h1 {
-        color: #ffffff;
-        font-weight: 1000;
-        text-decoration: none;
+.Gmail-icon { 
+    width: 60px; 
 }
 
-main a, #kontakt a {
-    color: #ffffff;
-        font-weight: 400;
-        text-decoration: none;
+footer { 
+    text-align: center; 
+    margin-top: 40px; 
+    font-weight: 700; 
 }
 
-.contact-label {
-    color: #6f6f6f;
+@media (max-width: 640px) {
+    .navbar, .page { 
+        padding: 20px; 
+    }
+
+    .navbar-links { 
+        order: 3; 
+        width: 100%; 
+        justify-content: center; 
+    }
+
+    .profile h1 { 
+        margin: 16px 0; 
+    }
+
+    .section-title { 
+        font-size: 28px; 
+    }
 }
