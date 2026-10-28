@@ -22,13 +22,16 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-a, .white-text { 
+.white-text { 
     color: #ffffff; 
 }
 
-a { 
+a {
     text-decoration: none; 
+    color: #ffffff; 
+    font-weight: 600;
 }
+
 
 img {
     max-width: 100%; 
@@ -169,11 +172,51 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offs
     width: 60px; 
 }
 
+#language-toggle, #theme-toggle { 
+    display: flex; 
+    align-items: center; 
+    gap: 4px; 
+}
+
+#language-toggle {
+    box-sizing: border-box;
+    width: 80px;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+
+#lang-icon { 
+    width: 20px;
+}
+
 footer { 
     text-align: center; 
     margin-top: 40px; 
     font-weight: 700; 
 }
+
+.github-label {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(12px);
+    transition: max-width 0.5s, margin-right 0.5s, opacity 0.5s, transform 0.5s;
+}
+
+.navbar-github:hover .github-label,
+.navbar-github:focus-visible .github-label {
+    max-width: 72px;
+    margin-right: 8px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navbar-github img {
+    width: 40px;
+}
+
 
 @media (max-width: 640px) {
     .navbar, .page { 
@@ -193,4 +236,61 @@ footer {
     .section-title { 
         font-size: 28px; 
     }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    #theme-toggle img {
+        transition: none;
+        width: 20px;
+    }
+}
+
+
+
+
+
+
+body.light-theme {
+    background: #e5e5eb;
+    color: #191a1e;
+}
+
+.light-theme .navbar,
+.light-theme .page {
+    background: #ffffff;
+}
+
+.light-theme a,
+.light-theme .white-text,
+.light-theme .section-title,
+.light-theme .profile h1 {
+    color: #191a1e;
+}
+
+.light-theme main p,
+.light-theme .contact-label {
+    color: #6f6f6f;
+}
+
+.light-theme .section-title,
+.light-theme .information,
+.light-theme .navbar button {
+    border-color: #191a1e;
+}
+
+.light-theme .navbar-github img,
+.light-theme #theme-toggle img,
+.light-theme .Github-icon,
+.light-theme .Gmail-icon {
+    filter: invert(1);
+}
+
+.light-theme .profile-picture,
+.light-theme .profile h1 {
+    filter: drop-shadow(6px 6px 24px rgba(0, 0, 0, 1));
+}
+
+.light-theme .profile h1 {
+    -webkit-text-stroke-color: #ffffff;
 }
