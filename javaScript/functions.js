@@ -8,12 +8,10 @@ const githubLink = document.querySelector(".navbar-github");
 const githubIcon = githubLink.querySelector("img");
 
 const contactGithubIcon = document.querySelector(".Github-icon");
+
 const contactEmailIcon = document.querySelector(".Gmail-icon");
-const githubContact = contactGithubIcon.closest(".contact-item");
-const emailContact = contactEmailIcon.closest(".contact-item");
 
 const copyEmailButton = document.getElementById("copy-email");
-const emailLabel = copyEmailButton.textContent.trim();
 
 
 themeButton.addEventListener("click", changeIcon);
@@ -64,30 +62,120 @@ function stopGitHubGif() {
     githubIcon.src = "assets/icons/github_white_icon.svg";
 }
 
-githubContact.addEventListener("mouseenter", function () {
-    contactGithubIcon.src = `assets/icons/github_white_icon.gif?v=${Date.now()}`;
-});
+if (contactGithubIcon) {
+    const githubContact = contactGithubIcon.closest(".contact-item");
 
-githubContact.addEventListener("mouseleave", function () {
-    contactGithubIcon.src = "assets/icons/github_white_icon.svg";
-});
+    githubContact.addEventListener("mouseenter", function () {
+        contactGithubIcon.src =
+            `assets/icons/github_white_icon.gif?v=${Date.now()}`;
+    });
 
-emailContact.addEventListener("mouseenter", function () {
-    contactEmailIcon.src = `assets/icons/gmail_white_icon.gif?v=${Date.now()}`;
-});
+    githubContact.addEventListener("mouseleave", function () {
+        contactGithubIcon.src = "assets/icons/github_white_icon.svg";
+    });
+}
 
-emailContact.addEventListener("mouseleave", function () {
-    contactEmailIcon.src = "assets/icons/gmail_white_icon.svg";
-});
+if (contactEmailIcon) {
+    const emailContact = contactEmailIcon.closest(".contact-item");
 
-copyEmailButton.addEventListener("click", async function () {
-    try {
-        await navigator.clipboard.writeText(emailLabel);
-        copyEmailButton.textContent = "Copied!";
-        setTimeout(function () {
-            copyEmailButton.textContent = emailLabel;
-        }, 750);
-    } catch {
-        alert("Could not copy the email address");
+    emailContact.addEventListener("mouseenter", function () {
+        contactEmailIcon.src = `assets/icons/gmail_white_icon.gif?v=${Date.now()}`;
+    });
+
+    emailContact.addEventListener("mouseleave", function () {
+        contactEmailIcon.src = "assets/icons/gmail_white_icon.svg";
+    });
+}
+
+if (copyEmailButton) {
+    const emailLabel = copyEmailButton.textContent.trim();
+    let resetEmailTimeout;
+
+    function resetCopyHint() {
+        clearTimeout(resetEmailTimeout);
+        copyEmailButton.classList.remove("copy-confirmed");
+        copyEmailButton.textContent = emailLabel;
     }
-});
+
+    copyEmailButton.addEventListener("mouseenter", resetCopyHint);
+    copyEmailButton.addEventListener("focus", resetCopyHint);
+
+    copyEmailButton.addEventListener("click", async function () {
+        try {
+            await navigator.clipboard.writeText(emailLabel);
+            clearTimeout(resetEmailTimeout);
+            copyEmailButton.textContent = "Copied!";
+            copyEmailButton.classList.add("copy-confirmed");
+            resetEmailTimeout = setTimeout(function () {
+                copyEmailButton.textContent = emailLabel;
+            }, 1500);
+        } catch {
+            alert("Could not copy the email address");
+        }
+    });
+}
+
+const shortVideo = document.getElementById("short-video");
+
+if (shortVideo) {
+    const recordings = [
+        "assets/videos/yt_video_1.mp4",
+        "assets/videos/yt_video_2.mp4",
+        "assets/videos/yt_video_3.mp4",
+        "assets/videos/yt_video_4.mp4",
+        "assets/videos/yt_video_5.mp4",
+        "assets/videos/yt_video_6.mp4",
+        "assets/videos/yt_video_7.mp4",
+        "assets/videos/yt_video_8.mp4",
+        "assets/videos/yt_video_9.mp4"
+    ];
+    const recordingTitles = [
+        "Mirage Pistol - 3K",
+        "Mirage Retake - 4K",
+        "Inferno Hold - 4K",
+        "Mirage Retake - 3K",
+        "Mirage Retake - 3K",
+        "Inferno Rotation - 4K",
+        "Mirage Hold - 3K",
+        "Mirage Pistol - 4K",
+        "Inferno Hold - 4K"
+    ];
+    const videoTabs = document.querySelector(".video-tabs");
+    const previousVideo = document.getElementById("previous-video");
+    const nextVideo = document.getElementById("next-video");
+    let currentVideo = 0;
+
+    function selectVideo(index) {
+        if (index === currentVideo) return;
+        currentVideo = index;
+        shortVideo.pause();
+        shortVideo.src = recordings[currentVideo];
+        shortVideo.load();
+
+        Array.from(videoTabs.children).forEach((button, buttonIndex) => {
+            button.setAttribute("aria-pressed", buttonIndex === currentVideo);
+        });
+    }
+
+    recordings.forEach((recording, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = `#${index + 1} ${recordingTitles[index]}`;
+        button.setAttribute("aria-pressed", index === currentVideo);
+        button.addEventListener("click", () => selectVideo(index));
+        videoTabs.appendChild(button);
+    });
+
+    function changeVideo(direction) {
+        selectVideo((currentVideo + direction + recordings.length) % recordings.length);
+    }
+
+    previousVideo.disabled = nextVideo.disabled = recordings.length < 2;
+    previousVideo.addEventListener("click", () => changeVideo(-1));
+    nextVideo.addEventListener("click", () => changeVideo(1));
+
+    shortVideo.addEventListener("ended", () => {
+        changeVideo(1);
+        shortVideo.play().catch(() => {});
+    });
+}

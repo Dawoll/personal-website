@@ -8,7 +8,7 @@
     <title>Dawid Głowacki — personal website</title>
 </head>
 <body>
-    <header> 
+    <header>
         <nav class="navbar" aria-label="Navigation bar">
             <a class="navbar-brand" href="index.html">D4WOL</a>
             <ul class="navbar-links">
@@ -37,12 +37,59 @@
     </header>
 
     <main>
-        <div class = "page">
+        <div class="page">
+            <section class="subpage-header cs-header">
+                <h1>Counter-Strike</h1>
+            </section>
 
+            <section class="Passion">
+                <h1 class="section-title"> Pasja do Counter-Strike </h1>
+                <div class="information">
+                    <p> W <span class="white-text">Counter-Strike </span> gram od <span class="white-text"> 2015 roku</span>.
+                        Choć dziś poświęcam mu znacznie mniej czasu niż kiedyś, nadal chętnie do niego wracam.</p>
+                    <p> Przez ponad <span class="white-text"> 11 lat </span> spędziłem w niej blisko <span class="white-text"> 7000 godzin</span>.
+                        Jak wspomniałem na stronie głównej, miałem okazję uczestniczyć  w kilku turniejach szkolnych i międzyszkolnych,
+                        reprezentując swoją klasę w technikum. </p>
+                    <p> Wygrałem także pare indywidualnych turniejów online na platformie <span class="white-text"> FACEIT </span> w formie 1vs1 z
+                        symbolicznymi nagrodami na stronach zewnętrznych. </p>
+                    <p> Zawsze marzyłem o grze na profesjonalnym poziomie jednak grając nieregularnie i często zmieniając
+                        drużyne na platformie <span class="white-text"> FACEIT </span> osiągnąłem jedynie blisko
+                        <span class="white-text"> 2500 ELO </span>, co na tamten moment odpowiadało blisko
+                        <span class="white-text"> 2800 </span> pozycji w Polskim rankingu <span class="white-text">(TOP ~53000 EU) </span> a wynik
+                        ten nigdy mnie w pełni nie satysfakcjonował.</p>
+                    <p> Przez pewien czas próbowałem również rozwijać swój kanał na <span class="white-text"> YouTube </span>, publikując Shortsy z najlepszymi
+                        zagraniami z moich meczów. Szybko jednak okazało się, że trudno znaleźć mi czas zarówno na grę, jak i montaż filmów.</p>
+                    <p> Podczas mojej przygody z <span class="white-text"> Counter-Strike'iem </span>miałem również okazję zagrać z trzema profesjonalnymi
+                        zawodnikami, w tym jednym Polakiem.</p>
+                </div>
+            </section>
 
+            <section aria-labelledby="recordings-title">
+            <h1 id="recordings-title" class="section-title">Moje nagrania</h1>
+                <div class="information recordings-content">
+                    <div class="recordings-intro">
+                        <p> Poniżej zamieszczam pare krótkich przykładowych nagrań z moimi zagraniami z Counter-Strike'a wraz ze spisem filmów po prawej stronie! </p>
+                    </div>
+                    <div class="recordings-layout">
+                    <div class="video-carousel">
+                        <button id="previous-video" type="button"
+                                aria-label="Poprzedni film">❮</button>
+
+                        <video id="short-video" controls playsinline preload="metadata">
+                            <source src="assets/videos/yt_video_1.mp4" type="video/mp4">
+                        </video>
+
+                        <button id="next-video" type="button"
+                                aria-label="Następny film">❯</button>
+                    </div>
+                    <div class="video-tabs" role="group" aria-label="Wybierz nagranie"></div>
+                    </div>
+                </div>
+            </section>
+        
         </div>
     </main>
-        
+
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>
     </footer>
