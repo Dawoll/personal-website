@@ -17,7 +17,10 @@
 }
 
 body {
-    background: #2b2c36;
+    background-color: #2b2c36;
+    background-image: url("../assets/backgrounds/ascii_dark_background.png");
+    background-size: 2400px 2400px;
+    background-repeat: repeat;
     color: #ffffff;
     font-family: "Inter", sans-serif;
 }
@@ -39,8 +42,13 @@ img {
     height: auto; 
     }
 
-main p, .contact-label { 
-    color: #6f6f6f; 
+main p, .contact-label, .page a:hover { 
+    color: #908f8f; 
+}
+
+.page .icon-text:hover img {
+    opacity: 0.7;
+    transform: scale(1.07);
 }
 
 main p { 
@@ -178,6 +186,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offs
     width: 60px; 
 }
 
+.icon-text {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    white-space: nowrap;
+    gap: 4px;
+}
+
+.icon-text img {
+    width: 30px;
+    transition: transform 0.4s, opacity 0.4s, filter 0.4s;
+}
+
 #language-toggle, #theme-toggle { 
     display: flex; 
     align-items: center; 
@@ -244,10 +265,43 @@ footer p {
 }
 
 .contact-item:hover .contact-value,
-.contact-item:focus-within .contact-value {
+.contact-item:focus-visible .contact-value,
+.contact-item:has(:focus-visible) .contact-value {
     max-width: 400px;
     opacity: 1;
     transform: translateX(0);
+}
+
+#copy-email {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+
+body, .navbar, .page, .section-title, .information,
+p, a, button, .white-text, .contact-label,
+.profile h1, .profile-picture,
+.navbar-github img, #theme-toggle img,
+.Github-icon, .Gmail-icon {
+    transition:
+        color 0.4s,
+        background-color 0.4s,
+        border-color 0.4s,
+        filter 0.4s,
+        -webkit-text-stroke-color 0.4s;
+}
+
+.contact-value {
+    transition: max-width 0.4s, opacity 0.4s,
+                transform 0.4s, color 0.4s;
+}
+
+.github-label {
+    transition: max-width 0.5s, margin-right 0.5s,
+                opacity 0.5s, transform 0.5s, color 0.4s;
 }
 
 
@@ -286,7 +340,8 @@ footer p {
 
 
 body.light-theme {
-    background: #e5e5eb;
+    background-color: #e5e5eb;
+    background-image: url("../assets/backgrounds/ascii_light_background.png");
     color: #191a1e;
 }
 
@@ -323,7 +378,9 @@ body.light-theme {
 }
 
 .light-theme .navbar-links a:hover,
-.light-theme .navbar button:hover {
+.light-theme .navbar button:hover,
+.light-theme .icon-text:hover,
+.light-theme .page a:hover {
     color: #000000;
     font-weight: 800;
     opacity: 1;
@@ -332,7 +389,8 @@ body.light-theme {
 .light-theme .navbar-github img,
 .light-theme #theme-toggle img,
 .light-theme .Github-icon,
-.light-theme .Gmail-icon {
+.light-theme .Gmail-icon,
+.light-theme .icon-text img {
     filter: invert(1);
 }
 

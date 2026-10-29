@@ -14,7 +14,7 @@
             <ul class="navbar-links">
                 <li><a href="index.html" aria-current="page">Start</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
-                <li><a href="muzyka.html">Muzyka</a></li>
+                <li><a href="music.html">Muzyka</a></li>
                 <li><a href="mygame.html">Moja gra</a></li>
             </ul>
 
@@ -38,7 +38,7 @@
     <main>
         <div class = "page">
         <section class="profile"n>
-            <img src = "assets/photos/profile_picture.png" alt = "Profile picture" class = "profile-picture">
+            <img src = "assets/photos/profile_black_picture.png" alt = "Profile picture" class = "profile-picture">
             <h1> D4WOL </h1>
         </section>
 
@@ -46,8 +46,9 @@
             <h1 class="section-title""> O mnie </h1>
 
             <div class="information">
-                <p> Nazywam się <span class="white-text">Dawid Głowacki</span> i jestem studentem <span class="white-text"> III </span> roku informatyki na <a href="https://pollub.pl/" target="_blank" rel="noopener">
-                    Politechnice Lubelskiej</a>. </p>
+                <p> Nazywam się <span class="white-text">Dawid Głowacki</span> i jestem studentem <span class="white-text"> III </span> roku informatyki na
+                    <a class="icon-text" href="https://pollub.pl/" target="_blank" rel="noopener">
+                    <img src="assets/icons/pollub_white_icon.svg"> Politechnice Lubelskiej</a>. </p>
                 <p> W wolnym czasie gram w gry komputerowe, słucham muzyki rockowej i uczę się grać na gitarze. </p>
                 <p> Stawiam również pierwsze kroki w tworzeniu własnej gry komputerowej.</p>
             </div>
@@ -59,12 +60,15 @@
 
             <div class="information">
                 <p> Jak wcześniej wspomniałem, lubię spędzać wolny czas grając w gry komputerowe w szczególności w gry Competetive. </p>
-                <p> Zdecydowanie najwięcej czasu spędziłem w grze <a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener">Counter-Strike 2</a>. </p>
-                <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych oraz publikowałem krótkie materiały w internecie. </p>
-                <p class="moreInfo"> <a href = "cs.html"> Więcej o mojej pasji do Counter-Strike</a> </p>
+                <p> Zdecydowanie najwięcej czasu spędziłem w grze <a class="icon-text" href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener"> <img src="assets/icons/cs_white_icon.svg"> </span> Counter-Strike 2</a>. </p>
+                <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych, publikowałem także krótkie materiały w internecie. </p>
+                <p class="moreInfo"> <a href = "cs.html"> Więcej o mojej pasji do serii Counter-Strike</a> </p>
 
-                <p> Praktycznie codziennie słucham muzyki rockowej. </p>
-                <p class="moreInfo"> <a href = "cs.html"> Moje ulubione piosenki i albumy</a> </p>
+                <p> Muzyka rockowa to zdecydowanie mój ulubiony gatunek muzyczny. </p>
+                <p> Najbardziej cenie w niej riffy gitarowe dlatego sam też zaczałęm grać. </p>
+                <p> A moim ulubionym zespołem muzycznym jest <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw" target="_blank" rel="noopener">
+                    <img src="assets/icons/nirvana_white_icon.svg"> Nirvana </a>. </p>
+                <p class="moreInfo"> <a href = "music.html"> Więcej o mojej ulubionej muzyce rockowej</a> </p>
             </div>
 
         </section>
@@ -86,10 +90,15 @@
             <h1 class="section-title"> Kontakt </h1>
 
             <div class="information">  
+
                 <p class="iconArea contact-item" tabindex="0">
                     <img class="Gmail-icon" src="assets/icons/gmail_white_icon.svg" alt="">
                     <span class="white-text">Email</span>
-                    <span class="contact-value white-text"> dawid.glowacki1337(at)gmail.com </span>
+                    <button id="copy-email" class="contact-value white-text"
+                            type="button" title="Copy e-mail"
+                            aria-label="Kopiuj adres e-mail">
+                            dawid.glowacki1337@gmail.com
+                    </button>
                 </p>
 
                 <p class="iconArea">

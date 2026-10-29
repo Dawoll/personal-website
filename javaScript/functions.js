@@ -1,16 +1,28 @@
 const themeButton = document.querySelector("#theme-toggle");
-const langButton  = document.querySelector("#language-toggle");
-
 const themeIcon = document.querySelector("#theme-toggle img");
+
+const langButton  = document.querySelector("#language-toggle");
 const langIcon = document.querySelector("#language-toggle img");
 
 const githubLink = document.querySelector(".navbar-github");
 const githubIcon = githubLink.querySelector("img");
 
+const contactGithubIcon = document.querySelector(".Github-icon");
+const contactEmailIcon = document.querySelector(".Gmail-icon");
+const githubContact = contactGithubIcon.closest(".contact-item");
+const emailContact = contactEmailIcon.closest(".contact-item");
+
+const copyEmailButton = document.getElementById("copy-email");
+const emailLabel = copyEmailButton.textContent.trim();
+
+
 themeButton.addEventListener("click", changeIcon);
 langButton.addEventListener("click", changeLanguage);
 githubLink.addEventListener("mouseenter", startGitHubGif);
 githubLink.addEventListener("mouseleave", stopGitHubGif);
+
+
+
 
 function changeLanguage() {
     const currentLang = document.getElementById("lang");
@@ -38,6 +50,7 @@ function changeIcon() {
         : "moon_to_sun_white_icon.gif";
 
     themeIcon.src = `assets/icons/${animation}?v=${Date.now()}`;
+
     updateFlag();
 }
 
@@ -51,3 +64,30 @@ function stopGitHubGif() {
     githubIcon.src = "assets/icons/github_white_icon.svg";
 }
 
+githubContact.addEventListener("mouseenter", function () {
+    contactGithubIcon.src = `assets/icons/github_white_icon.gif?v=${Date.now()}`;
+});
+
+githubContact.addEventListener("mouseleave", function () {
+    contactGithubIcon.src = "assets/icons/github_white_icon.svg";
+});
+
+emailContact.addEventListener("mouseenter", function () {
+    contactEmailIcon.src = `assets/icons/gmail_white_icon.gif?v=${Date.now()}`;
+});
+
+emailContact.addEventListener("mouseleave", function () {
+    contactEmailIcon.src = "assets/icons/gmail_white_icon.svg";
+});
+
+copyEmailButton.addEventListener("click", async function () {
+    try {
+        await navigator.clipboard.writeText(emailLabel);
+        copyEmailButton.textContent = "Copied!";
+        setTimeout(function () {
+            copyEmailButton.textContent = emailLabel;
+        }, 750);
+    } catch {
+        alert("Could not copy the email address");
+    }
+});
