@@ -139,6 +139,40 @@ if (galleryDialog) {
     });
 }
 
+const characterAnimation = document.getElementById("character-animation");
+
+if (characterAnimation) {
+    const characterAnimationLabel = document.getElementById("character-animation-label");
+    const animations = [
+        { file: "game_character_idle.gif", duration: 2200 },
+        { file: "game_character_run_up.gif", duration: 1260 },
+        { file: "game_character_run_left.gif", duration: 990 },
+        { file: "game_character_run_right.gif", duration: 990 },
+        { file: "game_character_run_down.gif", duration: 1440 },
+        { file: "game_character_attack_knife.gif", duration: 1350 }
+    ];
+    let currentAnimation = 0;
+
+    function playCharacterAnimation() {
+        const label = animations[currentAnimation].file
+            .replace("game_character_", "")
+            .replace(".gif", "")
+            .replaceAll("_", " ")
+            .replace("attack knife", "knife attack");
+        characterAnimationLabel.textContent = label;
+        characterAnimation.src = `assets/game_gifs/${animations[currentAnimation].file}?v=${Date.now()}`;
+    }
+
+    characterAnimation.addEventListener("load", () => {
+        setTimeout(() => {
+            currentAnimation = (currentAnimation + 1) % animations.length;
+            playCharacterAnimation();
+        }, animations[currentAnimation].duration);
+    });
+
+    playCharacterAnimation();
+}
+
 const shortVideo = document.getElementById("short-video");
 
 if (shortVideo) {
