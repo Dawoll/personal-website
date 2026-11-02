@@ -332,22 +332,23 @@ footer p {
     --video-width: clamp(200px, 25vw, 300px);
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: start;
+    align-items: center;
     gap: 12px;
     padding-top: 16px;
 }
 
 .recordings-intro {
-    display: flow-root;
+    display: grid;
+    place-items: center;
     min-width: 0;
+    padding: 0 56px 16px 12px;
 }
 
-.recordings-intro::before {
-    content: "";
-    float: right;
-    width: 56px;
-    height: calc(var(--video-width) * 16 / 9);
-    shape-outside: inset(calc(50% - 34px) 0);
+.recordings-intro p {
+    max-width: 28ch;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .recordings-layout {
@@ -463,8 +464,8 @@ footer p {
         gap: 16px;
     }
 
-    .recordings-intro::before {
-        display: none;
+    .recordings-intro {
+        padding: 0 12px;
     }
 
     .recordings-layout {
@@ -826,4 +827,40 @@ body.gallery-open {
 .light-theme .email-copy::after {
     background: #191a1e;
     color: #ffffff;
+}
+
+.song-groups {
+    max-width: 560px;
+    margin: 24px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.song-groups > li {
+    padding: 14px 0;
+    border-bottom: 1px solid #666666;
+}
+
+.song-groups summary {
+    font: 600 22px "Oxanium", sans-serif;
+    list-style-position: inside;
+    cursor: pointer;
+}
+
+.song-groups details ul {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.concert-list {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+    padding-left: 32px;
+    list-style-type: "→  ";
+    line-height: 1.5;
 }
