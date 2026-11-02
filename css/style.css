@@ -682,7 +682,30 @@ body.light-theme {
 
 .player-card h2 {
     margin: 0;
+    padding-right: 40px;
     font: 600 26px "Oxanium", sans-serif;
+}
+
+.player-flag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.player-flag img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.player-flag .flag-light,
+.light-theme .player-flag img:not(.flag-light) {
+    display: none;
+}
+
+.light-theme .player-flag .flag-light {
+    display: block;
 }
 
 .data-update {
@@ -860,7 +883,23 @@ body.gallery-open {
     display: grid;
     gap: 12px;
     margin: 20px 0;
-    padding-left: 32px;
+    padding-left: 56px;
     list-style-type: "→  ";
     line-height: 1.5;
+}
+
+.project-features {
+    padding-left: 12px;
+    list-style: none;
+}
+
+.project-features > li {
+    margin-bottom: 20px;
+}
+
+.project-features ul {
+    margin-top: 12px;
+    padding-left: 28px;
+    list-style-type: "→  ";
+    line-height: 1.6;
 }

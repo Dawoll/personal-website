@@ -42,6 +42,95 @@
                 <img src="assets/icons/game_white_icon.svg" alt="">
                 <h1>Moja gra</h1>
             </section>
+
+            <section class="subpage-content">
+                <h1 class="section-title"> Moja gra komputerowa </h1>
+                <p> Zawsze marzyłem o tym, żeby utworzyć własną grę komputerową.
+                    Dlatego też teraz w wolnym czasie uczę się tworzyć własny projekt. 
+                    Jest to moja pierwsza gra więc bardzo powoli się rozwija.
+                    Planowany gatunek gry to 2D RogueLike z widokiem Top-Down. </p>
+                <p> Pierwsze grafiki oraz animacje staram się tworzyć samodzielnie w programie Aseprite, mimo że to uciążliwe i bardzo czasochłonne. </p>
+                <p> Silnik jakiego używam to <span class="white-text">Unity</span>. Kod natomiast pisany jest w języku
+                <span class="white-text">C#</span> przy wykorzystaniu Visual Studio. </p>
+                <p> Kod projektu przechowuję i aktualizuję w prywatnym repozytorium na GitHubie. </p>
+            </section>
+
+            <section class="subpage-content">
+                <h1 class="section-title"> Aktualny stan projektu </h1>
+                <p> Projekt trwa zaledwie kilka tygodni zatem jest w bardzo wczesnej fazie. Nie ma w nim jeszcze zbyt wiele do przedstawienia. </p>
+                <p><strong class="white-text">Krótka lista aktualnych funkcjonalności:</strong></p>
+                <ul class="project-features">
+                    <li><strong>Gracz</strong>
+                        <ul>
+                            <li>Sprite postaci i animacje</li>
+                            <li>Obsługa sterowania</li>
+                            <li>Poruszanie się po mapie </li>
+                            <li>Podstawowe statystyki</li>
+                            <li>Tworzenie postaci na scenie z prefabu i dodawanie do listy graczy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Przeciwnicy</strong>
+                        <ul>
+                            <li>Zastępczy sprite postaci i animacje</li>
+                            <li>Podstawowe poruszanie się po mapie bez zaawansowanych zasad</li>
+                            <li>Ściganie gracza</li>
+                        </ul>
+                    </li>
+                    <li><strong>Skrypt proceduralnego generowania pomieszczeń</strong>
+                        <ul>
+                            <li>Utworzenie Sprite'ów dla Tile'ów</li>
+                            <li>Nadanie im odpowiednich rozmiarów oraz przypisanie Pivotów</li>
+                            <li>Wybieranie wielkości pokoi z listy</li>
+                            <li>Losowe rozmieszczanie drzwi pokoju</li>
+                            <li>Dopasowanie podłóg, ścian oraz drzwi do wygenerowanego rozmiaru pokoju</li>
+                        </ul>
+                    </li>
+                    <li><strong>Przedmioty</strong>
+                        <ul>
+                            <li>Utworzenie pliku z podstawowymi danymi przedmiotu</li>
+                            <li>Utworzenie assetów przedmiotów poprzez ScriptableObjects</li>
+                            <li>Utworzenie Prefabu przedmiotu</li>
+                            <li>Tworzenie przedmiotów na scenie</li>
+                            <li>Wykrywanie gracza w pobliżu przedmiotu</li>
+                            <li>Wyświetlanie komunikatu o możliwości podniesienia</li>
+                            <li>Obsługa podnoszenia przedmiotu</li>
+                            <li>Obsługa usuwania przedmiotu ze sceny</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ekwipunek</strong>
+                        <ul>
+                            <li>Początkowy wygląd ekwipunku utworzony w UI Builderze z Unity</li>
+                            <li>Przygotowanie skryptów do obsługi ekwipunku</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p> Najwięcej czasu spędziłem nad proceduralnym generowaniem mapy, które niestety tworzy póki co puste pomieszczenia.
+                    Sporo zajęło mi samodzielne zrozumienie obsługi obiektów 2D o różnych rozmiarach tak aby dopasowywać ze sobą konkretne Tile'e. </p>
+                <p>Skrypt nie korzysta z gotowych szablonów pomieszczeń, tylko pobiera ich wymiary i odpowiednio rozmieszcza Tile'e.
+                    Dzięki temu tworzy unikalny układ mapy, co jest jedną z charakterystycznych cech gatunku RogueLike.</p>
+                <p> Wykorzystałem osobne Tile'e dla podłogi, drzwi, ścian głównych, ścian bocznych oraz narożników.
+                    Praktycznie każdy element różni się rozmiarem, a ich warianty dodatkowo orientacją.
+                    Przykładowo narożniki występują nawet w ośmiu wariantach, czterech wewnętrznych i czterech zewnętrznych,
+                    odpowiadających różnym kierunkom obrotu. </p>   
+                
+                <ul class="project-features">
+                    <li><strong>Przykładowe rozmiary poszczególnych Tile'ów</strong>
+                        <ul>
+                            <li>Podłoga, Drzwi, Główne ściany - 6x6</li>
+                            <li>Ściany boczne - 1x6</li>
+                            <li>Narożniki - 1x1</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p> Pomysł na taki generator wydaje się prosty, jednak jego implementacja okazała się całkiem skompikowana. </p>
+                <p> Podczas pisania kodu trzeba zadbać o wiele offsetów które spowodowane są różnymi rozmiarami Tile'ów.
+                    Generator pozwala tworzyć mapy składające się nawet ze 100 pokoi.
+                    Kolejnym krokiem będzie dodanie rozgałęzień, dzięki którym z jednego pomieszczenia będzie można przejść do kilku kolejnych.
+                    Ponieważ akutalnie pokoje tworzą jeden długi nienaturalny ciąg. </p>
+                <p> Aktualnie staram się wprowadzić system walki, zdrowia oraz ekwipunek gracza, który będzie przechowywać podniesione przedmioty ze sceny.</p>
+            </section>
+
         </div>
     </main>
         
