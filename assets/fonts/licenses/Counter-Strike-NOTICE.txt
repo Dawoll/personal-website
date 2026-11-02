@@ -1,0 +1,11 @@
+Counter-Strike font
+Author: SoJa
+Font file: ../cs_regular.ttf
+Source: https://www.dafont.com/counter-strike.font
+
+The source page labels this font "100% Free".
+The downloaded counter_strike.zip archive contains no separate license text.
+Detailed redistribution and web embedding terms have not been confirmed.
+
+This file records the source and verification status. It is not a license
+or a grant of permission from the font author.

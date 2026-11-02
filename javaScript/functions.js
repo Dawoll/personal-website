@@ -115,6 +115,30 @@ if (copyEmailButton) {
     });
 }
 
+const galleryDialog = document.getElementById("gallery-dialog");
+
+if (galleryDialog) {
+    const galleryPreview = document.getElementById("gallery-preview");
+
+    document.querySelectorAll(".gallery-stack button").forEach((button) => {
+        button.addEventListener("click", () => {
+            const photo = button.querySelector("img");
+            galleryPreview.src = photo.currentSrc || photo.src;
+            galleryPreview.alt = photo.alt;
+            galleryDialog.showModal();
+            document.body.classList.add("gallery-open");
+        });
+    });
+
+    galleryDialog.addEventListener("click", (event) => {
+        if (event.target === galleryDialog) galleryDialog.close();
+    });
+
+    galleryDialog.addEventListener("close", () => {
+        document.body.classList.remove("gallery-open");
+    });
+}
+
 const shortVideo = document.getElementById("short-video");
 
 if (shortVideo) {

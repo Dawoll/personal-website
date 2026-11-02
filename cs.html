@@ -71,24 +71,93 @@
                         <p> Poniżej zamieszczam pare krótkich przykładowych nagrań z moimi zagraniami z Counter-Strike'a wraz ze spisem filmów po prawej stronie! </p>
                     </div>
                     <div class="recordings-layout">
-                    <div class="video-carousel">
-                        <button id="previous-video" type="button"
-                                aria-label="Poprzedni film">❮</button>
+                    <div class="video-carousel">    
+                        <button id="previous-video" type="button" aria-label="Poprzedni film">❮</button>
 
-                        <video id="short-video" controls playsinline preload="metadata">
-                            <source src="assets/videos/yt_video_1.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-frame">
+                            <video id="short-video" controls playsinline preload="metadata">
+                                <source src="assets/videos/yt_video_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
 
-                        <button id="next-video" type="button"
-                                aria-label="Następny film">❯</button>
+                        <button id="next-video" type="button" aria-label="Następny film">❯</button>                     
                     </div>
+
                     <div class="video-tabs" role="group" aria-label="Wybierz nagranie"></div>
                     </div>
                 </div>
             </section>
+
+            <section id="Gallery">
+            <h1 class="section-title"> ProGracze których spotkałem </h1>
+                <div class="information">
+                    <p> Poniżej zamieszczam dwa zdjęcia przedstawiające mecze w których miałem okazję zagrać z profesjonalnymi zawodnikami.
+                        Na zdjęciach można zauważyć trzech prosów. </p>
+                    <p> Na pierwszym zdjęciu widać dwóch rosyjskich graczy - <span class="white-text">Zweih'a</span> oraz <span class="white-text">Magnojez'a</span>, którzy grali w mojej drużynie. </p>
+                    <p> Na drugim zdjęciu można zobaczyć legendarnego polskiego zawodnika - <span class="white-text">Snax'a</span>, który grał w przeciwnej drużynie.
+                        To właśnie wtedy po raz pierwszy przekonałem się, jak duża jest różnica między codzienną grą a graniem przeciwko
+                        zawodnikowi na profesjonalnym poziomie.</p>
+                    <div class="gallery-stack">
+                        <button type="button" aria-label="Powiększ zdjęcie z Zweih i Magnojez" aria-haspopup="dialog">
+                            <img src="assets/photos/zweih_magnojez.png" alt="Game with Zweih and Magnojez">
+                        </button>
+                        <button type="button" aria-label="Powiększ zdjęcie ze Snaxem" aria-haspopup="dialog">
+                            <img src="assets/photos/snax.png" alt="Game with Snax">
+                        </button>
+                    </div>
+                    <div class="information">
+                        <p> Mecz ze <span class="white-text">Zweih'em</span> oraz <span class="white-text">Magnojez'em</span>
+                            miałem okazję zagrać pod koniec <Span class="white-text">kwietnia 2026 roku</Span>.
+                            Był to moment gdy zawodnicy testowali nowo dodaną mapę - <Span class="white-text">Cache</Span>.</p>
+                        <p> Natomiast mecz ze <span class="white-text"> Snax'em </span>
+                            miałem okazję zagrać w <Span class="white-text">kwietniu 2022 roku</Span>.</p>
+
+                    </div>
+                    <div class="player-cards">
+                        <article class="player-card team-gamerlegion">
+                            <h2>Snax</h2>
+                            <p class="white-text player-name">Janusz Pogorzelski</p>
+                            <p>Wiek: <span class="white-text"> 33 lata </span> </p>
+                            <p>Team: <span class="white-text"> GamerLegion </span></p>
+                            <p>Suma nagród: <span class="white-text"> $996 296 </span></p>
+                            <a href="https://www.hltv.org/player/2553/snax" target="_blank" rel="noopener"
+                               aria-label="Profil Snaxa na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                        </article>
+                        <article class="player-card team-betboom">
+                            <h2>Magnojez</h2>
+                            <p class="white-text player-name">Kirill Rodnov</p>
+                            <p>Wiek: <span class="white-text"> 22 lata </span> </p>
+                            <p>Team: <span class="white-text"> BetBoom </span></p>
+                            <p>Suma nagród: <span class="white-text"> $174 836 </span></p>
+                            <a href="https://www.hltv.org/player/21667/magnojez" target="_blank" rel="noopener"
+                               aria-label="Profil Magnojeza na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                        </article>
+                        <article class="player-card team-parivision">
+                            <h2>Zweih</h2>
+                            <p class="white-text player-name">Ivan Gogin</p>
+                            <p>Wiek: <span class="white-text"> 19 lata </span> </p>
+                            <p>Team: <span class="white-text"> Parivision </span></p>
+                            <p>Suma nagród: <span class="white-text"> $358 449 </span></p>
+                            <a href="https://www.hltv.org/player/23685/zweih" target="_blank" rel="noopener"
+                               aria-label="Profil Zweiha na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                        </article>
+                    </div>
+                    <p class="data-update white-text">
+                        <span>ⓘ</span> Dane zaktualizowano: 02.11.2026
+                    </p>
+                </div>
+
+            </section>
         
         </div>
     </main>
+
+    <dialog id="gallery-dialog" aria-label="Powiększone zdjęcie z galerii">
+        <form method="dialog">
+            <button class="gallery-close" type="submit" aria-label="Zamknij zdjęcie" autofocus>×</button>
+        </form>
+        <img id="gallery-preview" alt="">
+    </dialog>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>
