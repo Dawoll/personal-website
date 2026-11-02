@@ -1,7 +1,8 @@
+const assetsPath = new URL("../assets/", document.currentScript.src).href;
+
 const themeButton = document.querySelector("#theme-toggle");
 const themeIcon = document.querySelector("#theme-toggle img");
 
-const langButton  = document.querySelector("#language-toggle");
 const langIcon = document.querySelector("#language-toggle img");
 
 const githubLink = document.querySelector(".navbar-github");
@@ -13,22 +14,15 @@ const contactEmailIcon = document.querySelector(".Gmail-icon");
 
 const copyEmailButton = document.getElementById("copy-email");
 
+themeIcon.src = `${assetsPath}icons/${document.body.classList.contains("light-theme") ? "moon" : "sun"}_white_icon.svg`;
+updateFlag();
 
 themeButton.addEventListener("click", changeIcon);
-langButton.addEventListener("click", changeLanguage);
 githubLink.addEventListener("mouseenter", startGitHubGif);
 githubLink.addEventListener("mouseleave", stopGitHubGif);
 
 
 
-
-function changeLanguage() {
-    const currentLang = document.getElementById("lang");
-
-    currentLang.textContent = currentLang.textContent.trim() === "PL" ? "EN" : "PL";
-
-    updateFlag();
-}
 
 function updateFlag() {
     const language = document.getElementById("lang").textContent.trim();
@@ -37,29 +31,30 @@ function updateFlag() {
     const country = language === "PL" ? "pl" : "uk";
     const outline = isLight ? "black" : "white";
 
-    langIcon.src = `assets/icons/${country}_${outline}_icon.svg`;
+    langIcon.src = `${assetsPath}icons/${country}_${outline}_icon.svg`;
 }
 
 function changeIcon() {
     const isLight = document.body.classList.toggle("light-theme");
+    savePreference("theme", isLight ? "light" : "dark");
 
     const animation = isLight
         ? "sun_to_moon_white_icon.gif"
         : "moon_to_sun_white_icon.gif";
 
-    themeIcon.src = `assets/icons/${animation}?v=${Date.now()}`;
+    themeIcon.src = `${assetsPath}icons/${animation}?v=${Date.now()}`;
 
     updateFlag();
 }
 
 
 function startGitHubGif() {
-    githubIcon.src = `assets/icons/github_white_icon.gif?v=${Date.now()}`;
+    githubIcon.src = `${assetsPath}icons/github_white_icon.gif?v=${Date.now()}`;
 }
 
 
 function stopGitHubGif() {
-    githubIcon.src = "assets/icons/github_white_icon.svg";
+    githubIcon.src = `${assetsPath}icons/github_white_icon.svg`;
 }
 
 if (contactGithubIcon) {
@@ -67,11 +62,11 @@ if (contactGithubIcon) {
 
     githubContact.addEventListener("mouseenter", function () {
         contactGithubIcon.src =
-            `assets/icons/github_white_icon.gif?v=${Date.now()}`;
+            `${assetsPath}icons/github_white_icon.gif?v=${Date.now()}`;
     });
 
     githubContact.addEventListener("mouseleave", function () {
-        contactGithubIcon.src = "assets/icons/github_white_icon.svg";
+        contactGithubIcon.src = `${assetsPath}icons/github_white_icon.svg`;
     });
 }
 
@@ -79,11 +74,11 @@ if (contactEmailIcon) {
     const emailContact = contactEmailIcon.closest(".contact-item");
 
     emailContact.addEventListener("mouseenter", function () {
-        contactEmailIcon.src = `assets/icons/gmail_white_icon.gif?v=${Date.now()}`;
+        contactEmailIcon.src = `${assetsPath}icons/gmail_white_icon.gif?v=${Date.now()}`;
     });
 
     emailContact.addEventListener("mouseleave", function () {
-        contactEmailIcon.src = "assets/icons/gmail_white_icon.svg";
+        contactEmailIcon.src = `${assetsPath}icons/gmail_white_icon.svg`;
     });
 }
 
@@ -104,15 +99,16 @@ if (copyEmailButton) {
         try {
             await navigator.clipboard.writeText(emailLabel);
             clearTimeout(resetEmailTimeout);
-            copyEmailButton.textContent = "Copied!";
+            copyEmailButton.textContent = copyEmailButton.dataset.copied;
             copyEmailButton.classList.add("copy-confirmed");
             resetEmailTimeout = setTimeout(function () {
                 copyEmailButton.textContent = emailLabel;
             }, 1500);
         } catch {
-            alert("Could not copy the email address");
+            alert(copyEmailButton.dataset.copyError);
         }
     });
+
 }
 
 const galleryDialog = document.getElementById("gallery-dialog");
@@ -143,6 +139,7 @@ const characterAnimation = document.getElementById("character-animation");
 
 if (characterAnimation) {
     const characterAnimationLabel = document.getElementById("character-animation-label");
+    const animationLabels = characterAnimationLabel.dataset.labels.split("|");
     const animations = [
         { file: "game_character_idle.gif", duration: 2200 },
         { file: "game_character_run_up.gif", duration: 1260 },
@@ -154,13 +151,8 @@ if (characterAnimation) {
     let currentAnimation = 0;
 
     function playCharacterAnimation() {
-        const label = animations[currentAnimation].file
-            .replace("game_character_", "")
-            .replace(".gif", "")
-            .replaceAll("_", " ")
-            .replace("attack knife", "knife attack");
-        characterAnimationLabel.textContent = label;
-        characterAnimation.src = `assets/game_gifs/${animations[currentAnimation].file}?v=${Date.now()}`;
+        characterAnimationLabel.textContent = animationLabels[currentAnimation];
+        characterAnimation.src = `${assetsPath}game_gifs/${animations[currentAnimation].file}?v=${Date.now()}`;
     }
 
     characterAnimation.addEventListener("load", () => {
@@ -177,15 +169,15 @@ const shortVideo = document.getElementById("short-video");
 
 if (shortVideo) {
     const recordings = [
-        "assets/videos/yt_video_1.mp4",
-        "assets/videos/yt_video_2.mp4",
-        "assets/videos/yt_video_3.mp4",
-        "assets/videos/yt_video_4.mp4",
-        "assets/videos/yt_video_5.mp4",
-        "assets/videos/yt_video_6.mp4",
-        "assets/videos/yt_video_7.mp4",
-        "assets/videos/yt_video_8.mp4",
-        "assets/videos/yt_video_9.mp4"
+        `${assetsPath}videos/yt_video_1.mp4`,
+        `${assetsPath}videos/yt_video_2.mp4`,
+        `${assetsPath}videos/yt_video_3.mp4`,
+        `${assetsPath}videos/yt_video_4.mp4`,
+        `${assetsPath}videos/yt_video_5.mp4`,
+        `${assetsPath}videos/yt_video_6.mp4`,
+        `${assetsPath}videos/yt_video_7.mp4`,
+        `${assetsPath}videos/yt_video_8.mp4`,
+        `${assetsPath}videos/yt_video_9.mp4`
     ];
     const recordingTitles = [
         "Mirage Pistol - 3K",

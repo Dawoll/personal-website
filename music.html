@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="en" href="music.html">
+    <link rel="alternate" hreflang="pl" href="pl/music.html">
+    <link rel="alternate" hreflang="x-default" href="music.html">
+    <script src="javaScript/storage.js" defer></script>
     <script src="javaScript/functions.js" defer></script>
-    <title>Dawid Głowacki — personal website</title>
+    <title>Dawid Głowacki — Music</title>
 </head>
 <body>
-    <header> 
-        <nav class="navbar" aria-label="Navigation bar">
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
             <ul class="navbar-links">
-                <li><a href="index.html">Start</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
-                <li><a href="music.html" aria-current="page">Muzyka</a></li>
-                <li><a href="mygame.html">Moja gra</a></li>
+                <li><a href="music.html" aria-current="page">Music</a></li>
+                <li><a href="mygame.html">My game</a></li>
             </ul>
 
             <div class="navbar-tools">
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
-                    aria-label="Mój profil GitHub — otwiera nową kartę">
+                    aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
                     <img src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <button id="language-toggle" type="button" aria-label="Change language">
-                    <span id="lang"> PL </span> <img id="lang-icon"src="assets/icons/pl_white_icon.svg" alt="">
-                </button>
+                <a id="language-toggle" href="pl/music.html" hreflang="pl" aria-label="Switch to Polish">
+                    <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
+                </a>
 
                 <button id="theme-toggle" type="button" aria-label="Change theme">
                     <img src="assets/icons/sun_white_icon.svg" alt="">
@@ -35,30 +39,25 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         <div class = "page">
             <section class="subpage-header">
                 <img src="assets/icons/music_white_icon.svg" alt="">
-                <h1>Muzyka</h1>
+                <h1>Music</h1>
             </section>
 
             <section class="subpage-content">
-                <h1 class="section-title"> Muzyka rockowa </h1>
+                <h1 class="section-title"> Rock music </h1>
                 <div class="information">
-                    <p>Praktycznie codziennie słucham muzyki rockowej, a moimi ulubionymi zespołami są <span class="white-text">Nirvana</span>
-                        , <span class="white-text"> Foo Fighters </span> i <span class="white-text">Linkin Park</span>.
-                        Dodatkowo z polskiej muzyki bardzo lubię słuchać <span class="white-text">Dżemu</span> a w szczególności
-                        utworu <span class="white-text">Wehikuł Czasu</span>.</p>
-                    <p> Po słuchaniu piosenek <span class="white-text"> Nirvany </span> stwierdziłem, że sam chcę spróbować gry na gitarze więc kupiłem swój pierwszy model.
-                        Jest to <span class="white-text"> Harley Benton MS-60 VW Vintage Series </span> i na nim uczę się swoich pierwszych riffów gitarowych. </p>
+                    <p>I listen to rock music almost every day. My favourite bands are <span class="white-text">Nirvana</span>, <span class="white-text"> Foo Fighters </span> and <span class="white-text">Linkin Park</span>. Among Polish bands, I particularly enjoy <span class="white-text">Dżem</span>, especially the song <span class="white-text">Wehikuł Czasu</span>.</p>
+                    <p> Listening to <span class="white-text"> Nirvana </span> inspired me to try playing the guitar, so I bought my first instrument: a <span class="white-text"> Harley Benton MS-60 VW Vintage Series</span>, which I use to learn my first guitar riffs. </p>
                 </div>
             </section>
             <section class="subpage-content">
-                <h1 class="section-title"> Ulubione utwory </h1>
+                <h1 class="section-title"> Favourite songs </h1>
                 <div class="information">
-                        <p> Moja lista ulubionych utworów regularnie się zmienia więc bardzo trudno ułożyć zdecydowany ranking
-                            dlatego też przedstawiam po prostu listę ulubionych utworów do których zawsze wracam:</p>
+                        <p> My favourite songs change regularly, making it hard to put together a definitive ranking. Instead, here is a list of songs I always come back to:</p>
                         <ul class="song-groups">
                             <li>
                                 <strong>Veruca Salt</strong> — Volcano Girls
@@ -70,7 +69,7 @@
                                 <details>
                                     <summary>Nirvana</summary>
                                     <ul>
-                                        <li>Poison's Gone - Kurt Cobain solo</li>
+                                        <li>Poison&#x27;s Gone - Kurt Cobain (solo)</li>
                                         <li>You Know You're Right</li>
                                         <li>Verse Chorus Verse</li>
                                         <li>Lounge Act</li>
@@ -114,22 +113,20 @@
                                 </details>
                             </li>
                         </ul>
-                        <p> Bardzo często zamiast studyjnych wersji piosenek słucham nagrań koncertowych.
-                            Szczególnie polecam te występy: </p>
+                        <p> I often listen to live recordings rather than studio versions. I particularly recommend these performances: </p>
                         <ul class="concert-list">
                             <li><a href="https://www.youtube.com/watch?v=sqNBnuxKRbg&list=PL8vlRieH2oWmWnV42soc80XD5EvxxWPY8" target="_blank" rel="noopener">Nirvana — „Live at the Paramount” ↗</a> — 1991</li>
                             <li><a href="https://www.youtube.com/watch?v=BgiYcRV8Q5E" target="_blank" rel="noopener">Nirvana — „MTV Unplugged” ↗</a> — 1993</li>
                             <li><a href="https://www.youtube.com/watch?v=7Mxg4VkkRRI" target="_blank" rel="noopener">Linkin Park — „Live in Texas” ↗</a> — 2003</li>
                         </ul>
-                        <p> Bardzo lubię również fan-made album <a href="https://www.youtube.com/watch?v=ew23e-hwMvo" target="_blank" rel="noopener">Dire ↗</a>,
-                        inspirowany twórczością <span class="white-text"> Nirvany </span> oraz solowymi nagraniami
-                        <span class="white-text"> Kurta Cobaina</span>. </p>
+                        <p> I also really enjoy the fan-made album <a href="https://www.youtube.com/watch?v=ew23e-hwMvo" target="_blank" rel="noopener">Dire ↗</a>, inspired by the music of <span class="white-text"> Nirvana </span> and the solo recordings of
+                        <span class="white-text"> Kurt Cobain</span>. </p>
                 </div>
             </section>
 
         </div>
     </main>
-        
+
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>
     </footer>

@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="en" href="index.html">
+    <link rel="alternate" hreflang="pl" href="pl/index.html">
+    <link rel="alternate" hreflang="x-default" href="index.html">
+    <script src="javaScript/storage.js" defer></script>
     <script src="javaScript/functions.js" defer></script>
-    <title>Dawid Głowacki — personal website</title>
+    <title>Dawid Głowacki — Personal website</title>
 </head>
 <body>
-    <header> 
-        <nav class="navbar" aria-label="Navigation bar">
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
             <ul class="navbar-links">
-                <li><a href="index.html" aria-current="page">Start</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
-                <li><a href="music.html">Muzyka</a></li>
-                <li><a href="mygame.html">Moja gra</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="mygame.html">My game</a></li>
             </ul>
 
             <div class="navbar-tools">
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
-                    aria-label="Mój profil GitHub — otwiera nową kartę">
+                    aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
                     <img src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <button id="language-toggle" type="button" aria-label="Change language">
-                    <span id="lang"> PL </span> <img id="lang-icon"src="assets/icons/pl_white_icon.svg" alt="">
-                </button>
+                <a id="language-toggle" href="pl/index.html" hreflang="pl" aria-label="Switch to Polish">
+                    <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
+                </a>
 
                 <button id="theme-toggle" type="button" aria-label="Change theme">
                     <img src="assets/icons/sun_white_icon.svg" alt="">
@@ -37,69 +41,68 @@
     </header>
     <main>
         <div class = "page">
-        <section class="profile"n>
-            <img src = "assets/photos/profile_black_picture.png" alt = "Profile picture" class = "profile-picture">
+        <section class="profile">
+            <img src = "assets/photos/profile_black_picture.png" alt="Profile picture" class = "profile-picture">
             <h1> D4WOL </h1>
         </section>
 
-        <section id = "about me"> 
-            <h1 class="section-title""> O mnie </h1>
+        <section id = "about me">
+            <h1 class="section-title"> About me </h1>
 
             <div class="information">
-                <p> Nazywam się <span class="white-text">Dawid Głowacki</span> i jestem studentem <span class="white-text"> III </span> roku informatyki na
-                    <a class="icon-text" href="https://pollub.pl/" target="_blank" rel="noopener">
-                    <img src="assets/icons/pollub_white_icon.svg"> Politechnice Lubelskiej ↗</a>. </p>
-                <p> W wolnym czasie gram w gry komputerowe, słucham muzyki rockowej i uczę się grać na gitarze. </p>
-                <p> Stawiam również pierwsze kroki w tworzeniu własnej gry komputerowej.</p>
+                <p> My name is <span class="white-text">Dawid Głowacki</span> and I am a <span class="white-text">III</span> year computer science student at
+                    <a class="icon-text" href="https://pollub.pl/en/" target="_blank" rel="noopener">
+                    <img src="assets/icons/pollub_white_icon.svg" alt=""> Lublin University of Technology ↗</a>. </p>
+                <p> In my free time, I play video games, listen to rock music and learn to play the guitar. </p>
+                <p> I am also taking my first steps in developing my own video game.</p>
             </div>
 
         </section>
-        
+
         <section id = "interests">
-            <h1 class="section-title""> Zainteresowania </h1>
+            <h1 class="section-title"> Interests </h1>
 
             <div class="information">
-                <p> Jak wcześniej wspomniałem, lubię spędzać wolny czas grając w gry komputerowe w szczególności w gry Competetive. </p>
-                <p> Zdecydowanie najwięcej czasu spędziłem w grze <a class="icon-text"
+                <p> As mentioned earlier, I enjoy spending my free time playing video games, especially competitive games. </p>
+                <p> By far, I have spent the most time playing <a class="icon-text"
                     href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener">
-                    <img src="assets/icons/cs_white_icon.svg"> Counter-Strike 2 ↗</a>. </p>
-                <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych, publikowałem także krótkie materiały w internecie. </p>
-                <p class="moreInfo"> <a href = "cs.html"> Więcej o mojej pasji do serii Counter-Strike ↵</a> </p>
+                    <img src="assets/icons/cs_white_icon.svg" alt=""> Counter-Strike 2 ↗</a>. </p>
+                <p> I have taken part in several school and interschool tournaments and shared short videos online. </p>
+                <p class="moreInfo"> <a href = "cs.html"> More about my passion for Counter-Strike ↵</a> </p>
 
-                <p> Muzyka rockowa to zdecydowanie mój ulubiony gatunek muzyczny. </p>
-                <p> Najbardziej cenie w niej riffy gitarowe dlatego sam też zaczałęm grać. </p>
-                <p> A moim ulubionym zespołem muzycznym jest <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw" target="_blank" rel="noopener">
-                    <img src="assets/icons/nirvana_white_icon.svg"> Nirvana↗ </a>. </p>
-                <p class="moreInfo"> <a href = "music.html"> Więcej o mojej ulubionej muzyce rockowej ↵</a> </p>
+                <p> Rock is definitely my favourite music genre. </p>
+                <p> I particularly enjoy guitar riffs, which inspired me to start playing myself. </p>
+                <p> My favourite band is <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw" target="_blank" rel="noopener">
+                    <img src="assets/icons/nirvana_white_icon.svg" alt=""> Nirvana↗ </a>. </p>
+                <p class="moreInfo"> <a href = "music.html"> More about my favourite rock music ↵</a> </p>
             </div>
 
         </section>
 
         <section id = "projects">
-            <h1 class="section-title"> Projekty </h1>
+            <h1 class="section-title"> Projects </h1>
 
             <div class="information">
-                <p> Stawiam pierwsze kroki w tworzeniu własnej gry <span class="white-text">2D</span>
-                    , gatunku<a href="https://en.wikipedia.org/wiki/Roguelike" target="_blank" rel="noopener"> RogueLike ↗</a>. </p>
-                <p> Swoją grę tworzę w <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank" rel="noopener"> języku C# ↗ </a>
-                    na silniku <a href = "https://en.wikipedia.org/wiki/Unity_(game_engine)" target="_blank" rel="noopener"> Unity ↗</a>,
-                    a grafiki staram się tworzyć w programie <a href="https://en.wikipedia.org/wiki/Aseprite" target="_blank" rel="noopener"> Aseprite ↗</a>. </p>
-                <p class="moreInfo"> <a href="mygame.html"> Więcej o projekcie mojej gry ↵</a></p>
+                <p> I am taking my first steps in developing my own <span class="white-text">2D</span>
+                    game in the<a href="https://en.wikipedia.org/wiki/Roguelike" target="_blank" rel="noopener"> RogueLike ↗ </a>genre. </p>
+                <p> I am developing the game in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank" rel="noopener"> C# ↗ </a>
+                    using the <a href = "https://en.wikipedia.org/wiki/Unity_(game_engine)" target="_blank" rel="noopener"> Unity engine ↗</a>, and creating the artwork in <a href="https://en.wikipedia.org/wiki/Aseprite" target="_blank" rel="noopener"> Aseprite ↗</a>. </p>
+                <p class="moreInfo"> <a href="mygame.html"> More about my game project ↵</a></p>
             </div>
 
         </section>
 
         <section id = "contact">
-            <h1 class="section-title"> Kontakt </h1>
+            <h1 class="section-title"> Contact </h1>
 
-            <div class="information">  
+            <div class="information">
 
                 <p class="iconArea contact-item" tabindex="0">
                     <img class="Gmail-icon" src="assets/icons/gmail_white_icon.svg" alt="">
                     <span class="white-text">Email</span>
-                    <span class="email-copy">
-                        <button id="copy-email" class="contact-value white-text"
-                                type="button" aria-label="Kopiuj adres e-mail">
+                    <span class="email-copy" data-copy-hint="Click to copy!">
+                        <button id="copy-email" data-copied="Copied!" data-copy-error="Could not copy the email address. Please copy it manually." class="contact-value white-text"
+                                type="button" aria-label="Copy email address">
                             dawid.glowacki1337@gmail.com
                         </button>
                     </span>
@@ -117,7 +120,7 @@
 
         </section>
 
-        </div>  
+        </div>
     </main>
 
     <footer>

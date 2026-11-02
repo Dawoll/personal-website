@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="en" href="cs.html">
+    <link rel="alternate" hreflang="pl" href="pl/cs.html">
+    <link rel="alternate" hreflang="x-default" href="cs.html">
+    <script src="javaScript/storage.js" defer></script>
     <script src="javaScript/functions.js" defer></script>
-    <title>Dawid Głowacki — personal website</title>
+    <title>Dawid Głowacki — Counter-Strike</title>
 </head>
 <body>
     <header>
-        <nav class="navbar" aria-label="Navigation bar">
+        <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
             <ul class="navbar-links">
-                <li><a href="index.html">Start</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html" aria-current="page"> Counter-Strike</a></li>
-                <li><a href="music.html">Muzyka</a></li>
-                <li><a href="mygame.html">Moja gra</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="mygame.html">My game</a></li>
             </ul>
 
             <div class="navbar-tools">
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
-                    aria-label="Mój profil GitHub — otwiera nową kartę">
+                    aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
                     <img src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <button id="language-toggle" type="button" aria-label="Change language">
-                    <span id="lang"> PL </span> <img id="lang-icon"src="assets/icons/pl_white_icon.svg" alt="">
-                </button>
+                <a id="language-toggle" href="pl/cs.html" hreflang="pl" aria-label="Switch to Polish">
+                    <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
+                </a>
 
                 <button id="theme-toggle" type="button" aria-label="Change theme">
                     <img src="assets/icons/sun_white_icon.svg" alt="">
@@ -43,36 +47,37 @@
             </section>
 
             <section class="Passion">
-                <h1 class="section-title"> Pasja do Counter-Strike </h1>
+                <h1 class="section-title"> My passion for Counter-Strike </h1>
                 <div class="information">
-                    <p> W <span class="white-text">Counter-Strike </span> gram od <span class="white-text"> 2015 roku</span>.
-                        Choć dziś poświęcam mu znacznie mniej czasu niż kiedyś, nadal chętnie do niego wracam.</p>
-                    <p> Przez ponad <span class="white-text"> 11 lat </span> spędziłem w niej blisko <span class="white-text"> 7000 godzin</span>.
-                        Jak wspomniałem na stronie głównej, miałem okazję uczestniczyć  w kilku turniejach szkolnych i międzyszkolnych,
-                        reprezentując swoją klasę w technikum. </p>
-                    <p> Wygrałem także pare indywidualnych turniejów online na platformie <span class="white-text"> FACEIT </span> w formie 1vs1 z
-                        symbolicznymi nagrodami na stronach zewnętrznych. </p>
-                    <p> Zawsze marzyłem o grze na profesjonalnym poziomie jednak grając nieregularnie i często zmieniając
-                        drużyne na platformie <span class="white-text"> FACEIT </span> osiągnąłem jedynie blisko
-                        <span class="white-text"> 2500 ELO </span>, co na tamten moment odpowiadało blisko
-                        <span class="white-text"> 2800 </span> pozycji w Polskim rankingu <span class="white-text">(TOP ~53000 EU) </span> a wynik
-                        ten nigdy mnie w pełni nie satysfakcjonował.</p>
-                    <p> Przez pewien czas próbowałem również rozwijać swój kanał na <span class="white-text"> YouTube </span>, publikując Shortsy z najlepszymi
-                        zagraniami z moich meczów. Szybko jednak okazało się, że trudno znaleźć mi czas zarówno na grę, jak i montaż filmów.</p>
-                    <p> Podczas mojej przygody z <span class="white-text"> Counter-Strike'iem </span>miałem również okazję zagrać z trzema profesjonalnymi
-                        zawodnikami, w tym jednym Polakiem.</p>
+                    <p> I have been playing <span class="white-text">Counter-Strike </span> since <span class="white-text"> 2015</span>.
+                        Although I spend much less time on it now than I used to, I still enjoy coming back to it.</p>
+                    <p> In over <span class="white-text"> 11 years</span>, I have spent nearly <span class="white-text">
+                        7,000 hours playing</span>. As mentioned on the home page, I have taken part in several school and
+                        interschool tournaments,representing my class at high school. </p>
+                    <p> I have also won a few individual online tournaments on <span class="white-text"> FACEIT</span>,
+                        playing 1v1 matches for small prizes on third-party websites. </p>
+                    <p> I always dreamed of playing professionally. However, playing irregularly and frequently changing teams,
+                        on <span class="white-text"> FACEIT</span>, I reached only around
+                        <span class="white-text"> 2500 ELO</span>, which at the time placed me around
+                        <span class="white-text"> 2800 </span> in the Polish ranking <span class="white-text">
+                            (TOP ~53,000 EU)</span>. I was never completely satisfied with that result.</p>
+                    <p> For a while, I also tried to grow my <span class="white-text"> YouTube </span>channel 
+                        by posting Shorts featuring my best plays. However, I soon found it difficult to make 
+                        time for both playing and editing videos.</p>
+                    <p> During my time playing <span class="white-text"> Counter-Strike</span>, I also had the 
+                        opportunity to play with three professional players, including one from Poland.</p>
                 </div>
             </section>
 
             <section aria-labelledby="recordings-title">
-            <h1 id="recordings-title" class="section-title">Moje nagrania</h1>
+            <h1 id="recordings-title" class="section-title">My recordings</h1>
                 <div class="information recordings-content">
                     <div class="recordings-intro">
-                        <p> Obok zamieszczam pare krótkich przykładowych nagrań z moimi zagraniami z Counter-Strike'a wraz ze spisem filmów! </p>
+                        <p> Here are a few short clips of my Counter-Strike plays, together with a list of recordings! </p>
                     </div>
                     <div class="recordings-layout">
-                    <div class="video-carousel">    
-                        <button id="previous-video" type="button" aria-label="Poprzedni film">❮</button>
+                    <div class="video-carousel">
+                        <button id="previous-video" type="button" aria-label="Previous video">❮</button>
 
                         <div class="video-frame">
                             <video id="short-video" controls playsinline preload="metadata">
@@ -80,93 +85,89 @@
                             </video>
                         </div>
 
-                        <button id="next-video" type="button" aria-label="Następny film">❯</button>                     
+                        <button id="next-video" type="button" aria-label="Next video">❯</button>
                     </div>
 
-                    <div class="video-tabs" role="group" aria-label="Wybierz nagranie"></div>
+                    <div class="video-tabs" role="group" aria-label="Choose a recording"></div>
                     </div>
                 </div>
             </section>
 
             <section id="Gallery">
-            <h1 class="section-title"> ProGracze których spotkałem </h1>
+            <h1 class="section-title"> Professional players I have met </h1>
                 <div class="information">
-                    <p> Poniżej zamieszczam dwa zdjęcia przedstawiające mecze w których miałem okazję zagrać z profesjonalnymi zawodnikami.
-                        Na zdjęciach można zauważyć trzech prosów. </p>
-                    <p> Na pierwszym zdjęciu widać dwóch rosyjskich graczy - <span class="white-text">Zweih'a</span> oraz <span class="white-text">Magnojez'a</span>, którzy grali w mojej drużynie. </p>
-                    <p> Na drugim zdjęciu można zobaczyć legendarnego polskiego zawodnika - <span class="white-text">Snax'a</span>, który grał w przeciwnej drużynie.
-                        To właśnie wtedy po raz pierwszy przekonałem się, jak duża jest różnica między codzienną grą a graniem przeciwko
-                        zawodnikowi na profesjonalnym poziomie.</p>
+                    <p> Below are two screenshots from matches in which I had the opportunity to play with professional players. They show three pros in total. </p>
+                    <p> The first screenshot shows two Russian players, <span class="white-text">Zweih</span> and <span class="white-text">Magnojez</span>, who were on my team. </p>
+                    <p> The second screenshot shows the legendary Polish player <span class="white-text">Snax</span>, who was on the opposing team. That was when I first experienced the difference between everyday matches and playing against a professional.</p>
                     <div class="gallery-stack">
-                        <button type="button" aria-label="Powiększ zdjęcie z Zweih i Magnojez" aria-haspopup="dialog">
-                            <img src="assets/photos/zweih_magnojez.png" alt="Game with Zweih and Magnojez">
+                        <button type="button" aria-label="Enlarge the screenshot with Zweih and Magnojez" aria-haspopup="dialog">
+                            <img src="assets/photos/zweih_magnojez.png" alt="Match with Zweih and Magnojez">
                         </button>
-                        <button type="button" aria-label="Powiększ zdjęcie ze Snaxem" aria-haspopup="dialog">
-                            <img src="assets/photos/snax.png" alt="Game with Snax">
+                        <button type="button" aria-label="Enlarge the screenshot with Snax" aria-haspopup="dialog">
+                            <img src="assets/photos/snax.png" alt="Match with Snax">
                         </button>
                     </div>
                     <div class="information">
-                        <p> Mecz ze <span class="white-text">Zweih'em</span> oraz <span class="white-text">Magnojez'em</span>
-                            miałem okazję zagrać pod koniec <Span class="white-text">kwietnia 2026 roku</Span>.
-                            Był to moment gdy zawodnicy testowali nowo dodaną mapę - <Span class="white-text">Cache</Span>.</p>
-                        <p> Natomiast mecz ze <span class="white-text"> Snax'em </span>
-                            miałem okazję zagrać w <Span class="white-text">kwietniu 2022 roku</Span>.</p>
+                        <p> I played the match with <span class="white-text">Zweih</span> and <span class="white-text">Magnojez</span>
+                            in late <Span class="white-text">April 2026</Span>, when the players were testing the newly added map, <Span class="white-text">Cache</Span>.</p>
+                        <p> I played the match with <span class="white-text"> Snax </span>
+                            in <Span class="white-text">April 2022</Span>.</p>
 
                     </div>
                     <div class="player-cards">
                         <article class="player-card team-gamerlegion">
                             <span class="player-flag">
-                                <img src="assets/icons/pl_white_icon.svg" alt="Polska">
-                                <img class="flag-light" src="assets/icons/pl_black_icon.svg" alt="Polska">
+                                <img src="assets/icons/pl_white_icon.svg" alt="Poland">
+                                <img class="flag-light" src="assets/icons/pl_black_icon.svg" alt="Poland">
                             </span>
                             <h2>Snax</h2>
                             <p class="white-text player-name">Janusz Pogorzelski</p>
-                            <p>Wiek: <span class="white-text"> 33 lata </span> </p>
+                            <p>Age: <span class="white-text"> 33 years </span> </p>
                             <p>Team: <span class="white-text"> GamerLegion </span></p>
-                            <p>Suma nagród: <span class="white-text"> $996 296 </span></p>
+                            <p>Tournament winnings: <span class="white-text"> $996 296 </span></p>
                             <a href="https://www.hltv.org/player/2553/snax" target="_blank" rel="noopener"
-                               aria-label="Profil Snaxa na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                               aria-label="Snax&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                         <article class="player-card team-betboom">
                             <span class="player-flag">
-                                <img src="assets/icons/ru_white_icon.png" alt="Rosja">
-                                <img class="flag-light" src="assets/icons/ru_black_icon.png" alt="Rosja">
+                                <img src="assets/icons/ru_white_icon.png" alt="Russia">
+                                <img class="flag-light" src="assets/icons/ru_black_icon.png" alt="Russia">
                             </span>
                             <h2>Magnojez</h2>
                             <p class="white-text player-name">Kirill Rodnov</p>
-                            <p>Wiek: <span class="white-text"> 22 lata </span> </p>
+                            <p>Age: <span class="white-text"> 22 years </span> </p>
                             <p>Team: <span class="white-text"> BetBoom </span></p>
-                            <p>Suma nagród: <span class="white-text"> $174 836 </span></p>
+                            <p>Tournament winnings: <span class="white-text"> $174 836 </span></p>
                             <a href="https://www.hltv.org/player/21667/magnojez" target="_blank" rel="noopener"
-                               aria-label="Profil Magnojeza na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                               aria-label="Magnojez&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                         <article class="player-card team-parivision">
                             <span class="player-flag">
-                                <img src="assets/icons/ru_white_icon.png" alt="Rosja">
-                                <img class="flag-light" src="assets/icons/ru_black_icon.png" alt="Rosja">
+                                <img src="assets/icons/ru_white_icon.png" alt="Russia">
+                                <img class="flag-light" src="assets/icons/ru_black_icon.png" alt="Russia">
                             </span>
                             <h2>Zweih</h2>
                             <p class="white-text player-name">Ivan Gogin</p>
-                            <p>Wiek: <span class="white-text"> 19 lata </span> </p>
+                            <p>Age: <span class="white-text"> 19 years </span> </p>
                             <p>Team: <span class="white-text"> Parivision </span></p>
-                            <p>Suma nagród: <span class="white-text"> $358 449 </span></p>
+                            <p>Tournament winnings: <span class="white-text"> $358 449 </span></p>
                             <a href="https://www.hltv.org/player/23685/zweih" target="_blank" rel="noopener"
-                               aria-label="Profil Zweiha na HLTV — otwiera nową kartę"><img src="assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
+                               aria-label="Zweih&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                     </div>
                     <p class="data-update white-text">
-                        <span>ⓘ</span> Dane zaktualizowano: 11.2026
+                        <span>ⓘ</span> Data updated: 11/2026
                     </p>
                 </div>
 
             </section>
-        
+
         </div>
     </main>
 
-    <dialog id="gallery-dialog" aria-label="Powiększone zdjęcie z galerii">
+    <dialog id="gallery-dialog" aria-label="Enlarged gallery screenshot">
         <form method="dialog">
-            <button class="gallery-close" type="submit" aria-label="Zamknij zdjęcie" autofocus>×</button>
+            <button class="gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
         </form>
         <img id="gallery-preview" alt="">
     </dialog>

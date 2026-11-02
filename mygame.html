@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="en" href="mygame.html">
+    <link rel="alternate" hreflang="pl" href="pl/mygame.html">
+    <link rel="alternate" hreflang="x-default" href="mygame.html">
+    <script src="javaScript/storage.js" defer></script>
     <script src="javaScript/functions.js" defer></script>
-    <title>Dawid Głowacki — personal website</title>
+    <title>Dawid Głowacki — My game</title>
 </head>
 <body>
-    <header> 
-        <nav class="navbar" aria-label="Navigation bar">
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
             <ul class="navbar-links">
-                <li><a href="index.html">Start</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
-                <li><a href="music.html">Muzyka</a></li>
-                <li><a href="mygame.html" aria-current="page">Moja gra</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="mygame.html" aria-current="page">My game</a></li>
             </ul>
 
             <div class="navbar-tools">
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
-                    aria-label="Mój profil GitHub — otwiera nową kartę">
+                    aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
                     <img src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <button id="language-toggle" type="button" aria-label="Change language">
-                    <span id="lang"> PL </span> <img id="lang-icon"src="assets/icons/pl_white_icon.svg" alt="">
-                </button>
+                <a id="language-toggle" href="pl/mygame.html" hreflang="pl" aria-label="Switch to Polish">
+                    <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
+                </a>
 
                 <button id="theme-toggle" type="button" aria-label="Change theme">
                     <img src="assets/icons/sun_white_icon.svg" alt="">
@@ -35,129 +39,119 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         <div class = "page">
             <section class="subpage-header">
                 <img src="assets/icons/game_white_icon.svg" alt="">
-                <h1>Moja gra</h1>
+                <h1>My game</h1>
             </section>
 
             <section class="subpage-content">
-                <h1 class="section-title"> Moja gra komputerowa </h1>
-                <p> Zawsze marzyłem o tym, żeby utworzyć własną grę komputerową.
-                    Dlatego też teraz w wolnym czasie uczę się tworzyć własny projekt. 
-                    Jest to moja pierwsza gra więc bardzo powoli się rozwija.
-                    Planowany gatunek gry to 2D RogueLike z widokiem Top-Down. </p>
-                <p> Pierwsze grafiki oraz animacje staram się tworzyć samodzielnie w programie Aseprite, mimo że to uciążliwe i bardzo czasochłonne. </p>
-                <p> Silnik jakiego używam to <span class="white-text">Unity</span>. Kod natomiast pisany jest w języku
-                <span class="white-text">C#</span> przy wykorzystaniu Visual Studio. </p>
-                <p> Kod projektu przechowuję i aktualizuję w prywatnym repozytorium na GitHubie. </p>
+                <h1 class="section-title"> My video game </h1>
+                <p> I have always dreamed of creating my own video game. I am now learning to develop a project in my free time. As this is my first game, progress is gradual. The planned genre is a top-down 2D roguelike. </p>
+                <p> I am trying to create the first sprites and animations myself in Aseprite, even though it can be challenging and time-consuming. </p>
+                <p> The engine I use is <span class="white-text">Unity</span>. The code is written in
+                <span class="white-text">C#</span> using Visual Studio. </p>
+                <p> I store and update the project code in a private GitHub repository. </p>
             </section>
 
             <section class="subpage-content">
-                <h1 class="section-title"> Aktualny stan projektu </h1>
-                <p> Projekt trwa zaledwie kilka tygodni zatem jest w bardzo wczesnej fazie. Nie ma w nim jeszcze zbyt wiele do przedstawienia. </p>
-                <p><strong class="white-text">Krótka lista aktualnych funkcjonalności:</strong></p>
+                <h1 class="section-title"> Current project status </h1>
+                <p> The project is only a few weeks old and is still at a very early stage, so there is not much to show yet. </p>
+                <p><strong class="white-text">A brief list of current features:</strong></p>
                 <div class="features-overview">
                     <ul class="project-features">
-                        <li><strong>Gracz</strong>
+                        <li><strong>Player</strong>
                             <ul>
-                                <li>Sprite postaci i animacje</li>
-                                <li>Obsługa sterowania</li>
-                                <li>Poruszanie się po mapie </li>
-                                <li>Podstawowe statystyki</li>
-                                <li>Tworzenie postaci na scenie z prefabu i dodawanie do listy graczy</li>
+                                <li>Character sprite and animations</li>
+                                <li>Input handling</li>
+                                <li>Movement around the map </li>
+                                <li>Basic statistics</li>
+                                <li>Spawning the character from a prefab and adding it to the player list</li>
                             </ul>
                         </li>
-                        <li><strong>Przeciwnicy</strong>
+                        <li><strong>Enemies</strong>
                             <ul>
-                                <li>Zastępczy sprite postaci i animacje</li>
-                                <li>Podstawowe poruszanie się po mapie bez zaawansowanych zasad</li>
-                                <li>Ściganie gracza</li>
+                                <li>Placeholder character sprite and animations</li>
+                                <li>Basic movement around the map without advanced rules</li>
+                                <li>Chasing the player</li>
                             </ul>
                         </li>
-                        <li><strong>Skrypt proceduralnego generowania pomieszczeń</strong>
+                        <li><strong>Procedural room generation script</strong>
                             <ul>
-                                <li>Utworzenie Sprite'ów dla Tile'ów</li>
-                                <li>Nadanie im odpowiednich rozmiarów oraz przypisanie Pivotów</li>
-                                <li>Wybieranie wielkości pokoi z listy</li>
-                                <li>Losowe rozmieszczanie drzwi pokoju</li>
-                                <li>Dopasowanie podłóg, ścian oraz drzwi do wygenerowanego rozmiaru pokoju</li>
+                                <li>Creating tile sprites</li>
+                                <li>Setting their sizes and assigning pivots</li>
+                                <li>Choosing room sizes from a list</li>
+                                <li>Randomly placing room doors</li>
+                                <li>Fitting floors, walls and doors to the generated room size</li>
                             </ul>
                         </li>
-                        <li><strong>Przedmioty</strong>
+                        <li><strong>Items</strong>
                             <ul>
-                                <li>Utworzenie pliku z podstawowymi danymi przedmiotu</li>
-                                <li>Utworzenie assetów przedmiotów poprzez ScriptableObjects</li>
-                                <li>Utworzenie Prefabu przedmiotu</li>
-                                <li>Tworzenie przedmiotów na scenie</li>
-                                <li>Wykrywanie gracza w pobliżu przedmiotu</li>
-                                <li>Wyświetlanie komunikatu o możliwości podniesienia</li>
-                                <li>Obsługa podnoszenia przedmiotu</li>
-                                <li>Obsługa usuwania przedmiotu ze sceny</li>
+                                <li>Creating a file containing basic item data</li>
+                                <li>Creating item assets using ScriptableObjects</li>
+                                <li>Creating an item prefab</li>
+                                <li>Spawning items in the scene</li>
+                                <li>Detecting the player near an item</li>
+                                <li>Displaying a pickup prompt</li>
+                                <li>Handling item pickups</li>
+                                <li>Removing items from the scene</li>
                             </ul>
                         </li>
-                        <li><strong>Ekwipunek</strong>
+                        <li><strong>Inventory</strong>
                             <ul>
-                                <li>Początkowy wygląd ekwipunku utworzony w UI Builderze z Unity</li>
-                                <li>Przygotowanie skryptów do obsługi ekwipunku</li>
+                                <li>Initial inventory interface created in Unity&#x27;s UI Builder</li>
+                                <li>Preparing inventory management scripts</li>
                             </ul>
                         </li>
                     </ul>
                     <div class="character-showcase">
-                        <img src="assets/game_gifs/game_character_idle.gif" alt="Postać gracza w animacji bezczynności">
+                        <img src="assets/game_gifs/game_character_idle.gif" alt="Player character in the idle animation">
                     </div>
                 </div>
 
-                <p> Najwięcej czasu spędziłem nad proceduralnym generowaniem mapy, które niestety tworzy póki co puste pomieszczenia.
-                    Sporo zajęło mi samodzielne zrozumienie obsługi obiektów 2D o różnych rozmiarach tak aby dopasowywać ze sobą konkretne Tile'e. </p>
-                <p>Skrypt nie korzysta z gotowych szablonów pomieszczeń, tylko pobiera ich wymiary i odpowiednio rozmieszcza Tile'e.
-                    Dzięki temu tworzy unikalny układ mapy, co jest jedną z charakterystycznych cech gatunku RogueLike.</p>
-                <p> Wykorzystałem osobne Tile'e dla podłogi, drzwi, ścian głównych, ścian bocznych oraz narożników.
-                    Praktycznie każdy element różni się rozmiarem, a ich warianty dodatkowo orientacją.
-                    Przykładowo narożniki występują nawet w ośmiu wariantach, czterech wewnętrznych i czterech zewnętrznych,
-                    odpowiadających różnym kierunkom obrotu. </p>   
-                
+                <p> I have spent the most time on procedural map generation, which currently creates empty rooms. Learning how to work with differently sized 2D objects and fit the tiles together took considerable time. </p>
+                <p>The script does not use predefined room templates. Instead, it takes room dimensions and places the tiles accordingly, producing a unique map layout — one of the characteristic features of the roguelike genre.</p>
+                <p> I use separate tiles for floors, doors, main walls, side walls and corners. Almost every element has a different size, and its variants also differ in orientation. For example, corners come in eight variants: four inner and four outer corners, corresponding to different rotations. </p>
+
                 <ul class="project-features">
-                    <li><strong>Przykładowe rozmiary poszczególnych Tile'ów</strong>
+                    <li><strong>Example tile sizes</strong>
                         <ul>
-                            <li>Podłoga, Drzwi, Główne ściany - 6x6</li>
-                            <li>Ściany boczne - 1x6</li>
-                            <li>Narożniki - 1x1</li>
+                            <li>Floor, doors, main walls - 6×6</li>
+                            <li>Side walls - 1×6</li>
+                            <li>Corners - 1×1</li>
                         </ul>
                     </li>
                 </ul>
-                <p> Pomysł na taki generator wydaje się prosty, jednak jego implementacja okazała się całkiem skompikowana. </p>
-                <p> Podczas pisania kodu trzeba zadbać o wiele offsetów które spowodowane są różnymi rozmiarami Tile'ów.
-                    Generator pozwala tworzyć mapy składające się nawet ze 100 pokoi. </p>
-                <p> Kolejnym krokiem będzie dodanie do niego rozgałęzień, dzięki którym z jednego pomieszczenia będzie można przejść do kilku kolejnych.
-                    Ponieważ akutalnie pokoje tworzą jeden długi nienaturalny ciąg. </p>
-                <p> Aktualnie staram się wprowadzić system walki, zdrowia oraz ekwipunek gracza, który będzie przechowywać podniesione przedmioty ze sceny.</p>
+                <p> The idea behind this generator seems simple, but implementing it turned out to be quite complex. </p>
+                <p> The code needs to account for many offsets caused by different tile sizes. The generator can create maps containing up to 100 rooms. </p>
+                <p> The next step is to add branching paths, allowing one room to connect to several others. Currently, the rooms form one long, unnatural chain. </p>
+                <p> I am currently working on combat, health and a player inventory for storing items picked up in the scene.</p>
             </section>
 
             <section class="subpage-content">
-                <h1 class="section-title">Animacje postaci</h1>
-                <p> Przedstawiam kilka autorskich animacji mojej głównej postaci!</p>
+                <h1 class="section-title">Character animations</h1>
+                <p> Here are a few original animations of my main character!</p>
                 <div class="character-showcase animation-showcase">
                     <div class="character-frame">
                         <img id="character-animation" src="assets/game_gifs/game_character_idle.gif"
-                             alt="Animowana postać z mojej gry — bezczynność, poruszanie się i atak">
+                             alt="Animated game character — idle, movement and attack">
                     </div>
-                    <p id="character-animation-label" class="white-text">idle</p>
+                    <p id="character-animation-label" class="white-text" data-labels="idle|run up|run left|run right|run down|knife attack">idle</p>
                 </div>
             </section>
 
             <section class="subpage-content">
-                <h1 class="section-title">Generator pomieszczeń</h1>
-                <p> Przedstawiam zachowanie generatora pomieszczeń ze względu na iteracje.</p>
-                <p> Przykład dla i = 50 oraz i = 12, gdzie i oznacza liczbę pomieszczeń.</p>
+                <h1 class="section-title">Room generator</h1>
+                <p> Here is how the room generator behaves with different iteration counts.</p>
+                <p> Examples for i = 50 and i = 12, where i is the number of rooms.</p>
                 <div class="gallery-stack generator-gallery">
-                    <button type="button" aria-label="Powiększ mapę z 50 pomieszczeniami" aria-haspopup="dialog">
-                        <img src="assets/photos/game_rooms_50.png" alt="Przykładowa mapa wygenerowana dla 50 pomieszczeń" loading="lazy">
+                    <button type="button" aria-label="Enlarge the map with 50 rooms" aria-haspopup="dialog">
+                        <img src="assets/photos/game_rooms_50.png" alt="Example map generated for 50 rooms" loading="lazy">
                     </button>
-                    <button type="button" aria-label="Powiększ mapę z 12 pomieszczeniami" aria-haspopup="dialog">
-                        <img src="assets/photos/game_rooms_12.png" alt="Przykładowa mapa wygenerowana dla 12 pomieszczeń" loading="lazy">
+                    <button type="button" aria-label="Enlarge the map with 12 rooms" aria-haspopup="dialog">
+                        <img src="assets/photos/game_rooms_12.png" alt="Example map generated for 12 rooms" loading="lazy">
                     </button>
                 </div>
             </section>
@@ -165,13 +159,13 @@
         </div>
     </main>
 
-    <dialog id="gallery-dialog" aria-label="Powiększone zdjęcie generatora pomieszczeń">
+    <dialog id="gallery-dialog" aria-label="Enlarged room generator screenshot">
         <form method="dialog">
-            <button class="gallery-close" type="submit" aria-label="Zamknij zdjęcie" autofocus>×</button>
+            <button class="gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
-        
+
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>
     </footer>
