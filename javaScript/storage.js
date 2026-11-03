@@ -18,7 +18,7 @@ try {
     }
 } catch {}
 
-document.addEventListener("click", (event) => {
+document.addEventListener("click", function (event) {
     const languageLink = event.target.closest("#language-toggle");
     if (languageLink) savePreference("language", languageLink.hreflang);
 });

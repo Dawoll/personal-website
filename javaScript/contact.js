@@ -17,8 +17,12 @@ if (gameContactForm) {
     }
 
     category.addEventListener("change", updateSubject);
-    customSubject.addEventListener("input", () => customSubject.setCustomValidity(""));
-    message.addEventListener("input", () => message.setCustomValidity(""));
+    customSubject.addEventListener("input", function () {
+        customSubject.setCustomValidity("");
+    });
+    message.addEventListener("input", function () {
+        message.setCustomValidity("");
+    });
     updateSubject();
 
     if (web3FormsAccessKey) {
@@ -27,21 +31,33 @@ if (gameContactForm) {
         status.textContent = gameContactForm.dataset.unavailable;
     }
 
-    gameContactForm.addEventListener("submit", async (event) => {
+    gameContactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         if (!web3FormsAccessKey || submitButton.disabled) return;
 
-        message.setCustomValidity(message.value.trim().length < 10 ? gameContactForm.dataset.shortMessage : "");
-        customSubject.setCustomValidity(category.value === "other" && customSubject.value.trim().length < 3 ? gameContactForm.dataset.shortSubject : "");
+        message.setCustomValidity("");
+        customSubject.setCustomValidity("");
+        if (message.value.trim().length < 10) {
+            message.setCustomValidity(gameContactForm.dataset.shortMessage);
+        }
+        if (category.value === "other" && customSubject.value.trim().length < 3) {
+            customSubject.setCustomValidity(gameContactForm.dataset.shortSubject);
+        }
         if (!gameContactForm.reportValidity() || gameContactForm.elements.botcheck.checked) return;
 
-        const data = Object.fromEntries(new FormData(gameContactForm));
-        data.access_key = web3FormsAccessKey;
-        data.subject = `My game — ${category.value === "other" ? customSubject.value.trim() : category.selectedOptions[0].textContent}`;
-        data.category = category.selectedOptions[0].textContent;
-        data.message = message.value.trim();
-        if (!data.email) delete data.email;
-        delete data.custom_subject;
+        const categoryName = category.options[category.selectedIndex].textContent;
+        let subject = categoryName;
+        if (category.value === "other") subject = customSubject.value.trim();
+        const data = {
+            access_key: web3FormsAccessKey,
+            name: gameContactForm.elements.name.value,
+            subject: "My game — " + subject,
+            category: categoryName,
+            message: message.value.trim()
+        };
+        if (gameContactForm.elements.email.value) {
+            data.email = gameContactForm.elements.email.value;
+        }
 
         submitButton.disabled = true;
         gameContactForm.setAttribute("aria-busy", "true");

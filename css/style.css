@@ -42,13 +42,14 @@ a {
     font-weight: 600;
 }
 img, .contact-item, .character-frame { max-width: 100%; }
+.contact-item { font-size: clamp(18px, 1.5vw, 20px); }
 img { height: auto; }
 main p, .page a:hover, .light-theme main p, .light-theme .game-contact-form small { color: var(--muted); }
 main p, .project-features { padding-left: 12px; }
 main p, .concert-list, .game-contact-form small { line-height: 1.5; }
 main p { margin: 0 0 4px; }
 a:focus-visible, button:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--text);
     outline-offset: 4px;
 }
 footer {
@@ -127,7 +128,7 @@ footer p { margin-block: 50px; }
 .navbar-links, .recordings-intro p, .player-card p, .game-contact-form p, .animation-showcase p,
 #copy-email, .gallery-stack button, .gallery-close, .song-groups, .song-groups details ul { padding: 0; }
 .navbar-links, .recordings-intro p, .player-card p, .game-contact-form p, .animation-showcase p,
-.subpage-header h1, .player-card h2 { margin: 0; }
+.subpage-header h1, .player-card h3 { margin: 0; }
 .navbar-links, .song-groups, .song-groups details ul, .project-features { list-style: none; }
 .navbar-tools { margin-left: auto; }
 .navbar-brand, .profile { font-family: "UpHeavtt", sans-serif; }
@@ -173,6 +174,7 @@ footer p { margin-block: 50px; }
     -webkit-text-stroke: 0.25px black;
 }
 .section-title {
+    margin-block: .67em;
     font: 600 35px "Oxanium", sans-serif;
     border-left: 4px solid var(--text);
     padding-left: 8px;
@@ -321,6 +323,11 @@ footer p { margin-block: 50px; }
 .light-theme .navbar-links a:hover, .light-theme .navbar button:hover, .light-theme .icon-text:hover,
 .light-theme .page a:hover { font-weight: 800; }
 .light-theme .theme-icon { filter: invert(1); }
+.light-theme #theme-toggle img {
+    filter: brightness(0) invert(.5);
+    transition: filter .2s;
+}
+.light-theme #theme-toggle:is(:hover, :focus-visible) img { filter: brightness(0); }
 .light-theme .profile-picture, .light-theme .profile h1 { filter: drop-shadow(6px 6px 24px #000); }
 .light-theme .profile h1 { -webkit-text-stroke-color: #fff; }
 .email-copy {
@@ -371,7 +378,7 @@ footer p { margin-block: 50px; }
     pointer-events: none;
     transition: color .4s;
 }
-.player-card h2 {
+.player-card h3 {
     padding-right: 40px;
     font: 600 26px "Oxanium", sans-serif;
 }
@@ -570,7 +577,7 @@ footer p { margin-block: 50px; }
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    #theme-toggle img {
+    #theme-toggle img, .light-theme #theme-toggle img {
         transition: none;
         width: 20px;
     }
@@ -643,7 +650,7 @@ footer p { margin-block: 50px; }
         border: 1px solid #666;
         border-radius: 8px;
     }
-    .information .moreInfo { font-size: 13px; }
+    .information .moreInfo { font-size: clamp(15px, 4vw, 17px); }
     .information {
         font-size: 16px;
         overflow-wrap: anywhere;
@@ -677,6 +684,7 @@ footer p { margin-block: 50px; }
     .game-contact-form, .form-field { min-width: 0; }
     .game-contact-form { margin: 20px 0 20px 12px; }
     #copy-email {
+        min-height: 44px;
         overflow-wrap: anywhere;
         text-align: left;
     }
@@ -688,13 +696,12 @@ footer p { margin-block: 50px; }
 @media (max-width: 640px), (hover: none), (pointer: coarse) {
     .contact-item {
         display: grid;
-        grid-template-columns: 28px auto minmax(0, 1fr);
+        grid-template-columns: clamp(24px, 7.5vw, 36px) auto minmax(0, 1fr);
+        min-height: 44px;
         gap: 4px;
-        font-size: clamp(10px, 3.2vw, 14px);
+        font-size: clamp(12px, 3.8vw, 18px);
     }
-    .contact-item > img {
-        width: 28px;
-    }
+    .contact-item > img { width: 100%; }
     .contact-item .contact-value {
         max-width: 100%;
         margin-left: 0;
