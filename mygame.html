@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <button class="button navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
             <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
@@ -31,15 +31,15 @@
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
                     aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
-                    <img src="assets/icons/github_white_icon.svg" alt="">
+                    <img class="theme-icon" src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <a id="language-toggle" href="pl/mygame.html" hreflang="pl" aria-label="Switch to Polish">
+                <a class="button" id="language-toggle" href="pl/mygame.html" hreflang="pl" aria-label="Switch to Polish">
                     <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
                 </a>
 
-                <button id="theme-toggle" type="button" aria-label="Change theme">
-                    <img src="assets/icons/sun_white_icon.svg" alt="">
+                <button class="button-icon button" id="theme-toggle" type="button" aria-label="Change theme">
+                    <img class="theme-icon" src="assets/icons/sun_white_icon.svg" alt="">
                 </button>
             </div>
         </nav>
@@ -48,7 +48,7 @@
     <main>
         <div class = "page">
             <section class="subpage-header">
-                <img src="assets/icons/game_white_icon.svg" alt="">
+                <img class="theme-icon" src="assets/icons/game_white_icon.svg" alt="">
                 <h1>My game</h1>
             </section>
 
@@ -188,21 +188,23 @@
                     <p>Have an idea for a feature or want to ask about the project? Send me a message.</p>
                     <form id="game-contact-form" class="game-contact-form" action="https://api.web3forms.com/submit" method="post"
                           data-unavailable="The form is temporarily unavailable. Please contact me by email." data-sending="Sending your message…"
-                          data-success="Your message has been sent. Thank you!" data-error="The message could not be sent. Your text has been kept — try again or contact me by email."
+                          data-success="Your message has been sent. Thank you!" data-error="The message could not be sent. Your text has been kept
+                          — try again or contact me by email."
                           data-short-message="Please enter at least 10 characters, excluding leading and trailing spaces." data-short-subject="Please enter a subject of at least 3 characters.">
-                        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
+                        <input class="form-control" type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
                         <div class="form-field">
                             <label for="contact-name">Name or nickname (optional)</label>
-                            <input id="contact-name" name="name" type="text" maxlength="60" autocomplete="nickname">
+                            <input class="form-control" id="contact-name" name="name" type="text" maxlength="60" autocomplete="nickname">
                         </div>
                         <div class="form-field">
                             <label for="contact-email">Your email (optional)</label>
-                            <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" aria-describedby="contact-email-help">
+                            <input class="form-control" id="contact-email" name="email" type="email" maxlength="254" autocomplete="email"
+                            aria-describedby="contact-email-help">
                             <small id="contact-email-help">Include your email if you would like a reply.</small>
                         </div>
                         <div class="form-field">
                             <label for="contact-category">What is your message about?</label>
-                            <select id="contact-category" name="category" required>
+                            <select class="form-control" id="contact-category" name="category" required>
                                 <option value="">Choose a category</option>
                                 <option value="feature">Feature suggestion</option>
                                 <option value="contact">Contact about the game</option>
@@ -211,15 +213,18 @@
                         </div>
                         <div class="form-field" hidden>
                             <label for="contact-subject">Your subject</label>
-                            <input id="contact-subject" name="custom_subject" type="text" minlength="3" maxlength="120" disabled>
+                            <input class="form-control" id="contact-subject" name="custom_subject" type="text" minlength="3" maxlength="120" disabled>
                         </div>
                         <div class="form-field">
                             <label for="contact-message">Message</label>
-                            <textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="5000" required aria-describedby="contact-message-help"></textarea>
+                            <textarea class="form-control" id="contact-message" name="message" rows="6" minlength="10" maxlength="5000"
+                            required aria-describedby="contact-message-help"></textarea>
                             <small id="contact-message-help">Describe your suggestion or tell me what you would like to discuss.</small>
                         </div>
-                        <small>Your message and any contact details you provide will be sent through <span class="white-text">Web3Forms</span> to handle your enquiry.</small>
-                        <button type="submit" disabled>Send message</button>
+                        <small>Your message and any contact details you provide will be sent through <span class="white-text">Web3Forms
+
+                        </span> to handle your enquiry.</small>
+                        <button class="button form-control" type="submit" disabled>Send message</button>
                         <p id="contact-status" role="status" aria-live="polite"></p>
                         <noscript><p>Enable JavaScript to use this form, or contact me by email.</p></noscript>
                     </form>
@@ -232,12 +237,12 @@
 
     <dialog id="gallery-dialog" aria-label="Enlarged room generator screenshot">
         <form method="dialog">
-            <button class="gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
+            <button class="button-icon gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
 
-    <button class="back-to-top" type="button">↑ Back to top</button>
+    <button class="button back-to-top" type="button">↑ Back to top</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>

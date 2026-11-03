@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar" aria-label="Nawigacja">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <button class="button navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
             <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html" aria-current="page">Start</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
@@ -30,15 +30,15 @@
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
                     aria-label="Mój profil GitHub — otwiera nową kartę">
                     <span class="github-label">GitHub</span>
-                    <img src="../assets/icons/github_white_icon.svg" alt="">
+                    <img class="theme-icon" src="../assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <a id="language-toggle" href="../index.html" hreflang="en" aria-label="Przełącz na angielski">
+                <a class="button" id="language-toggle" href="../index.html" hreflang="en" aria-label="Przełącz na angielski">
                     <span id="lang">PL</span> <img id="lang-icon" src="../assets/icons/pl_white_icon.svg" alt="">
                 </a>
 
-                <button id="theme-toggle" type="button" aria-label="Zmień motyw">
-                    <img src="../assets/icons/sun_white_icon.svg" alt="">
+                <button class="button-icon button" id="theme-toggle" type="button" aria-label="Zmień motyw">
+                    <img class="theme-icon" src="../assets/icons/sun_white_icon.svg" alt="">
                 </button>
             </div>
         </nav>
@@ -56,7 +56,7 @@
             <div class="information">
                 <p> Nazywam się <span class="white-text">Dawid Głowacki</span> i jestem studentem <span class="white-text"> III </span> roku informatyki na
                     <a class="icon-text" href="https://pollub.pl/" target="_blank" rel="noopener">
-                    <img src="../assets/icons/pollub_white_icon.svg" alt=""> Politechnice Lubelskiej ↗</a>. </p>
+                    <img class="theme-icon" src="../assets/icons/pollub_white_icon.svg" alt=""> Politechnice Lubelskiej ↗</a>. </p>
                 <p> W wolnym czasie gram w gry komputerowe, słucham muzyki rockowej i uczę się grać na gitarze. </p>
                 <p> Stawiam również pierwsze kroki w tworzeniu własnej gry komputerowej.</p>
             </div>
@@ -70,14 +70,14 @@
                 <p> Jak wcześniej wspomniałem, lubię spędzać wolny czas grając w gry komputerowe w szczególności w gry Competetive. </p>
                 <p> Zdecydowanie najwięcej czasu spędziłem w grze <a class="icon-text"
                     href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener">
-                    <img src="../assets/icons/cs_white_icon.svg" alt=""> Counter-Strike 2 ↗</a>. </p>
+                    <img class="theme-icon" src="../assets/icons/cs_white_icon.svg" alt=""> Counter-Strike 2 ↗</a>. </p>
                 <p> Grałem w kilku turniejach zarówno szkolnych jak i międzyszkolnych, publikowałem także krótkie materiały w internecie. </p>
                 <p class="moreInfo"> <a href = "cs.html"> Więcej o mojej pasji do serii Counter-Strike ↵</a> </p>
 
                 <p> Muzyka rockowa to zdecydowanie mój ulubiony gatunek muzyczny. </p>
                 <p> Najbardziej cenie w niej riffy gitarowe dlatego sam też zaczałęm grać. </p>
                 <p> A moim ulubionym zespołem muzycznym jest <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw" target="_blank" rel="noopener">
-                    <img src="../assets/icons/nirvana_white_icon.svg" alt=""> Nirvana↗ </a>. </p>
+                    <img class="theme-icon" src="../assets/icons/nirvana_white_icon.svg" alt=""> Nirvana↗ </a>. </p>
                 <p class="moreInfo"> <a href = "music.html"> Więcej o mojej ulubionej muzyce rockowej ↵</a> </p>
             </div>
 
@@ -102,7 +102,7 @@
             <div class="information">
 
                 <p class="iconArea contact-item" tabindex="0">
-                    <img class="Gmail-icon" src="../assets/icons/gmail_white_icon.svg" alt="">
+                    <img class="theme-icon Gmail-icon" src="../assets/icons/gmail_white_icon.svg" alt="">
                     <span class="white-text">Email:</span>
                     <span class="email-copy" data-copy-hint="Kliknij, aby skopiować!">
                         <button id="copy-email" data-copied="Skopiowano!" data-copy-error="Nie udało się skopiować adresu e-mail. Skopiuj go ręcznie." class="contact-value white-text"
@@ -114,7 +114,7 @@
 
                 <p class="iconArea">
                     <a class="iconArea contact-item" href="https://github.com/Dawoll" target="_blank" rel="noopener">
-                        <img class="Github-icon" src="../assets/icons/github_white_icon.svg" alt="">
+                        <img class="theme-icon Github-icon" src="../assets/icons/github_white_icon.svg" alt="">
                         <span class="white-text">GitHub:</span>
                         <span class="contact-value white-text">dawoll</span>
                     </a>
@@ -127,7 +127,7 @@
         </div>
     </main>
 
-    <button class="back-to-top" type="button">↑ Powrót na górę</button>
+    <button class="button back-to-top" type="button">↑ Powrót na górę</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosting: GitHub Pages</p>

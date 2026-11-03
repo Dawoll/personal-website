@@ -212,6 +212,7 @@ if (shortVideo) {
     recordings.forEach((recording, index) => {
         const button = document.createElement("button");
         button.type = "button";
+        button.className = "button";
         button.textContent = `#${index + 1} ${recordingTitles[index]}`;
         button.setAttribute("aria-pressed", index === currentVideo);
         button.addEventListener("click", () => selectVideo(index));

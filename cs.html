@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <button class="button navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
             <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html" aria-current="page"> Counter-Strike</a></li>
@@ -31,15 +31,15 @@
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
                     aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
-                    <img src="assets/icons/github_white_icon.svg" alt="">
+                    <img class="theme-icon" src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <a id="language-toggle" href="pl/cs.html" hreflang="pl" aria-label="Switch to Polish">
+                <a class="button" id="language-toggle" href="pl/cs.html" hreflang="pl" aria-label="Switch to Polish">
                     <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
                 </a>
 
-                <button id="theme-toggle" type="button" aria-label="Change theme">
-                    <img src="assets/icons/sun_white_icon.svg" alt="">
+                <button class="button-icon button" id="theme-toggle" type="button" aria-label="Change theme">
+                    <img class="theme-icon" src="assets/icons/sun_white_icon.svg" alt="">
                 </button>
             </div>
         </nav>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="recordings-layout">
                     <div class="video-carousel">
-                        <button id="previous-video" type="button" aria-label="Previous video">❮</button>
+                        <button class="button-icon button" id="previous-video" type="button" aria-label="Previous video">❮</button>
 
                         <div class="video-frame">
                             <video id="short-video" controls playsinline preload="metadata">
@@ -90,7 +90,7 @@
                             </video>
                         </div>
 
-                        <button id="next-video" type="button" aria-label="Next video">❯</button>
+                        <button class="button-icon button" id="next-video" type="button" aria-label="Next video">❯</button>
                     </div>
 
                     <div class="video-tabs" role="group" aria-label="Choose a recording"></div>
@@ -180,12 +180,12 @@
 
     <dialog id="gallery-dialog" aria-label="Enlarged gallery screenshot">
         <form method="dialog">
-            <button class="gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
+            <button class="button-icon gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
 
-    <button class="back-to-top" type="button">↑ Back to top</button>
+    <button class="button back-to-top" type="button">↑ Back to top</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>

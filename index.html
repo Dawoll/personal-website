@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <button class="button navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
             <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
@@ -30,15 +30,15 @@
                 <a  class="navbar-github" href="https://github.com/Dawoll" target="_blank" rel="noopener"
                     aria-label="My GitHub profile — opens in a new tab">
                     <span class="github-label">GitHub</span>
-                    <img src="assets/icons/github_white_icon.svg" alt="">
+                    <img class="theme-icon" src="assets/icons/github_white_icon.svg" alt="">
                 </a>
 
-                <a id="language-toggle" href="pl/index.html" hreflang="pl" aria-label="Switch to Polish">
+                <a class="button" id="language-toggle" href="pl/index.html" hreflang="pl" aria-label="Switch to Polish">
                     <span id="lang">EN</span> <img id="lang-icon" src="assets/icons/uk_white_icon.svg" alt="">
                 </a>
 
-                <button id="theme-toggle" type="button" aria-label="Change theme">
-                    <img src="assets/icons/sun_white_icon.svg" alt="">
+                <button class="button-icon button" id="theme-toggle" type="button" aria-label="Change theme">
+                    <img class="theme-icon" src="assets/icons/sun_white_icon.svg" alt="">
                 </button>
             </div>
         </nav>
@@ -54,9 +54,10 @@
             <h1 class="section-title"> About me </h1>
 
             <div class="information">
-                <p> My name is <span class="white-text">Dawid Głowacki</span> and I am a <span class="white-text">III</span> year computer science student at
+                <p> My name is <span class="white-text">Dawid Głowacki</span> and I am a <span class="white-text">III</span>
+                    year computer science student at
                     <a class="icon-text" href="https://pollub.pl/en/" target="_blank" rel="noopener">
-                    <img src="assets/icons/pollub_white_icon.svg" alt=""> Lublin University of Technology ↗</a>. </p>
+                    <img class="theme-icon" src="assets/icons/pollub_white_icon.svg" alt=""> Lublin University of Technology ↗</a>. </p>
                 <p> In my free time, I play video games, listen to rock music and learn to play the guitar. </p>
                 <p> I am also taking my first steps in developing my own video game.</p>
             </div>
@@ -70,14 +71,15 @@
                 <p> As mentioned earlier, I enjoy spending my free time playing video games, especially competitive games. </p>
                 <p> By far, I have spent the most time playing <a class="icon-text"
                     href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank" rel="noopener">
-                    <img src="assets/icons/cs_white_icon.svg" alt=""> Counter-Strike 2 ↗</a>. </p>
+                    <img class="theme-icon" src="assets/icons/cs_white_icon.svg" alt=""> Counter-Strike 2 ↗</a>. </p>
                 <p> I have taken part in several school and interschool tournaments and shared short videos online. </p>
                 <p class="moreInfo"> <a href = "cs.html"> More about my passion for Counter-Strike ↵</a> </p>
 
                 <p> Rock is definitely my favourite music genre. </p>
                 <p> I particularly enjoy guitar riffs, which inspired me to start playing myself. </p>
-                <p> My favourite band is <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw" target="_blank" rel="noopener">
-                    <img src="assets/icons/nirvana_white_icon.svg" alt=""> Nirvana↗ </a>. </p>
+                <p> My favourite band is <a class="icon-text" href="https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?si=Z2lgDo1pQneDaTebb05Caw"
+                    target="_blank" rel="noopener">
+                    <img class="theme-icon" src="assets/icons/nirvana_white_icon.svg" alt=""> Nirvana↗ </a>. </p>
                 <p class="moreInfo"> <a href = "music.html"> More about my favourite rock music ↵</a> </p>
             </div>
 
@@ -89,8 +91,10 @@
             <div class="information">
                 <p> I am taking my first steps in developing my own <span class="white-text">2D</span>
                     game in the<a href="https://en.wikipedia.org/wiki/Roguelike" target="_blank" rel="noopener"> RogueLike ↗ </a>genre. </p>
-                <p> I am developing the game in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank" rel="noopener"> C# ↗ </a>
-                    using the <a href = "https://en.wikipedia.org/wiki/Unity_(game_engine)" target="_blank" rel="noopener"> Unity engine ↗</a>, and creating the artwork in <a href="https://en.wikipedia.org/wiki/Aseprite" target="_blank" rel="noopener"> Aseprite ↗</a>. </p>
+                <p> I am developing the game in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank" rel="noopener">
+                    C# ↗ </a>
+                    using the <a href = "https://en.wikipedia.org/wiki/Unity_(game_engine)" target="_blank" rel="noopener"> Unity engine ↗</a>,
+                    and creating the artwork in <a href="https://en.wikipedia.org/wiki/Aseprite" target="_blank" rel="noopener"> Aseprite ↗</a>. </p>
                 <p class="moreInfo"> <a href="mygame.html"> More about my game project ↵</a></p>
             </div>
 
@@ -102,10 +106,11 @@
             <div class="information">
 
                 <p class="iconArea contact-item" tabindex="0">
-                    <img class="Gmail-icon" src="assets/icons/gmail_white_icon.svg" alt="">
+                    <img class="theme-icon Gmail-icon" src="assets/icons/gmail_white_icon.svg" alt="">
                     <span class="white-text">Email:</span>
                     <span class="email-copy" data-copy-hint="Click to copy!">
-                        <button id="copy-email" data-copied="Copied!" data-copy-error="Could not copy the email address. Please copy it manually." class="contact-value white-text"
+                        <button id="copy-email" data-copied="Copied!" data-copy-error="Could not copy the email address.
+                        Please copy it manually." class="contact-value white-text"
                                 type="button" aria-label="Copy email address">
                             dawid.glowacki1337@gmail.com
                         </button>
@@ -114,7 +119,7 @@
 
                 <p class="iconArea">
                     <a class="iconArea contact-item" href="https://github.com/Dawoll" target="_blank" rel="noopener">
-                        <img class="Github-icon" src="assets/icons/github_white_icon.svg" alt="">
+                        <img class="theme-icon Github-icon" src="assets/icons/github_white_icon.svg" alt="">
                         <span class="white-text">GitHub:</span>
                         <span class="contact-value white-text">dawoll</span>
                     </a>
@@ -127,7 +132,7 @@
         </div>
     </main>
 
-    <button class="back-to-top" type="button">↑ Back to top</button>
+    <button class="button back-to-top" type="button">↑ Back to top</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>
