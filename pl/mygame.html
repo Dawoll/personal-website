@@ -11,7 +11,7 @@
     <link rel="alternate" hreflang="pl" href="mygame.html">
     <link rel="alternate" hreflang="x-default" href="../mygame.html">
     <script src="../javaScript/storage.js"></script>
-    <script src="../javaScript/functions.js" defer></script>
+    <script src="../javaScript/functions.js?v=2" defer></script>
     <script src="../javaScript/contact.js" defer></script>
     <title>Dawid Głowacki — Moja gra</title>
 </head>
@@ -39,7 +39,7 @@
                 </a>
 
                 <button class="button-icon button" id="theme-toggle" type="button" aria-label="Zmień motyw">
-                    <img class="theme-icon" src="../assets/icons/sun_white_icon.svg" alt="">
+                    <img class="theme-icon" src="../assets/icons/sun_static_white_icon.png" alt="">
                 </button>
             </div>
         </nav>
@@ -177,7 +177,7 @@
                           data-unavailable="Formularz jest chwilowo niedostępny. Skontaktuj się ze mną przez e-mail." data-sending="Wysyłanie wiadomości…"
                           data-success="Wiadomość została wysłana. Dziękuję!" data-error="Nie udało się wysłać wiadomości. Treść została zachowana — spróbuj ponownie lub napisz do mnie e-mail."
                           data-short-message="Wpisz co najmniej 10 znaków, nie licząc spacji na początku i końcu." data-short-subject="Wpisz temat zawierający co najmniej 3 znaki.">
-                        <input class="form-control" type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
+                        <input class="form-control" type="checkbox" name="botcheck" hidden tabindex="-1">
                         <div class="form-field">
                             <label for="contact-name">Imię lub nick (opcjonalnie)</label>
                             <input class="form-control" id="contact-name" name="name" type="text" maxlength="60" autocomplete="nickname">
@@ -221,7 +221,7 @@
         <form method="dialog">
             <button class="button-icon gallery-close" type="submit" aria-label="Zamknij zdjęcie" autofocus>×</button>
         </form>
-        <img id="gallery-preview" alt="">
+        <img id="gallery-preview" src="../assets/photos/game_rooms_50.png" alt="">
     </dialog>
 
     <button class="button back-to-top" type="button">↑ Powrót na górę</button>

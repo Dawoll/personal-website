@@ -15,7 +15,7 @@ const contactEmailIcon = document.querySelector(".Gmail-icon");
 const copyEmailButton = document.getElementById("copy-email");
 
 document.body.classList.toggle("light-theme", document.documentElement.classList.contains("light-theme"));
-themeIcon.src = `${assetsPath}icons/${document.body.classList.contains("light-theme") ? "moon" : "sun"}_white_icon.svg`;
+themeIcon.src = `${assetsPath}icons/${document.body.classList.contains("light-theme") ? "moon" : "sun"}_static_white_icon.png`;
 updateFlag();
 
 themeButton.addEventListener("click", changeIcon);

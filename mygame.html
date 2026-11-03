@@ -11,7 +11,7 @@
     <link rel="alternate" hreflang="pl" href="pl/mygame.html">
     <link rel="alternate" hreflang="x-default" href="mygame.html">
     <script src="javaScript/storage.js"></script>
-    <script src="javaScript/functions.js" defer></script>
+    <script src="javaScript/functions.js?v=2" defer></script>
     <script src="javaScript/contact.js" defer></script>
     <title>Dawid Głowacki — My game</title>
 </head>
@@ -39,7 +39,7 @@
                 </a>
 
                 <button class="button-icon button" id="theme-toggle" type="button" aria-label="Change theme">
-                    <img class="theme-icon" src="assets/icons/sun_white_icon.svg" alt="">
+                    <img class="theme-icon" src="assets/icons/sun_static_white_icon.png" alt="">
                 </button>
             </div>
         </nav>
@@ -191,7 +191,7 @@
                           data-success="Your message has been sent. Thank you!" data-error="The message could not be sent. Your text has been kept
                           — try again or contact me by email."
                           data-short-message="Please enter at least 10 characters, excluding leading and trailing spaces." data-short-subject="Please enter a subject of at least 3 characters.">
-                        <input class="form-control" type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
+                        <input class="form-control" type="checkbox" name="botcheck" hidden tabindex="-1">
                         <div class="form-field">
                             <label for="contact-name">Name or nickname (optional)</label>
                             <input class="form-control" id="contact-name" name="name" type="text" maxlength="60" autocomplete="nickname">
@@ -239,7 +239,7 @@
         <form method="dialog">
             <button class="button-icon gallery-close" type="submit" aria-label="Close image" autofocus>×</button>
         </form>
-        <img id="gallery-preview" alt="">
+        <img id="gallery-preview" src="assets/photos/game_rooms_50.png" alt="">
     </dialog>
 
     <button class="button back-to-top" type="button">↑ Back to top</button>
