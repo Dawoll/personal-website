@@ -1118,6 +1118,14 @@ body.gallery-open {
         width: 100%;
     }
 
+    .navbar-menu-toggle[aria-expanded="true"] {
+        color: #acadb1;
+    }
+
+    .light-theme .navbar-menu-toggle[aria-expanded="true"] {
+        color: #000000;
+    }
+
     .menu-ready:not(.menu-open) .navbar-links {
         display: none;
     }
@@ -1160,15 +1168,19 @@ body.gallery-open {
         order: 3;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 4px 8px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
         text-align: center;
     }
 
     .navbar-links a {
         display: grid;
         place-items: center;
+        box-sizing: border-box;
         min-height: 44px;
+        width: 100%;
+        border: 1px solid #666666;
+        border-radius: 8px;
     }
 
     .information .moreInfo {
@@ -1261,23 +1273,17 @@ body.gallery-open {
     }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (max-width: 640px), (hover: none), (pointer: coarse) {
     .contact-item {
         display: grid;
-        grid-template-columns: 44px minmax(0, 1fr);
-        column-gap: 8px;
-        row-gap: 4px;
+        grid-template-columns: 28px auto minmax(0, 1fr);
+        gap: 4px;
+        font-size: clamp(10px, 3.2vw, 14px);
     }
 
     .contact-item > img {
-        grid-row: 1 / 3;
-        width: 44px;
+        width: 28px;
         padding-left: 0;
-    }
-
-    .contact-item .email-copy,
-    .contact-item .contact-value {
-        grid-column: 2;
     }
 
     .contact-item .email-copy {
@@ -1287,7 +1293,7 @@ body.gallery-open {
     .contact-item .contact-value {
         max-width: 100%;
         margin-left: 0;
-        white-space: normal;
+        white-space: nowrap;
         opacity: 1;
         transform: none;
     }
