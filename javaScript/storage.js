@@ -4,21 +4,21 @@ function savePreference(key, value) {
     } catch {}
 }
 
-const languageLink = document.getElementById("language-toggle");
-
 try {
     const savedTheme = localStorage.getItem("theme");
     const savedLanguage = localStorage.getItem("language");
 
-    document.body.classList.toggle("light-theme", savedTheme === "light");
+    document.documentElement.classList.toggle("light-theme", savedTheme === "light");
 
     if ((savedLanguage === "pl" || savedLanguage === "en") && savedLanguage !== document.documentElement.lang) {
-        window.location.replace(languageLink.href);
+        const languagePage = document.querySelector(`link[rel="alternate"][hreflang="${savedLanguage}"]`);
+        if (languagePage) window.location.replace(languagePage.href);
     } else {
         savePreference("language", document.documentElement.lang);
     }
 } catch {}
 
-languageLink.addEventListener("click", () => {
-    savePreference("language", languageLink.hreflang);
+document.addEventListener("click", (event) => {
+    const languageLink = event.target.closest("#language-toggle");
+    if (languageLink) savePreference("language", languageLink.hreflang);
 });

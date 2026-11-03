@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="assets/fonts/InterVariable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Oxanium-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/upheavtt.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="css/style.css">
     <link rel="alternate" hreflang="en" href="mygame.html">
     <link rel="alternate" hreflang="pl" href="pl/mygame.html">
     <link rel="alternate" hreflang="x-default" href="mygame.html">
-    <script src="javaScript/storage.js" defer></script>
+    <script src="javaScript/storage.js"></script>
     <script src="javaScript/functions.js" defer></script>
+    <script src="javaScript/contact.js" defer></script>
     <title>Dawid Głowacki — My game</title>
 </head>
 <body>
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <ul class="navbar-links">
+            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
                 <li><a href="music.html">Music</a></li>
@@ -49,110 +54,176 @@
 
             <section class="subpage-content">
                 <h1 class="section-title"> My video game </h1>
-                <p> I have always dreamed of creating my own video game. I am now learning to develop a project in my free time. As this is my first game, progress is gradual. The planned genre is a top-down 2D roguelike. </p>
-                <p> I am trying to create the first sprites and animations myself in Aseprite, even though it can be challenging and time-consuming. </p>
-                <p> The engine I use is <span class="white-text">Unity</span>. The code is written in
-                <span class="white-text">C#</span> using Visual Studio. </p>
-                <p> I store and update the project code in a private GitHub repository. </p>
+                <div class="information">
+                    <p> I have always dreamed of creating my own video game. I am now learning to develop a project in my free time.
+                        As this is my first game, progress is gradual. The planned genre is a <span class="white-text"> Top-down 2D roguelike</span>. </p>
+                    <p> I am trying to create the first sprites and animations myself in <span class="white-text">Aseprite</span>, even though it can be
+                        challenging and time-consuming. </p>
+                    <p> The engine I use is <span class="white-text">Unity</span>. The code is written in
+                    <span class="white-text">C#</span> using <span class="white-text">Visual Studio</span>. </p>
+                    <p> I store and update the project code in a private <span class="white-text">GitHub</span> repository. </p>
+                </div>
             </section>
 
             <section class="subpage-content">
                 <h1 class="section-title"> Current project status </h1>
-                <p> The project is only a few weeks old and is still at a very early stage, so there is not much to show yet. </p>
-                <p><strong class="white-text">A brief list of current features:</strong></p>
-                <div class="features-overview">
+                <div class="information">
+                    <p> The project is only a few weeks old and is still at a very early stage, so there is not much to show yet. </p>
+                    <p><strong class="white-text">A brief list of current features:</strong></p>
+                    <div class="features-overview">
+                        <ul class="project-features">
+                            <li><strong>Player</strong>
+                                <ul>
+                                    <li>Character sprite and animations</li>
+                                    <li>Input handling</li>
+                                    <li>Movement around the map </li>
+                                    <li>Basic statistics</li>
+                                    <li>Spawning the character from a prefab and adding it to the player list</li>
+                                </ul>
+                            </li>
+                            <li><strong>Enemies</strong>
+                                <ul>
+                                    <li>Placeholder character sprite and animations</li>
+                                    <li>Basic movement around the map without advanced rules</li>
+                                    <li>Chasing the player</li>
+                                </ul>
+                            </li>
+                            <li><strong>Procedural room generation script</strong>
+                                <ul>
+                                    <li>Creating tile sprites</li>
+                                    <li>Setting their sizes and assigning pivots</li>
+                                    <li>Choosing room sizes from a list</li>
+                                    <li>Randomly placing room doors</li>
+                                    <li>Fitting floors, walls and doors to the generated room size</li>
+                                </ul>
+                            </li>
+                            <li><strong>Items</strong>
+                                <ul>
+                                    <li>Creating a file containing basic item data</li>
+                                    <li>Creating item assets using ScriptableObjects</li>
+                                    <li>Creating an item prefab</li>
+                                    <li>Spawning items in the scene</li>
+                                    <li>Detecting the player near an item</li>
+                                    <li>Displaying a pickup prompt</li>
+                                    <li>Handling item pickups</li>
+                                    <li>Removing items from the scene</li>
+                                </ul>
+                            </li>
+                            <li><strong>Inventory</strong>
+                                <ul>
+                                    <li>Initial inventory interface created in Unity&#x27;s UI Builder</li>
+                                    <li>Preparing inventory management scripts</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="character-showcase">
+                            <img src="assets/game_gifs/game_character_idle.gif" alt="Player character in the idle animation">
+                        </div>
+                    </div>
+
+                    <p> I have spent the most time on procedural map generation, which currently creates empty rooms.
+                        Learning how to work with differently sized 2D objects and fit the tiles together took considerable time. </p>
+                    <p>The script does not use predefined room templates. Instead, it takes room dimensions and places the tiles accordingly,
+                        producing a unique map layout, one of the characteristic features of the roguelike genre.</p>
+                    <p> I use separate tiles for floors, doors, main walls, side walls and corners.
+                        Almost every element has a different size, and its variants also differ in orientation.
+                        For example, corners come in eight variants: four inner and four outer corners, corresponding to different rotations. </p>
+
                     <ul class="project-features">
-                        <li><strong>Player</strong>
+                        <li><strong>Example tile sizes</strong>
                             <ul>
-                                <li>Character sprite and animations</li>
-                                <li>Input handling</li>
-                                <li>Movement around the map </li>
-                                <li>Basic statistics</li>
-                                <li>Spawning the character from a prefab and adding it to the player list</li>
-                            </ul>
-                        </li>
-                        <li><strong>Enemies</strong>
-                            <ul>
-                                <li>Placeholder character sprite and animations</li>
-                                <li>Basic movement around the map without advanced rules</li>
-                                <li>Chasing the player</li>
-                            </ul>
-                        </li>
-                        <li><strong>Procedural room generation script</strong>
-                            <ul>
-                                <li>Creating tile sprites</li>
-                                <li>Setting their sizes and assigning pivots</li>
-                                <li>Choosing room sizes from a list</li>
-                                <li>Randomly placing room doors</li>
-                                <li>Fitting floors, walls and doors to the generated room size</li>
-                            </ul>
-                        </li>
-                        <li><strong>Items</strong>
-                            <ul>
-                                <li>Creating a file containing basic item data</li>
-                                <li>Creating item assets using ScriptableObjects</li>
-                                <li>Creating an item prefab</li>
-                                <li>Spawning items in the scene</li>
-                                <li>Detecting the player near an item</li>
-                                <li>Displaying a pickup prompt</li>
-                                <li>Handling item pickups</li>
-                                <li>Removing items from the scene</li>
-                            </ul>
-                        </li>
-                        <li><strong>Inventory</strong>
-                            <ul>
-                                <li>Initial inventory interface created in Unity&#x27;s UI Builder</li>
-                                <li>Preparing inventory management scripts</li>
+                                <li>Floor, doors, main walls - 6×6</li>
+                                <li>Side walls - 1×6</li>
+                                <li>Corners - 1×1</li>
                             </ul>
                         </li>
                     </ul>
-                    <div class="character-showcase">
-                        <img src="assets/game_gifs/game_character_idle.gif" alt="Player character in the idle animation">
-                    </div>
+                    <p> The idea behind this generator seems simple, but implementing it turned out to be quite complex. </p>
+                    <p> The code needs to account for many offsets caused by different tile sizes. The generator can create maps containing up to 
+                        <span class="white-text"> 100 rooms</span>. </p>
+                    <p> The next step is to add branching paths, allowing one room to connect to several others. Currently, the rooms form one long,
+                        unnatural chain. </p>
+                    <p> I am currently working on <span class="white-text"> combat</span>, <span class="white-text">health</span>
+                        and a <span class="white-text">player inventory</span> for storing items picked up in the scene.</p>
                 </div>
-
-                <p> I have spent the most time on procedural map generation, which currently creates empty rooms. Learning how to work with differently sized 2D objects and fit the tiles together took considerable time. </p>
-                <p>The script does not use predefined room templates. Instead, it takes room dimensions and places the tiles accordingly, producing a unique map layout — one of the characteristic features of the roguelike genre.</p>
-                <p> I use separate tiles for floors, doors, main walls, side walls and corners. Almost every element has a different size, and its variants also differ in orientation. For example, corners come in eight variants: four inner and four outer corners, corresponding to different rotations. </p>
-
-                <ul class="project-features">
-                    <li><strong>Example tile sizes</strong>
-                        <ul>
-                            <li>Floor, doors, main walls - 6×6</li>
-                            <li>Side walls - 1×6</li>
-                            <li>Corners - 1×1</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p> The idea behind this generator seems simple, but implementing it turned out to be quite complex. </p>
-                <p> The code needs to account for many offsets caused by different tile sizes. The generator can create maps containing up to 100 rooms. </p>
-                <p> The next step is to add branching paths, allowing one room to connect to several others. Currently, the rooms form one long, unnatural chain. </p>
-                <p> I am currently working on combat, health and a player inventory for storing items picked up in the scene.</p>
             </section>
 
             <section class="subpage-content">
                 <h1 class="section-title">Character animations</h1>
-                <p> Here are a few original animations of my main character!</p>
-                <div class="character-showcase animation-showcase">
-                    <div class="character-frame">
-                        <img id="character-animation" src="assets/game_gifs/game_character_idle.gif"
-                             alt="Animated game character — idle, movement and attack">
+                <div class="information">
+                    <p> Here are a few original animations of my main character!</p>
+                    <div class="character-showcase animation-showcase">
+                        <div class="character-frame">
+                            <img id="character-animation" src="assets/game_gifs/game_character_idle.gif"
+                                 alt="Animated game character — idle, movement and attack">
+                        </div>
+                        <p id="character-animation-label" class="white-text" data-labels="idle|run up|run left|run right|run down|knife attack">idle</p>
                     </div>
-                    <p id="character-animation-label" class="white-text" data-labels="idle|run up|run left|run right|run down|knife attack">idle</p>
                 </div>
             </section>
 
             <section class="subpage-content">
                 <h1 class="section-title">Room generator</h1>
-                <p> Here is how the room generator behaves with different iteration counts.</p>
-                <p> Examples for i = 50 and i = 12, where i is the number of rooms.</p>
-                <div class="gallery-stack generator-gallery">
-                    <button type="button" aria-label="Enlarge the map with 50 rooms" aria-haspopup="dialog">
-                        <img src="assets/photos/game_rooms_50.png" alt="Example map generated for 50 rooms" loading="lazy">
-                    </button>
-                    <button type="button" aria-label="Enlarge the map with 12 rooms" aria-haspopup="dialog">
-                        <img src="assets/photos/game_rooms_12.png" alt="Example map generated for 12 rooms" loading="lazy">
-                    </button>
+                <div class="information">
+                    <p> Here is how the room generator behaves with different iteration counts.</p>
+                    <p> Examples for <span class="white-text">   i </span> = <span class="white-text"> 50
+                        </span> and <span class="white-text">    i </span> = <span class="white-text"> 12
+                        </span>, where <span class="white-text"> i </span> is the
+                        <span class="white-text"> number of rooms </span>.</p>
+
+                    <div class="gallery-stack generator-gallery">
+                        <button type="button" aria-label="Enlarge the map with 50 rooms" aria-haspopup="dialog">
+                            <img src="assets/photos/game_rooms_50.png" alt="Example map generated for 50 rooms" loading="lazy">
+                        </button>
+                        <button type="button" aria-label="Enlarge the map with 12 rooms" aria-haspopup="dialog">
+                            <img src="assets/photos/game_rooms_12.png" alt="Example map generated for 12 rooms" loading="lazy">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subpage-content" aria-labelledby="game-contact-title">
+                <h1 id="game-contact-title" class="section-title">Contact me about the game</h1>
+                <div class="information">
+                    <p>Have an idea for a feature or want to ask about the project? Send me a message.</p>
+                    <form id="game-contact-form" class="game-contact-form" action="https://api.web3forms.com/submit" method="post"
+                          data-unavailable="The form is temporarily unavailable. Please contact me by email." data-sending="Sending your message…"
+                          data-success="Your message has been sent. Thank you!" data-error="The message could not be sent. Your text has been kept — try again or contact me by email."
+                          data-short-message="Please enter at least 10 characters, excluding leading and trailing spaces." data-short-subject="Please enter a subject of at least 3 characters.">
+                        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
+                        <div class="form-field">
+                            <label for="contact-name">Name or nickname (optional)</label>
+                            <input id="contact-name" name="name" type="text" maxlength="60" autocomplete="nickname">
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-email">Your email (optional)</label>
+                            <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" aria-describedby="contact-email-help">
+                            <small id="contact-email-help">Include your email if you would like a reply.</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-category">What is your message about?</label>
+                            <select id="contact-category" name="category" required>
+                                <option value="">Choose a category</option>
+                                <option value="feature">Feature suggestion</option>
+                                <option value="contact">Contact about the game</option>
+                                <option value="other">Other topic</option>
+                            </select>
+                        </div>
+                        <div class="form-field" hidden>
+                            <label for="contact-subject">Your subject</label>
+                            <input id="contact-subject" name="custom_subject" type="text" minlength="3" maxlength="120" disabled>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="5000" required aria-describedby="contact-message-help"></textarea>
+                            <small id="contact-message-help">Describe your suggestion or tell me what you would like to discuss.</small>
+                        </div>
+                        <small>Your message and any contact details you provide will be sent through <span class="white-text">Web3Forms</span> to handle your enquiry.</small>
+                        <button type="submit" disabled>Send message</button>
+                        <p id="contact-status" role="status" aria-live="polite"></p>
+                        <noscript><p>Enable JavaScript to use this form, or contact me by email.</p></noscript>
+                    </form>
+                    <p>You can also email me directly: <span class="email-copy" data-copy-hint="Click to copy!"><button id="copy-email" class="white-text" type="button" aria-label="Copy email address" data-copied="Copied!" data-copy-error="Could not copy the email address. Please copy it manually.">dawid.glowacki1337@gmail.com</button></span></p>
                 </div>
             </section>
 
@@ -165,6 +236,8 @@
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
+
+    <button class="back-to-top" type="button">↑ Back to top</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../assets/fonts/InterVariable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/Oxanium-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/upheavtt.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="alternate" hreflang="en" href="../index.html">
     <link rel="alternate" hreflang="pl" href="index.html">
     <link rel="alternate" hreflang="x-default" href="../index.html">
-    <script src="../javaScript/storage.js" defer></script>
+    <script src="../javaScript/storage.js"></script>
     <script src="../javaScript/functions.js" defer></script>
     <title>Dawid Głowacki — Strona osobista</title>
 </head>
@@ -15,7 +18,8 @@
     <header>
         <nav class="navbar" aria-label="Nawigacja">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <ul class="navbar-links">
+            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html" aria-current="page">Start</a></li>
                 <li><a href="cs.html">Counter-Strike</a></li>
                 <li><a href="music.html">Muzyka</a></li>
@@ -122,6 +126,8 @@
 
         </div>
     </main>
+
+    <button class="back-to-top" type="button">↑ Powrót na górę</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosting: GitHub Pages</p>

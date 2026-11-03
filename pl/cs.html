@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../assets/fonts/InterVariable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/Oxanium-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/upheavtt.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/fonts/cs_regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="alternate" hreflang="en" href="../cs.html">
     <link rel="alternate" hreflang="pl" href="cs.html">
     <link rel="alternate" hreflang="x-default" href="../cs.html">
-    <script src="../javaScript/storage.js" defer></script>
+    <script src="../javaScript/storage.js"></script>
     <script src="../javaScript/functions.js" defer></script>
     <title>Dawid Głowacki — Counter-Strike</title>
 </head>
@@ -15,7 +19,8 @@
     <header>
         <nav class="navbar" aria-label="Nawigacja">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <ul class="navbar-links">
+            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="cs.html" aria-current="page"> Counter-Strike</a></li>
                 <li><a href="music.html">Muzyka</a></li>
@@ -124,7 +129,7 @@
                             <p class="white-text player-name">Janusz Pogorzelski</p>
                             <p>Wiek: <span class="white-text"> 33 lata </span> </p>
                             <p>Team: <span class="white-text"> GamerLegion </span></p>
-                            <p>Suma nagród: <span class="white-text"> $996 296 </span></p>
+                            <p class="player-winnings">Suma nagród: <span class="white-text"> ≈ 3 924 310 zł </span></p>
                             <a href="https://www.hltv.org/player/2553/snax" target="_blank" rel="noopener"
                                aria-label="Profil Snaxa na HLTV — otwiera nową kartę"><img src="../assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
                         </article>
@@ -137,7 +142,7 @@
                             <p class="white-text player-name">Kirill Rodnov</p>
                             <p>Wiek: <span class="white-text"> 22 lata </span> </p>
                             <p>Team: <span class="white-text"> BetBoom </span></p>
-                            <p>Suma nagród: <span class="white-text"> $174 836 </span></p>
+                            <p class="player-winnings">Suma nagród: <span class="white-text"> ≈ 688 662 zł </span></p>
                             <a href="https://www.hltv.org/player/21667/magnojez" target="_blank" rel="noopener"
                                aria-label="Profil Magnojeza na HLTV — otwiera nową kartę"><img src="../assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
                         </article>
@@ -150,7 +155,7 @@
                             <p class="white-text player-name">Ivan Gogin</p>
                             <p>Wiek: <span class="white-text"> 19 lata </span> </p>
                             <p>Team: <span class="white-text"> Parivision </span></p>
-                            <p>Suma nagród: <span class="white-text"> $358 449 </span></p>
+                            <p class="player-winnings">Suma nagród: <span class="white-text"> ≈ 1 411 895 zł </span></p>
                             <a href="https://www.hltv.org/player/23685/zweih" target="_blank" rel="noopener"
                                aria-label="Profil Zweiha na HLTV — otwiera nową kartę"><img src="../assets/icons/htlv_white_icon.svg" alt="">Profil HLTV ↗</a>
                         </article>
@@ -171,6 +176,8 @@
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
+
+    <button class="back-to-top" type="button">↑ Powrót na górę</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosting: GitHub Pages</p>

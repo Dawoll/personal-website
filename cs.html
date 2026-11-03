@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="assets/fonts/InterVariable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Oxanium-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/upheavtt.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/cs_regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="css/style.css">
     <link rel="alternate" hreflang="en" href="cs.html">
     <link rel="alternate" hreflang="pl" href="pl/cs.html">
     <link rel="alternate" hreflang="x-default" href="cs.html">
-    <script src="javaScript/storage.js" defer></script>
+    <script src="javaScript/storage.js"></script>
     <script src="javaScript/functions.js" defer></script>
     <title>Dawid Głowacki — Counter-Strike</title>
 </head>
@@ -15,7 +19,8 @@
     <header>
         <nav class="navbar" aria-label="Main navigation">
             <a class="navbar-brand" href="index.html">D4WOL</a>
-            <ul class="navbar-links">
+            <button class="navbar-menu-toggle" type="button" aria-expanded="false" aria-controls="navbar-links">Menu ▾</button>
+            <ul id="navbar-links" class="navbar-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cs.html" aria-current="page"> Counter-Strike</a></li>
                 <li><a href="music.html">Music</a></li>
@@ -96,9 +101,13 @@
             <section id="Gallery">
             <h1 class="section-title"> Professional players I have met </h1>
                 <div class="information">
-                    <p> Below are two screenshots from matches in which I had the opportunity to play with professional players. They show three pros in total. </p>
-                    <p> The first screenshot shows two Russian players, <span class="white-text">Zweih</span> and <span class="white-text">Magnojez</span>, who were on my team. </p>
-                    <p> The second screenshot shows the legendary Polish player <span class="white-text">Snax</span>, who was on the opposing team. That was when I first experienced the difference between everyday matches and playing against a professional.</p>
+                    <p> Below are two screenshots from matches in which I had the opportunity to play with professional players.
+                        They show three pros in total. </p>
+                    <p> The first screenshot shows two Russian players, <span class="white-text">Zweih</span> and
+                        <span class="white-text">Magnojez</span>, who were on my team. </p>
+                    <p> The second screenshot shows the legendary Polish player <span class="white-text">Snax</span>,
+                        who was on the opposing team. That was when I first experienced the difference between everyday
+                        matches and playing against a professional.</p>
                     <div class="gallery-stack">
                         <button type="button" aria-label="Enlarge the screenshot with Zweih and Magnojez" aria-haspopup="dialog">
                             <img src="assets/photos/zweih_magnojez.png" alt="Match with Zweih and Magnojez">
@@ -109,7 +118,8 @@
                     </div>
                     <div class="information">
                         <p> I played the match with <span class="white-text">Zweih</span> and <span class="white-text">Magnojez</span>
-                            in late <Span class="white-text">April 2026</Span>, when the players were testing the newly added map, <Span class="white-text">Cache</Span>.</p>
+                            in late <Span class="white-text">April 2026</Span>, when the players were testing the newly added map,
+                            <Span class="white-text">Cache</Span>.</p>
                         <p> I played the match with <span class="white-text"> Snax </span>
                             in <Span class="white-text">April 2022</Span>.</p>
 
@@ -124,9 +134,10 @@
                             <p class="white-text player-name">Janusz Pogorzelski</p>
                             <p>Age: <span class="white-text"> 33 years </span> </p>
                             <p>Team: <span class="white-text"> GamerLegion </span></p>
-                            <p>Tournament winnings: <span class="white-text"> $996 296 </span></p>
+                            <p class="player-winnings">Tournament winnings: <span class="white-text"> $996 296 </span></p>
                             <a href="https://www.hltv.org/player/2553/snax" target="_blank" rel="noopener"
-                               aria-label="Snax&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
+                               aria-label="Snax&#x27;s HLTV profile — opens in a new tab">
+                               <img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                         <article class="player-card team-betboom">
                             <span class="player-flag">
@@ -137,9 +148,10 @@
                             <p class="white-text player-name">Kirill Rodnov</p>
                             <p>Age: <span class="white-text"> 22 years </span> </p>
                             <p>Team: <span class="white-text"> BetBoom </span></p>
-                            <p>Tournament winnings: <span class="white-text"> $174 836 </span></p>
+                            <p class="player-winnings">Tournament winnings: <span class="white-text"> $174 836 </span></p>
                             <a href="https://www.hltv.org/player/21667/magnojez" target="_blank" rel="noopener"
-                               aria-label="Magnojez&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
+                               aria-label="Magnojez&#x27;s HLTV profile — opens in a new tab">
+                               <img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                         <article class="player-card team-parivision">
                             <span class="player-flag">
@@ -150,9 +162,10 @@
                             <p class="white-text player-name">Ivan Gogin</p>
                             <p>Age: <span class="white-text"> 19 years </span> </p>
                             <p>Team: <span class="white-text"> Parivision </span></p>
-                            <p>Tournament winnings: <span class="white-text"> $358 449 </span></p>
+                            <p class="player-winnings">Tournament winnings: <span class="white-text"> $358 449 </span></p>
                             <a href="https://www.hltv.org/player/23685/zweih" target="_blank" rel="noopener"
-                               aria-label="Zweih&#x27;s HLTV profile — opens in a new tab"><img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
+                               aria-label="Zweih&#x27;s HLTV profile — opens in a new tab">
+                               <img src="assets/icons/htlv_white_icon.svg" alt="">HLTV profile ↗</a>
                         </article>
                     </div>
                     <p class="data-update white-text">
@@ -171,6 +184,8 @@
         </form>
         <img id="gallery-preview" alt="">
     </dialog>
+
+    <button class="back-to-top" type="button">↑ Back to top</button>
 
     <footer>
         <p><b>&copy; 2026 Dawid Głowacki </b> · Hosted on GitHub Pages</p>

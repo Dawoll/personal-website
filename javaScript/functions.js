@@ -14,6 +14,7 @@ const contactEmailIcon = document.querySelector(".Gmail-icon");
 
 const copyEmailButton = document.getElementById("copy-email");
 
+document.body.classList.toggle("light-theme", document.documentElement.classList.contains("light-theme"));
 themeIcon.src = `${assetsPath}icons/${document.body.classList.contains("light-theme") ? "moon" : "sun"}_white_icon.svg`;
 updateFlag();
 
@@ -36,6 +37,7 @@ function updateFlag() {
 
 function changeIcon() {
     const isLight = document.body.classList.toggle("light-theme");
+    document.documentElement.classList.toggle("light-theme", isLight);
     savePreference("theme", isLight ? "light" : "dark");
 
     const animation = isLight
@@ -227,5 +229,59 @@ if (shortVideo) {
     shortVideo.addEventListener("ended", () => {
         changeVideo(1);
         shortVideo.play().catch(() => {});
+    });
+}
+
+const backToTopButton = document.querySelector(".back-to-top");
+
+if (backToTopButton) {
+    let scrollAnimation;
+
+    backToTopButton.addEventListener("click", function () {
+        cancelAnimationFrame(scrollAnimation);
+        const startPosition = window.scrollY;
+        const startTime = performance.now();
+        const duration = 1800;
+
+        function scrollUp(time) {
+            const progress = Math.min((time - startTime) / duration, 1);
+            const easing = 1 - Math.pow(1 - progress, 3);
+            window.scrollTo({ top: startPosition * (1 - easing), behavior: "instant" });
+            if (progress < 1) scrollAnimation = requestAnimationFrame(scrollUp);
+        }
+
+        scrollAnimation = requestAnimationFrame(scrollUp);
+    });
+
+    for (const event of ["wheel", "touchstart", "keydown"]) {
+        window.addEventListener(event, () => cancelAnimationFrame(scrollAnimation), { passive: true });
+    }
+}
+
+const navbarMenuButton = document.querySelector(".navbar-menu-toggle");
+
+if (navbarMenuButton) {
+    const navbar = navbarMenuButton.closest(".navbar");
+    navbar.classList.add("menu-ready");
+
+    function setMenuOpen(open) {
+        navbar.classList.toggle("menu-open", open);
+        navbarMenuButton.setAttribute("aria-expanded", String(open));
+        navbarMenuButton.textContent = open ? "Menu ▴" : "Menu ▾";
+    }
+
+    navbarMenuButton.addEventListener("click", () => {
+        setMenuOpen(navbarMenuButton.getAttribute("aria-expanded") !== "true");
+    });
+
+    navbar.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && navbar.classList.contains("menu-open")) {
+            setMenuOpen(false);
+            navbarMenuButton.focus();
+        }
+    });
+
+    navbar.querySelector(".navbar-links").addEventListener("click", (event) => {
+        if (event.target.closest("a")) setMenuOpen(false);
     });
 }
