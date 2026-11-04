@@ -14,8 +14,9 @@ const savedLightTheme = document.documentElement.classList.contains("light-theme
 document.body.classList.toggle("light-theme", savedLightTheme);
 let startingIcon = "sun_static_white_icon.png";
 
-if (savedLightTheme) startingIcon = "moon_static_white_icon.png";
-
+if (savedLightTheme) {
+    startingIcon = "moon_static_white_icon.png";
+}
 themeIcon.src = assetsPath + "icons/" + startingIcon;
 updateFlag();
 
@@ -27,9 +28,13 @@ function updateFlag() {
     const isLight = document.body.classList.contains("light-theme");
     let country = "uk";
     let outline = "white";
-    if (language === "PL") country = "pl";
-    if (isLight) outline = "black";
-    langIcon.src = `${assetsPath}icons/${country}_${outline}_icon.svg`;
+    if (language === "PL") {
+        country = "pl";
+    }
+    if (isLight) {
+        outline = "black";
+    }
+    langIcon.src = assetsPath + "icons/" + country + "_" + outline + "_icon.svg";
 }
 
 function changeIcon() {
@@ -42,13 +47,17 @@ function changeIcon() {
         animation = "sun_to_moon_white_icon.gif";
     }
     savePreference("theme", theme);
-    themeIcon.src = `${assetsPath}icons/${animation}?v=${Date.now()}`;
+    themeIcon.src = assetsPath + "icons/" + animation + "?v=" + Date.now();
     updateFlag();
 }
 
 function setupIconAnimation(icon, name, contact) {
-    if (!icon) return;
-    if (!contact) contact = icon.closest(".contact-item");
+    if (!icon) {
+        return;
+    }
+    if (!contact) {
+        contact = icon.closest(".contact-item");
+    }
     contact.addEventListener("mouseenter", function () {
         icon.src = assetsPath + "icons/" + name + ".gif?v=" + Date.now();
     });
@@ -100,7 +109,9 @@ if (galleryDialog) {
         });
     }
     galleryDialog.addEventListener("click", function (event) {
-        if (event.target === galleryDialog) galleryDialog.close();
+        if (event.target === galleryDialog) {
+            galleryDialog.close();
+        }
     });
     galleryDialog.addEventListener("close", function () {
         document.body.classList.remove("gallery-open");
@@ -123,11 +134,14 @@ if (characterAnimation) {
     let currentAnimation = 0;
     function playCharacterAnimation() {
         characterAnimationLabel.textContent = animationLabels[currentAnimation];
-        characterAnimation.src = `${assetsPath}game_gifs/${animations[currentAnimation].file}?v=${Date.now()}`;
+        const animation = animations[currentAnimation];
+        characterAnimation.src = assetsPath + "game_gifs/" + animation.file + "?v=" + Date.now();
     }
     function nextCharacterAnimation() {
         currentAnimation++;
-        if (currentAnimation === animations.length) currentAnimation = 0;
+        if (currentAnimation === animations.length) {
+            currentAnimation = 0;
+        }
         playCharacterAnimation();
     }
     characterAnimation.addEventListener("load", function () {
@@ -140,15 +154,15 @@ const shortVideo = document.getElementById("short-video");
 
 if (shortVideo) {
     const recordings = [
-        `${assetsPath}videos/yt_video_1.mp4`,
-        `${assetsPath}videos/yt_video_2.mp4`,
-        `${assetsPath}videos/yt_video_3.mp4`,
-        `${assetsPath}videos/yt_video_4.mp4`,
-        `${assetsPath}videos/yt_video_5.mp4`,
-        `${assetsPath}videos/yt_video_6.mp4`,
-        `${assetsPath}videos/yt_video_7.mp4`,
-        `${assetsPath}videos/yt_video_8.mp4`,
-        `${assetsPath}videos/yt_video_9.mp4`
+        assetsPath + "videos/yt_video_1.mp4",
+        assetsPath + "videos/yt_video_2.mp4",
+        assetsPath + "videos/yt_video_3.mp4",
+        assetsPath + "videos/yt_video_4.mp4",
+        assetsPath + "videos/yt_video_5.mp4",
+        assetsPath + "videos/yt_video_6.mp4",
+        assetsPath + "videos/yt_video_7.mp4",
+        assetsPath + "videos/yt_video_8.mp4",
+        assetsPath + "videos/yt_video_9.mp4"
     ];
     const recordingTitles = [
         "Mirage Pistol - 3K",
@@ -166,7 +180,9 @@ if (shortVideo) {
     const nextVideo = document.getElementById("next-video");
     let currentVideo = 0;
     function selectVideo(index) {
-        if (index === currentVideo) return;
+        if (index === currentVideo) {
+            return;
+        }
         currentVideo = index;
         shortVideo.pause();
         shortVideo.src = recordings[currentVideo];
@@ -179,7 +195,7 @@ if (shortVideo) {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "button";
-        button.textContent = `#${index + 1} ${recordingTitles[index]}`;
+        button.textContent = "#" + (index + 1) + " " + recordingTitles[index];
         button.setAttribute("aria-pressed", index === currentVideo);
         button.addEventListener("click", function () {
             selectVideo(index);
@@ -188,8 +204,12 @@ if (shortVideo) {
     }
     function changeVideo(direction) {
         let index = currentVideo + direction;
-        if (index < 0) index = recordings.length - 1;
-        if (index >= recordings.length) index = 0;
+        if (index < 0) {
+            index = recordings.length - 1;
+        }
+        if (index >= recordings.length) {
+            index = 0;
+        }
         selectVideo(index);
     }
     previousVideo.disabled = recordings.length < 2;
@@ -217,13 +237,17 @@ if (backToTopButton) {
         const duration = 1800;
         function scrollUp(time) {
             let progress = (time - startTime) / duration;
-            if (progress > 1) progress = 1;
+            if (progress > 1) {
+                progress = 1;
+            }
             const remaining = 1 - progress;
             window.scrollTo({
                 top: startPosition * remaining * remaining * remaining,
                 behavior: "instant"
             });
-            if (progress < 1) scrollAnimation = requestAnimationFrame(scrollUp);
+            if (progress < 1) {
+                scrollAnimation = requestAnimationFrame(scrollUp);
+            }
         }
         scrollAnimation = requestAnimationFrame(scrollUp);
     });
@@ -242,7 +266,7 @@ if (navbarMenuButton) {
     navbar.classList.add("menu-ready");
     function setMenuOpen(open) {
         navbar.classList.toggle("menu-open", open);
-        navbarMenuButton.setAttribute("aria-expanded", String(open));
+        navbarMenuButton.setAttribute("aria-expanded", open);
         if (open) {
             navbarMenuButton.textContent = "Menu ▴";
         } else {
@@ -250,7 +274,12 @@ if (navbarMenuButton) {
         }
     }
     navbarMenuButton.addEventListener("click", function () {
-        setMenuOpen(navbarMenuButton.getAttribute("aria-expanded") !== "true");
+        const menuIsOpen = navbar.classList.contains("menu-open");
+        if (menuIsOpen) {
+            setMenuOpen(false);
+        } else {
+            setMenuOpen(true);
+        }
     });
     navbar.addEventListener("keydown", function (event) {
         if (event.key === "Escape" && navbar.classList.contains("menu-open")) {
@@ -259,6 +288,8 @@ if (navbarMenuButton) {
         }
     });
     navbar.querySelector(".navbar-links").addEventListener("click", function (event) {
-        if (event.target.closest("a")) setMenuOpen(false);
+        if (event.target.closest("a")) {
+            setMenuOpen(false);
+        }
     });
 }

@@ -10,9 +10,15 @@ try {
 
     document.documentElement.classList.toggle("light-theme", savedTheme === "light");
 
-    if ((savedLanguage === "pl" || savedLanguage === "en") && savedLanguage !== document.documentElement.lang) {
-        const languagePage = document.querySelector(`link[rel="alternate"][hreflang="${savedLanguage}"]`);
-        if (languagePage) window.location.replace(languagePage.href);
+    const currentLanguage = document.documentElement.lang;
+    const languageIsSupported = savedLanguage === "pl" || savedLanguage === "en";
+    const languageIsDifferent = savedLanguage !== currentLanguage;
+
+    if (languageIsSupported && languageIsDifferent) {
+        const languagePage = document.querySelector('link[rel="alternate"][hreflang="' + savedLanguage + '"]');
+        if (languagePage) {
+            window.location.replace(languagePage.href);
+        }
     } else {
         savePreference("language", document.documentElement.lang);
     }
@@ -20,5 +26,7 @@ try {
 
 document.addEventListener("click", function (event) {
     const languageLink = event.target.closest("#language-toggle");
-    if (languageLink) savePreference("language", languageLink.hreflang);
+    if (languageLink) {
+        savePreference("language", languageLink.hreflang);
+    }
 });

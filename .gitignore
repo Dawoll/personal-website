@@ -1,0 +1,14 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+*.tmp
+*.bak
+*~
+.env
+.env.*
+!.env.example
+/node_modules/
+/tmp/
+/output/
+.vscode/settings.json

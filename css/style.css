@@ -34,7 +34,9 @@ body, .navbar, .page, .section-title, .information, p, a, button, .white-text, .
 body, .white-text, a, .game-contact-form option, .back-to-top, .light-theme .white-text { color: var(--text); }
 body {
     min-width: 304px;
-    background: var(--background) var(--pattern) 0% 0% / 2400px 2400px;
+    background-color: var(--background);
+    background-image: var(--pattern);
+    background-size: 2400px 2400px;
     font-family: "Inter", sans-serif;
 }
 a {
@@ -57,9 +59,14 @@ footer {
     margin-top: 40px;
     font-weight: 700;
 }
-footer p { margin-block: 50px; }
-:is(.video-carousel, .video-tabs) button { min-width: 44px; }
-:is(.video-tabs, .video-carousel) button:focus-visible { outline-color: currentColor; }
+footer p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.video-carousel button,
+.video-tabs button { min-width: 44px; }
+.video-tabs button:focus-visible,
+.video-carousel button:focus-visible { outline-color: currentColor; }
 #language-toggle {
     box-sizing: border-box;
     width: 80px;
@@ -93,7 +100,7 @@ footer p { margin-block: 50px; }
 #gallery-dialog::backdrop { background: #000000cc; }
 #gallery-preview {
     width: auto;
-    max-height: calc(94vh - 60px);
+    max-height: 90vh;
 }
 .light-theme {
     --text: #191a1e;
@@ -141,7 +148,8 @@ footer p { margin-block: 50px; }
 .button, .player-card a { padding: 10px 12px; }
 .button-icon {
     display: grid;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     box-sizing: border-box;
     width: 44px;
     height: 44px;
@@ -164,7 +172,7 @@ footer p { margin-block: 50px; }
     flex-wrap: wrap;
 }
 .profile-picture {
-    width: min(250px, 100%);
+    width: 250px;
     border-radius: 50%;
     filter: drop-shadow(6px 6px 12px rgba(255, 255, 255, 0.5));
 }
@@ -174,7 +182,8 @@ footer p { margin-block: 50px; }
     -webkit-text-stroke: 0.25px black;
 }
 .section-title {
-    margin-block: .67em;
+    margin-top: .67em;
+    margin-bottom: .67em;
     font: 600 35px "Oxanium", sans-serif;
     border-left: 4px solid var(--text);
     padding-left: 8px;
@@ -191,7 +200,8 @@ footer p { margin-block: 50px; }
 .email-copy, .player-card, .gallery-stack button, .form-control { min-width: 0; }
 .iconArea { gap: 4px; }
 .iconArea .white-text, .video-tabs button, .game-contact-form p { overflow-wrap: anywhere; }
-.Github-icon, .Gmail-icon, #language-toggle, #lang-icon, :is(.video-carousel, .video-tabs) button { flex-shrink: 0; }
+.Github-icon, .Gmail-icon, #language-toggle, #lang-icon,
+.video-carousel button, .video-tabs button { flex-shrink: 0; }
 .Github-icon, .Gmail-icon { width: 50px; }
 .icon-text, .github-label, .contact-value, .email-copy::after, .player-card::before,
 .player-winnings .white-text { white-space: nowrap; }
@@ -211,11 +221,20 @@ footer p { margin-block: 50px; }
     transform: translateX(12px);
     transition: max-width .5s, margin-right .5s, opacity .5s, transform .5s, color .4s;
 }
-.navbar-github:is(:hover, :focus-visible) .github-label,
-.contact-item:is(:hover, :focus-visible, :has(:focus-visible)) .contact-value, .light-theme .navbar .navbar-brand:hover,
-.light-theme .navbar-links a:hover, .light-theme .navbar button:hover, .light-theme .icon-text:hover,
-.light-theme .page a:hover, .email-copy:is(:hover, :has(:focus-visible))::after { opacity: 1; }
-.navbar-github:is(:hover, :focus-visible) .github-label {
+.navbar-github:hover .github-label,
+.navbar-github:focus-visible .github-label,
+.contact-item:hover .contact-value,
+.contact-item:focus-visible .contact-value,
+.contact-item:has(:focus-visible) .contact-value,
+.light-theme .navbar .navbar-brand:hover,
+.light-theme .navbar-links a:hover,
+.light-theme .navbar button:hover,
+.light-theme .icon-text:hover,
+.light-theme .page a:hover,
+.email-copy:hover::after,
+.email-copy:has(:focus-visible)::after { opacity: 1; }
+.navbar-github:hover .github-label,
+.navbar-github:focus-visible .github-label {
     max-width: 72px;
     margin-right: 8px;
     transform: translateX(0);
@@ -228,7 +247,9 @@ footer p { margin-block: 50px; }
     transform: translateX(-8px);
     transition: max-width .4s, opacity .4s, transform .4s, color .4s;
 }
-.contact-item:is(:hover, :focus-visible, :has(:focus-visible)) .contact-value {
+.contact-item:hover .contact-value,
+.contact-item:focus-visible .contact-value,
+.contact-item:has(:focus-visible) .contact-value {
     max-width: 400px;
     transform: translateX(0);
 }
@@ -251,7 +272,8 @@ footer p { margin-block: 50px; }
     padding-top: 16px;
 }
 .recordings-intro {
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     padding: 0 56px 16px 12px;
 }
 .recordings-intro p {
@@ -327,7 +349,8 @@ footer p { margin-block: 50px; }
     filter: brightness(0) invert(.5);
     transition: filter .2s;
 }
-.light-theme #theme-toggle:is(:hover, :focus-visible) img { filter: brightness(0); }
+.light-theme #theme-toggle:hover img,
+.light-theme #theme-toggle:focus-visible img { filter: brightness(0); }
 .light-theme .profile-picture, .light-theme .profile h1 { filter: drop-shadow(6px 6px 24px #000); }
 .light-theme .profile h1 { -webkit-text-stroke-color: #fff; }
 .email-copy {
@@ -349,7 +372,8 @@ footer p { margin-block: 50px; }
     transition: opacity .15s;
     z-index: 10;
 }
-.email-copy:is(:hover, :has(:focus-visible))::after { transition-delay: .1s; }
+.email-copy:hover::after,
+.email-copy:has(:focus-visible)::after { transition-delay: .1s; }
 .player-cards {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 16px;
@@ -367,9 +391,13 @@ footer p { margin-block: 50px; }
 .team-parivision { --team-name: "PARIVISION"; }
 .player-card::before {
     content: var(--team-name);
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     font: 600 30px "Oxanium", sans-serif;
     color: #fff;
     transform: rotate(-20deg);
@@ -416,9 +444,11 @@ footer p { margin-block: 50px; }
     height: 26px;
     transition: filter .4s;
 }
-.player-card a:is(:hover, :focus-visible) img { filter: brightness(0.57); }
+.player-card a:hover img,
+.player-card a:focus-visible img { filter: brightness(0.57); }
 .light-theme .player-card a img { filter: brightness(0) invert(0.45); }
-.light-theme .player-card a:is(:hover, :focus-visible) img { filter: brightness(0); }
+.light-theme .player-card a:hover img,
+.light-theme .player-card a:focus-visible img { filter: brightness(0); }
 .gallery-stack {
     grid-template-columns: repeat(5, 1fr);
     max-width: 700px;
@@ -498,7 +528,8 @@ footer p { margin-block: 50px; }
     padding-right: 40px;
 }
 .character-showcase {
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     padding: 24px;
 }
 .character-showcase img {
@@ -528,7 +559,9 @@ footer p { margin-block: 50px; }
     padding: 10px 12px;
     transition: border-color .4s, background-color .4s;
 }
-.game-contact-form :is(input, select, textarea):focus-visible {
+.game-contact-form input:focus-visible,
+.game-contact-form select:focus-visible,
+.game-contact-form textarea:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
 }
@@ -570,7 +603,10 @@ footer p { margin-block: 50px; }
         grid-template-columns: minmax(0, 1fr) 240px;
         padding-left: 12px;
     }
-    .video-frame { width: min(100%, 320px); }
+    .video-frame {
+        width: 100%;
+        max-width: 320px;
+    }
     #previous-video {
         position: static;
         transform: none;
@@ -589,6 +625,11 @@ footer p { margin-block: 50px; }
         padding-right: 12px;
     }
     .features-overview .character-showcase { padding: 12px; }
+}
+@media (min-width: 529px) and (max-width: 900px) {
+    .player-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .player-card { grid-column: span 2; }
+    .player-card:last-child { grid-column: 2 / 4; }
 }
 @media (max-width: 640px) {
     .navbar {
@@ -644,7 +685,8 @@ footer p { margin-block: 50px; }
     }
     .navbar-links a {
         display: grid;
-        place-items: center;
+        align-items: center;
+        justify-items: center;
         box-sizing: border-box;
         min-height: 44px;
         border: 1px solid #666;
@@ -672,7 +714,8 @@ footer p { margin-block: 50px; }
     }
     .video-frame {
         grid-row: 1;
-        width: min(100% - 24px, 300px);
+        width: calc(100% - 24px);
+        max-width: 300px;
     }
     .video-carousel button { grid-row: 2; }
     .features-overview {

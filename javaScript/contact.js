@@ -10,9 +10,16 @@ if (gameContactForm) {
 
     function updateSubject() {
         const isOther = category.value === "other";
-        customSubject.closest(".form-field").hidden = !isOther;
-        customSubject.disabled = !isOther;
-        customSubject.required = isOther;
+        const subjectField = customSubject.closest(".form-field");
+        if (isOther) {
+            subjectField.hidden = false;
+            customSubject.disabled = false;
+            customSubject.required = true;
+        } else {
+            subjectField.hidden = true;
+            customSubject.disabled = true;
+            customSubject.required = false;
+        }
         customSubject.setCustomValidity("");
     }
 
@@ -33,8 +40,9 @@ if (gameContactForm) {
 
     gameContactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
-        if (!web3FormsAccessKey || submitButton.disabled) return;
-
+        if (!web3FormsAccessKey || submitButton.disabled) {
+            return;
+        }
         message.setCustomValidity("");
         customSubject.setCustomValidity("");
         if (message.value.trim().length < 10) {
@@ -43,11 +51,18 @@ if (gameContactForm) {
         if (category.value === "other" && customSubject.value.trim().length < 3) {
             customSubject.setCustomValidity(gameContactForm.dataset.shortSubject);
         }
-        if (!gameContactForm.reportValidity() || gameContactForm.elements.botcheck.checked) return;
+        if (!gameContactForm.reportValidity()) {
+            return;
+        }
+        if (gameContactForm.elements.botcheck.checked) {
+            return;
+        }
 
         const categoryName = category.options[category.selectedIndex].textContent;
         let subject = categoryName;
-        if (category.value === "other") subject = customSubject.value.trim();
+        if (category.value === "other") {
+            subject = customSubject.value.trim();
+        }
         const data = {
             access_key: web3FormsAccessKey,
             name: gameContactForm.elements.name.value,
@@ -71,10 +86,13 @@ if (gameContactForm) {
                 signal: AbortSignal.timeout(20000)
             });
             const result = await response.json();
-            if (!response.ok || !result.success) throw new Error();
-            status.textContent = gameContactForm.dataset.success;
-            gameContactForm.reset();
-            updateSubject();
+            if (response.ok && result.success) {
+                status.textContent = gameContactForm.dataset.success;
+                gameContactForm.reset();
+                updateSubject();
+            } else {
+                status.textContent = gameContactForm.dataset.error;
+            }
         } catch {
             status.textContent = gameContactForm.dataset.error;
         } finally {
