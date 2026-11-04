@@ -43,3 +43,7 @@ Specjalizacja: **Techniki Informacyjne**<br>
 Rok: **III**, semestr **5**<br>
 Grupa: **TI 5.9**<br>
 Kierunek: **Informatyka**, **Politechnika Lubelska**
+
+## Tłumaczenie
+
+Angielskie wersje README, dokumentacji, credits oraz podstron zostały przetłumaczone przy użyciu AI.

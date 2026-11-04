@@ -39,3 +39,7 @@ The room screenshots show my own game project.
 
 **Dawid Głowacki**<br>
 Student at **Lublin University of Technology**, **third** year, semester **5**.
+
+## Translation
+
+The English versions of the README, documentation, credits and website pages were translated with AI assistance.
