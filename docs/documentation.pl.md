@@ -82,7 +82,7 @@ Plik contact.js obsługuje formularz Web3Forms, korzystając z wygenerowanego ko
 - **Czcionki:** TrueType **`.ttf`**.
 - **Selektory `[]`:** wybierają elementy według atrybutów HTML.
 - **`inherit`:** przejmuje czcionkę lub kolor rodzica.
-- Zastosowanie `vw`, `vh` zależnych od rozdzielczości oraz `em`, które zależy od czcionki.
+- Zastosowanie **`vw`, `vh`** zależnych od rozdzielczości oraz **`em`**, które zależy od czcionki.
 - **`clamp()`** wprowadza płynne rozmiary.
 - **`calc()`** oblicza wartość używając różnych wielkości.
 - Użycie **`translateX(0)`** przywraca pozycję poziomą.
@@ -95,12 +95,14 @@ Oddzielna reguła z **529–900px** centruje trzecią kartę gracza pod dwiema p
 
 ## 📜 Zasoby i licencje
 
-Zapoznaj się z licencjami użytych materiałów, [licencje oraz pomoc AI](credits.pl.md)
+Zapoznaj się z **licencjami** użytych materiałów, [licencje oraz pomoc AI](credits.pl.md)
 
 ## 👤 Autor
 
 **Dawid Głowacki**<br>
 Numer albumu: **103381**<br>
 Specjalizacja: **Techniki Informacyjne**<br>
+Rok: **III**, semestr **5**<br>
 Grupa: **TI 5.9**<br>
-**Informatyka, Politechnika Lubelska**
+Kierunek: **Informatyka**, **Politechnika Lubelska**
+

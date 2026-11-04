@@ -1,12 +1,12 @@
 # Dawid Głowacki — Strona osobista
 
-Otwórz działajacą strone: [Strona - GitHub Pages](https://dawoll.github.io/personal-website/)
+Otwórz **Projekt** na **GitHub Pages** : [personal-website](https://dawoll.github.io/personal-website/)
+Open **English ReadMe** [EN README](README.md)
 
-Open English README [EN README](README.md)
 
-
-**Krótki Opis Projektu**
-Responsywna strona osobista stworzona w ramach projektu zaliczeniowego podczas III roku studiów na przedmiot **Aplikacje Internetowe**. Strona prezentuje moje zainteresowania oraz projekt gry komputerowej.
+**Krótki Opis Projektu** <br>
+Responsywna strona osobista stworzona w ramach projektu zaliczeniowego podczas **III** roku studiów na przedmiot **Aplikacje Internetowe**. <br>
+Strona prezentuje **moje zainteresowania** oraz **projekt gry komputerowej**.
 
 ## 🛠️ Technologie
 
@@ -26,9 +26,8 @@ Możesz również otworzyć główny `index.html` bezpośrednio w przeglądarce.
 
 ## 📖 Dokumentacja
 
-Aby poznać główne funkcjonalności i zastosowane rozwiązania [przeczytaj dokumentację](docs/documentation.pl.md)
-
-Zapoznaj się z licencjami użytych materiałów, [licencje oraz pomoc AI](docs/credits.pl.md)
+Aby poznać główne **funkcjonalności** i **zastosowane rozwiązania** [przeczytaj dokumentację](docs/documentation.pl.md)
+Zapoznaj się z **licencjami** użytych materiałów, [licencje oraz pomoc AI](docs/credits.pl.md)
 
 ## 👤 Autor
 

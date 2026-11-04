@@ -13,9 +13,9 @@ The available original license files and source information are kept with the fo
 
 ## 🎨 Original material and AI editing
 
-The **Counter-Strike** recordings and match screenshots are my own captures. The screenshots with Snax, Zweih and Magnojez were uploaded to Steam and had poor image quality, so they were upscaled using AI to improve readability. They may contain visible processing artifacts.
+The **Counter-Strike** recordings and match screenshots are my own captures. The screenshots with **Snax**, **Zweih** and **Magnojez** were uploaded to **Steam** and had poor image quality, so they were upscaled using **AI** to improve readability. They may contain visible processing artifacts.
 
-The following assets were edited or enhanced using AI, as previously noted in the project:
+The following assets were edited or enhanced using **AI**, as previously noted in the project:
 
 - [cs_white_icon.svg](../assets/icons/cs_white_icon.svg)
 - [ru_black_icon.png](../assets/icons/ru_black_icon.png)
@@ -37,4 +37,4 @@ The character animations are also my own work, created in Aseprite and exported 
 ## 👤 Author
 
 **Dawid Głowacki**<br>
-Student at Lublin University of Technology, third year, semester 5.
+Student at **Lublin University of Technology**, **third** year, semester **5**.

@@ -13,9 +13,9 @@ Dostępne oryginalne pliki licencji i informacje o pochodzeniu pozostają przy c
 
 ## 🎨 Materiały własne i edycja AI
 
-Nagrania z **Counter-Strike'a** i zrzuty meczów są moimi własnymi plikami. Zrzuty ze Snax'em oraz Zweih'em i Magnojez'em były przesłane na Steam co spowodowało słabą jakość, dlatego zostały przeskalowane przy użyciu AI dla poprawy czytelności. Mogą zawierać widoczne artefakty przetwarzania.
+Nagrania z **Counter-Strike'a** i zrzuty meczów są moimi własnymi plikami. Zrzuty ze **Snax'em** oraz **Zweih'em** i **Magnojez'em** były przesłane na **Steam** co spowodowało słabą jakość, dlatego zostały przeskalowane przy użyciu **AI** dla poprawy czytelności. Mogą zawierać widoczne artefakty przetwarzania.
 
-Następujące zasoby były edytowane lub ulepszane przy użyciu AI, zgodnie z wcześniejszymi informacjami w projekcie:
+Następujące zasoby były edytowane lub ulepszane przy użyciu **AI**, zgodnie z wcześniejszymi informacjami w projekcie:
 
 - [cs_white_icon.svg](../assets/icons/cs_white_icon.svg)
 - [ru_black_icon.png](../assets/icons/ru_black_icon.png)
@@ -30,7 +30,7 @@ Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały
 
 ## 🌐 Usługi zewnętrzne
 
-- ** GitHub Pages** hostuje stronę.
+- **GitHub Pages** hostuje stronę.
 - **Web3Forms** otrzymuje dane z formularza i przekazuje je na mój adres e-mail.
 - Strony zawierają odnośniki do **HLTV, YouTube** i innych serwisów. Dane zawodników są wpisywane ręcznie.
 
@@ -39,5 +39,6 @@ Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały
 **Dawid Głowacki**<br>
 Numer albumu: **103381**<br>
 Specjalizacja: **Techniki Informacyjne**<br>
+Rok: **III**, semestr **5**<br>
 Grupa: **TI 5.9**<br>
-**Informatyka, Politechnika Lubelska**
+Kierunek: **Informatyka**, **Politechnika Lubelska**

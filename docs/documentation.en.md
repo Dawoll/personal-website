@@ -82,7 +82,7 @@ The contact.js file handles the Web3Forms form using generated code and keys fro
 - **Fonts:** TrueType **`.ttf`**.
 - **Attribute selectors `[]`:** select elements based on their HTML attributes.
 - **`inherit`:** uses the parent's font or colour.
-- `vw` and `vh` depend on viewport dimensions, while `em` depends on font size.
+- **`vw` and `vh`** depend on viewport dimensions, while **`em`** depends on font size.
 - **`clamp()`** provides fluid sizes.
 - **`calc()`** calculates a value using different sizes or units.
 - **`translateX(0)`** restores the horizontal position.
@@ -95,9 +95,9 @@ A separate **529–900px** rule centres the third player card below the other tw
 
 ## 📜 Assets and licenses
 
-Read about the licenses of the materials used: [licenses and AI assistance](credits.en.md).
+Read about the **licenses** of the materials used: [licenses and AI assistance](credits.en.md).
 
 ## 👤 Author
 
 **Dawid Głowacki**<br>
-Student at Lublin University of Technology, third year, semester 5.
+Student at **Lublin University of Technology**, **third** year, semester **5**.
