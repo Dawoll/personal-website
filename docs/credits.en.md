@@ -29,6 +29,11 @@ The following assets were edited or enhanced using **AI**, as previously noted i
 The character animations are also my own work, created in Aseprite. They were exported as transparent GIFs. <br>
 The room screenshots show my own game project.
 
+## Translation
+
+The English versions of the README, documentation, credits and website pages were translated with AI assistance.
+
+
 ## 🌐 External services
 
 - **GitHub Pages** hosts the website.
@@ -39,7 +44,3 @@ The room screenshots show my own game project.
 
 **Dawid Głowacki**<br>
 Student at **Lublin University of Technology**, **third** year, semester **5**.
-
-## Translation
-
-The English versions of the README, documentation, credits and website pages were translated with AI assistance.

@@ -29,6 +29,11 @@ Następujące zasoby były edytowane lub ulepszane przy użyciu **AI**, zgodnie 
 Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały wyeksportowane do przezroczystych GIF-ów. <br>
 Zrzuty pomieszczeń przedstawiają mój własny projekt gry.
 
+## Tłumaczenie
+
+Angielskie wersje README, dokumentacji, credits oraz podstron zostały przetłumaczone przy użyciu AI.
+
+
 ## 🌐 Usługi zewnętrzne
 
 - **GitHub Pages** hostuje stronę.
@@ -43,7 +48,3 @@ Specjalizacja: **Techniki Informacyjne**<br>
 Rok: **III**, semestr **5**<br>
 Grupa: **TI 5.9**<br>
 Kierunek: **Informatyka**, **Politechnika Lubelska**
-
-## Tłumaczenie
-
-Angielskie wersje README, dokumentacji, credits oraz podstron zostały przetłumaczone przy użyciu AI.
