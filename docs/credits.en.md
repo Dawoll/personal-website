@@ -2,7 +2,7 @@
 
 [README](../README.md) · [Documentation](documentation.en.md) · [Polska wersja](credits.pl.md)
 
-## Fonts
+## 🔤 Fonts
 
 The available original license files and source information are kept with the fonts:
 
@@ -11,7 +11,7 @@ The available original license files and source information are kept with the fo
 - [Upheaval — author's readme](../assets/fonts/licenses/Upheaval-readme.txt)
 - [Counter-Strike — source and verification status](../assets/fonts/licenses/Counter-Strike-NOTICE.txt)
 
-## Original material and AI editing
+## 🎨 Original material and AI editing
 
 The **Counter-Strike** recordings and match screenshots are my own captures. The screenshots with Snax, Zweih and Magnojez were uploaded to Steam and had poor image quality, so they were upscaled using AI to improve readability. They may contain visible processing artifacts.
 
@@ -28,13 +28,13 @@ The following assets were edited or enhanced using AI, as previously noted in th
 
 The character animations are also my own work, created in Aseprite and exported as transparent GIFs. The room screenshots show my own game project.
 
-## External services
+## 🌐 External services
 
 - GitHub Pages hosts the website.
 - Web3Forms receives form data and forwards it to my email address.
 - The pages link to HLTV, YouTube and other services. Player information is entered manually.
 
-## Author
+## 👤 Author
 
 **Dawid Głowacki**  
 Student at Lublin University of Technology, third year, semester 5.

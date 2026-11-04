@@ -2,7 +2,7 @@
 
 [README](../README.pl.md) · [Dokumentacja](documentation.pl.md) · [English version](credits.en.md)
 
-## Czcionki
+## 🔤 Czcionki
 
 Dostępne oryginalne pliki licencji i informacje o pochodzeniu pozostają przy czcionkach:
 
@@ -11,7 +11,7 @@ Dostępne oryginalne pliki licencji i informacje o pochodzeniu pozostają przy c
 - [Upheaval — readme autora](../assets/fonts/licenses/Upheaval-readme.txt)
 - [Counter-Strike — źródło i stan weryfikacji](../assets/fonts/licenses/Counter-Strike-NOTICE.txt)
 
-## Materiały własne i edycja AI
+## 🎨 Materiały własne i edycja AI
 
 Nagrania z **Counter-Strike'a** i zrzuty meczów są moimi własnymi plikami. Zrzuty ze Snax'em oraz Zweih'em i Magnojez'em były przesłane na Steam co spowodowało słabą jakość, dlatego zostały przeskalowane przy użyciu AI dla poprawy czytelności. Mogą zawierać widoczne artefakty przetwarzania.
 
@@ -28,13 +28,13 @@ Następujące zasoby były edytowane lub ulepszane przy użyciu AI, zgodnie z wc
 
 Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały wyeksportowane do przezroczystych GIF-ów. Zrzuty pomieszczeń przedstawiają mój własny projekt gry.
 
-## Usługi zewnętrzne
+## 🌐 Usługi zewnętrzne
 
 - GitHub Pages hostuje stronę.
 - Web3Forms otrzymuje dane z formularza i przekazuje je na mój adres e-mail.
 - Strony zawierają odnośniki do HLTV, YouTube i innych serwisów. Dane zawodników są wpisywane ręcznie.
 
-## Autor
+## 👤 Autor
 
 **Dawid Głowacki**  
 Numer albumu: **103381**  

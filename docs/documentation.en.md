@@ -2,31 +2,37 @@
 
 [Live website ↗](https://dawoll.github.io/personal-website/) · [README](../README.md) · [Dokumentacja po polsku](documentation.pl.md)
 
-## Project structure
+## 📁 Project structure
 
-| Location | Purpose |
-| --- | --- |
-| `index.html` | Home page |
-| `cs.html`, `music.html`, `mygame.html` | English subpages: Counter-Strike, music and my game project |
-| `pl/` | Folder containing the corresponding Polish pages |
-| `css/style.css` | Styles, themes and responsive layouts |
-| `javaScript/functions.js` | Main website interactions |
-| `javaScript/storage.js` | Saved theme and language preferences |
-| `javaScript/contact.js` | Web3Forms contact form |
-| `assets/` | Icons, photos, backgrounds, fonts, character GIFs and videos |
-| `docs/` | Documentation and asset information in both languages |
+```text
+personal-website/
+├── index.html                  # Home page (EN)
+├── cs.html                     # Counter-Strike (EN)
+├── music.html                  # Music (EN)
+├── mygame.html                 # Game project (EN)
+├── pl/                         # Polish versions of the four pages
+├── css/style.css               # Shared styles and responsive layouts
+├── javaScript/functions.js     # Website interactions
+├── javaScript/storage.js       # Saved theme and language
+├── javaScript/contact.js       # Web3Forms contact form
+├── assets/                     # Graphics, icons, fonts, GIFs and videos
+├── docs/                       # Documentation and asset information (PL/EN)
+├── README.md                   # English README
+└── README.pl.md                # Polish README
+```
 
-## Main features
+## ⚙️ Main features
 
 ### functions.js
 
-- Theme switching.
-- Initial theme icon.
-- Language flag matching the theme.
+- Light and dark theme switching.
+- Language switching.
+- Matching the theme icon.
+- Matching the language flag.
 - Animated icons.
 - Copying the email address.
-- Photo previews.
-- Character animation showcase.
+- Enlarging photos.
+- Displaying character animations.
 - Video player and recording selection.
 - Automatic advance to the next video.
 - Animated scrolling back to the top.
@@ -42,7 +48,7 @@ Each language has its own HTML files, which is a practical solution for four pag
 
 ### contact.js
 
-The contact.js file handles the form using Web3Forms. It was based on an integration example and adapted to the project.
+The contact.js file handles the Web3Forms form using an integration example adapted to the project.
 
 ### HTML and CSS features
 
@@ -55,7 +61,7 @@ The contact.js file handles the form using Web3Forms. It was based on an integra
 - Decorative corners around the video.
 - Player information, **which is not automatically fetched from HLTV**.
 
-## Technical choices
+## 🔧 Technical choices
 
 ### HTML
 
@@ -82,16 +88,16 @@ The contact.js file handles the form using Web3Forms. It was based on an integra
 - `translateX(0)` restores the horizontal position.
 - `white-space: nowrap` keeps the amount and currency together.
 
-## Responsive layout
+## 📱 Responsive layout
 
 The reference views are **390, 768, 1366 and 1920 px**, with fluid adjustments between them.
 A separate 529–900 px rule centres the third player card below the other two on the Counter-Strike page.
 
-## Assets and licenses
+## 📜 Assets and licenses
 
 [Graphics, AI editing and font licenses](credits.en.md).
 
-## Author
+## 👤 Author
 
 **Dawid Głowacki**  
 Student at Lublin University of Technology, third year, semester 5.
