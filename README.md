@@ -1,9 +1,10 @@
 # Dawid Głowacki — Personal website
 
-[View the live website ↗](https://dawoll.github.io/personal-website/)
+View the live website: [Website - GitHub Pages](https://dawoll.github.io/personal-website/)
 
-[Polska wersja README](README.pl.md)
+Otwórz polskie README [PL README](README.pl.md)
 
+**Brief Project Description**
 A responsive personal website created as a course project during my third year of study for **Internet Applications**. The website presents my interests and my game project.
 
 ## 🛠️ Technologies
@@ -24,11 +25,11 @@ You can also open the root `index.html` directly in your browser.
 
 ## 📖 Documentation
 
-[Read the documentation](docs/documentation.en.md) to learn about the main features and technical choices.
+To learn about the main features and technical choices, [read the documentation](docs/documentation.en.md).
 
-[Graphics, licenses and AI assistance](docs/credits.en.md)
+Read about the licenses of the materials used: [licenses and AI assistance](docs/credits.en.md).
 
 ## 👤 Author
 
-**Dawid Głowacki**  
-Student at **Lublin University of Technology**, **third** year, semester **5**.
+**Dawid Głowacki**<br>
+Student at Lublin University of Technology, third year, semester 5.

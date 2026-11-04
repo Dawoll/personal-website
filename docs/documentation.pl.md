@@ -1,6 +1,6 @@
 # Dokumentacja projektu
 
-[Działająca strona ↗](https://dawoll.github.io/personal-website/) · [README](../README.pl.md) · [English documentation](documentation.en.md)
+[Działająca strona](https://dawoll.github.io/personal-website/) · [README](../README.pl.md) · [English documentation](documentation.en.md)
 
 ## 📁 Struktura projektu
 
@@ -48,7 +48,7 @@ Każdy język ma własne HTML-e co jest optymalnym rozwiązaniem dla czterech po
 
 ### contact.js
 
-Plik contact.js obsługuje formularz Web3Forms na podstawie przykładu integracji dostosowanego do projektu.
+Plik contact.js obsługuje formularz Web3Forms, korzystając z wygenerowanego kodu oraz kluczy z oryginalnej strony.
 
 ### Funkcje HTML i CSS
 
@@ -65,42 +65,42 @@ Plik contact.js obsługuje formularz Web3Forms na podstawie przykładu integracj
 
 ### HTML
 
-- **Semantyka i nagłówki:** `header`, `nav`, `main`, `section`, `article` i `footer` opisują role treści. Każda strona ma główny `h1`, sekcje `h2` i w razie potrzeby `h3`.
-- **Dostępność:** zastosowano `aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`. Pomagają one czytnikom ekranu.
-- Przypisanie do elementu **ID i klasa jednocześnie:** ID wskazuje konkretny element dla odwołania ARIA, a klasa nadaje wspólne style.
+- **Semantyka i nagłówki:** **`header`, `nav`, `main`, `section`, `article` i `footer`** opisują role treści. Każda strona ma główny **`h1`**, sekcje **`h2`** i w razie potrzeby **`h3`**.
+- **Dostępność:** zastosowano **`aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`**. Pomagają one czytnikom ekranu.
+- Przypisanie do elementu **ID i klasy jednocześnie:** ID wskazuje konkretny element dla odwołania ARIA, a klasa nadaje wspólne style.
 - **Puste `alt=""`:** dekoracyjne ikony obok równoważnego tekstu są pomijane przez czytnik, żeby nie duplikować informacji.
-- `aria-hidden="true"` podobnie ukrywa dekorację przed czytnikami.
+- **`aria-hidden="true"`** ukrywa dekorację przed czytnikami.
 - **`defer`:** skrypty wczytują się przy przetwarzaniu HTML i wykonują dopiero po jego przetworzeniu.
 - **`?v=n`:** parametr przy ścieżce pliku, który daje inny adres i odświeża starszy plik z cache.
-- **`target="_blank"` i `rel="noopener"`:** otwierają link w nowej karcie i blokują otwartej stronie dostęp do strony źródłowej przez `window.opener`
+- **`target="_blank"` i `rel="noopener"`:** otwierają link w nowej karcie i blokują otwartej stronie dostęp do strony źródłowej i jej edycji.
 
 ### CSS
 
-- **Zmienne:** `--text`, `--panel`.
+- **Zmienne: `--text`, `--panel`**.
+- **Pseudoklasy: `:hover`, `:last-child`**.
+- **Pseudoelementy: `::before` i `::after`**.
+- **Czcionki:** TrueType **`.ttf`**.
 - **Selektory `[]`:** wybierają elementy według atrybutów HTML.
-- **Pseudoklasy:** `:hover`, `:last-child`.
-- **Pseudoelementy:** `::before` i `::after`.
-- **Czcionki:** TrueType `.ttf`.
 - **`inherit`:** przejmuje czcionkę lub kolor rodzica.
 - Zastosowanie `vw`, `vh` zależnych od rozdzielczości oraz `em`, które zależy od czcionki.
 - **`clamp()`** wprowadza płynne rozmiary.
 - **`calc()`** oblicza wartość używając różnych wielkości.
-- Użycie `translateX(0)` przywraca pozycję poziomą.
-- `white-space: nowrap` utrzymuje kwotę i walutę razem.
+- Użycie **`translateX(0)`** przywraca pozycję poziomą.
+- **`white-space: nowrap`** utrzymuje kwotę i walutę razem.
 
 ## 📱 Responsywność
 
-Widoki referencyjne to **390, 768, 1366 i 1920 px**, z płynnym dopasowaniem pomiędzy nimi.
-Oddzielna reguła 529–900 px centruje trzecią kartę gracza pod dwiema pozostałymi - podstrona z Counter-Strike'iem.
+Widoki referencyjne to **390px, 768px, 1366px i 1920px**, z płynnym dopasowaniem pomiędzy nimi.
+Oddzielna reguła z **529–900px** centruje trzecią kartę gracza pod dwiema pozostałymi - podstrona z Counter-Strike'iem.
 
 ## 📜 Zasoby i licencje
 
-[Informacje o grafikach, edycji AI i licencjach czcionek](credits.pl.md).
+Zapoznaj się z licencjami użytych materiałów, [licencje oraz pomoc AI](credits.pl.md)
 
 ## 👤 Autor
 
-**Dawid Głowacki**  
-Numer albumu: **103381**  
-Specjalizacja: **Techniki Informacyjne**  
-Grupa: **TI 5.9**
+**Dawid Głowacki**<br>
+Numer albumu: **103381**<br>
+Specjalizacja: **Techniki Informacyjne**<br>
+Grupa: **TI 5.9**<br>
 **Informatyka, Politechnika Lubelska**

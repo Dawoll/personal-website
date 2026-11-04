@@ -1,8 +1,8 @@
 # Assets, licenses and AI assistance
 
-[README](../README.md) · [Documentation](documentation.en.md) · [Polska wersja](credits.pl.md)
+[README](../README.md) · [Documentation](documentation.en.md) · [Polska wersja licencji](credits.pl.md)
 
-## 🔤 Fonts
+## 📝 Fonts
 
 The available original license files and source information are kept with the fonts:
 
@@ -30,11 +30,11 @@ The character animations are also my own work, created in Aseprite and exported 
 
 ## 🌐 External services
 
-- GitHub Pages hosts the website.
-- Web3Forms receives form data and forwards it to my email address.
-- The pages link to HLTV, YouTube and other services. Player information is entered manually.
+- **GitHub Pages** hosts the website.
+- **Web3Forms** receives form data and forwards it to my email address.
+- The pages link to **HLTV, YouTube** and other services. Player information is entered manually.
 
 ## 👤 Author
 
-**Dawid Głowacki**  
+**Dawid Głowacki**<br>
 Student at Lublin University of Technology, third year, semester 5.

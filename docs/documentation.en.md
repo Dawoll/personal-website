@@ -1,6 +1,6 @@
 # Project documentation
 
-[Live website ↗](https://dawoll.github.io/personal-website/) · [README](../README.md) · [Dokumentacja po polsku](documentation.pl.md)
+[Live website](https://dawoll.github.io/personal-website/) · [README](../README.md) · [Polska dokumentacja](documentation.pl.md)
 
 ## 📁 Project structure
 
@@ -14,9 +14,9 @@ personal-website/
 ├── css/style.css               # Shared styles and responsive layouts
 ├── javaScript/functions.js     # Website interactions
 ├── javaScript/storage.js       # Saved theme and language
-├── javaScript/contact.js       # Web3Forms contact form
+├── javaScript/contact.js       # Web3Forms form
 ├── assets/                     # Graphics, icons, fonts, GIFs and videos
-├── docs/                       # Documentation and asset information (PL/EN)
+├── docs/                       # Documentation
 ├── README.md                   # English README
 └── README.pl.md                # Polish README
 ```
@@ -29,14 +29,14 @@ personal-website/
 - Language switching.
 - Matching the theme icon.
 - Matching the language flag.
-- Animated icons.
+- Icon animations.
 - Copying the email address.
 - Enlarging photos.
 - Displaying character animations.
-- Video player and recording selection.
-- Automatic advance to the next video.
-- Animated scrolling back to the top.
-- Collapsible mobile menu.
+- Selecting and playing videos.
+- Automatically advancing to the next video.
+- Smooth scrolling back to the top.
+- Collapsible menu on phones.
 
 ### storage.js
 
@@ -48,7 +48,7 @@ Each language has its own HTML files, which is a practical solution for four pag
 
 ### contact.js
 
-The contact.js file handles the Web3Forms form using an integration example adapted to the project.
+The contact.js file handles the Web3Forms form using generated code and keys from the original website.
 
 ### HTML and CSS features
 
@@ -65,39 +65,39 @@ The contact.js file handles the Web3Forms form using an integration example adap
 
 ### HTML
 
-- **Semantics and headings:** `header`, `nav`, `main`, `section`, `article` and `footer` describe content roles. Each page has a main `h1`, section headings using `h2` and, where needed, `h3`.
-- **Accessibility:** the site uses `aria-label`, `aria-controls`, `aria-expanded` and `aria-current="page"`. These help screen readers.
-- **An ID and a class on the same element:** the ID identifies a specific element for an ARIA reference, while the class applies shared styles.
+- **Semantics and headings:** **`header`, `nav`, `main`, `section`, `article` and `footer`** describe content roles. Each page has a main **`h1`**, section headings using **`h2`** and, where needed, **`h3`**.
+- **Accessibility:** the site uses **`aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`**. These help screen readers.
+- Assigning **an ID and a class to the same element:** the ID identifies a specific element for an ARIA reference, while the class applies shared styles.
 - **Empty `alt=""`:** decorative icons beside equivalent text are skipped by screen readers to avoid repeating information.
-- `aria-hidden="true"` similarly hides decorative content from screen readers.
+- **`aria-hidden="true"`** hides decorative content from screen readers.
 - **`defer`:** scripts download while HTML is being parsed and run after parsing is complete.
 - **`?v=n`:** a parameter in the file path that, when changed, gives the file a different URL and helps refresh an older cached version.
-- **`target="_blank"` and `rel="noopener"`:** open a link in a new tab and prevent the opened page from accessing the original page through `window.opener`.
+- **`target="_blank"` and `rel="noopener"`:** open a link in a new tab and prevent the opened page from accessing or modifying the source page through `window.opener`.
 
 ### CSS
 
-- **Variables:** `--text`, `--panel`.
+- **Variables: `--text`, `--panel`**.
+- **Pseudo-classes: `:hover`, `:last-child`**.
+- **Pseudo-elements: `::before` and `::after`**.
+- **Fonts:** TrueType **`.ttf`**.
 - **Attribute selectors `[]`:** select elements based on their HTML attributes.
-- **Pseudo-classes:** `:hover`, `:last-child`.
-- **Pseudo-elements:** `::before` and `::after`.
-- **Fonts:** TrueType `.ttf`.
 - **`inherit`:** uses the parent's font or colour.
 - `vw` and `vh` depend on viewport dimensions, while `em` depends on font size.
-- **`clamp()`** provides fluid sizes within limits.
-- **`calc()`** calculates values using different sizes or units.
-- `translateX(0)` restores the horizontal position.
-- `white-space: nowrap` keeps the amount and currency together.
+- **`clamp()`** provides fluid sizes.
+- **`calc()`** calculates a value using different sizes or units.
+- **`translateX(0)`** restores the horizontal position.
+- **`white-space: nowrap`** keeps the amount and currency together.
 
 ## 📱 Responsive layout
 
-The reference views are **390, 768, 1366 and 1920 px**, with fluid adjustments between them.
-A separate 529–900 px rule centres the third player card below the other two on the Counter-Strike page.
+The reference views are **390px, 768px, 1366px and 1920px**, with fluid adjustments between them.
+A separate **529–900px** rule centres the third player card below the other two on the Counter-Strike page.
 
 ## 📜 Assets and licenses
 
-[Graphics, AI editing and font licenses](credits.en.md).
+Read about the licenses of the materials used: [licenses and AI assistance](credits.en.md).
 
 ## 👤 Author
 
-**Dawid Głowacki**  
+**Dawid Głowacki**<br>
 Student at Lublin University of Technology, third year, semester 5.

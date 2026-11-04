@@ -1,8 +1,8 @@
 # Zasoby, licencje oraz pomoc AI
 
-[README](../README.pl.md) · [Dokumentacja](documentation.pl.md) · [English version](credits.en.md)
+[README](../README.pl.md) · [Dokumentacja](documentation.pl.md) · [English license version](credits.en.md)
 
-## 🔤 Czcionki
+## 📝 Czcionki
 
 Dostępne oryginalne pliki licencji i informacje o pochodzeniu pozostają przy czcionkach:
 
@@ -30,14 +30,14 @@ Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały
 
 ## 🌐 Usługi zewnętrzne
 
-- GitHub Pages hostuje stronę.
-- Web3Forms otrzymuje dane z formularza i przekazuje je na mój adres e-mail.
-- Strony zawierają odnośniki do HLTV, YouTube i innych serwisów. Dane zawodników są wpisywane ręcznie.
+- ** GitHub Pages** hostuje stronę.
+- **Web3Forms** otrzymuje dane z formularza i przekazuje je na mój adres e-mail.
+- Strony zawierają odnośniki do **HLTV, YouTube** i innych serwisów. Dane zawodników są wpisywane ręcznie.
 
 ## 👤 Autor
 
-**Dawid Głowacki**  
-Numer albumu: **103381**  
-Specjalizacja: **Techniki Informacyjne**  
-Grupa: **TI 5.9**
+**Dawid Głowacki**<br>
+Numer albumu: **103381**<br>
+Specjalizacja: **Techniki Informacyjne**<br>
+Grupa: **TI 5.9**<br>
 **Informatyka, Politechnika Lubelska**
