@@ -1,11 +1,12 @@
 # Dawid Głowacki — Personal website
 
-Open **Project** on **GitHub Pages** : [personal-website](https://dawoll.github.io/personal-website/)
+Open the **Project** on **GitHub Pages**: [personal-website](https://dawoll.github.io/personal-website/) <br>
 Otwórz **polskie ReadMe** [PL README](README.pl.md)
 
-**Brief Project Description**
-A responsive personal website created as a course project during my third year of study for **Internet Applications**. <br>
-The website presents my interests and my game project.
+
+**Brief Project Description** <br>
+A responsive personal website created as a course project during my **third** year of study for **Internet Applications**. <br>
+The website presents **my interests** and **my game project**.
 
 ## 🛠️ Technologies
 
@@ -25,8 +26,8 @@ You can also open the root `index.html` directly in your browser.
 
 ## 📖 Documentation
 
-To learn about the **main features** and **technical choices**, [read the documentation](docs/documentation.en.md).
-Read about the **licenses** of the materials used: [licenses and AI assistance](docs/credits.en.md).
+To learn about the **main features** and **technical choices**, [read the documentation](docs/documentation.en.md) <br>
+Read about the **licenses** of the materials used: [licenses and AI assistance](docs/credits.en.md)
 
 ## 👤 Author
 

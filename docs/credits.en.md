@@ -26,7 +26,8 @@ The following assets were edited or enhanced using **AI**, as previously noted i
 - [zweih_magnojez.png](../assets/photos/zweih_magnojez.png)
 - [profile_black_picture.png](../assets/photos/profile_black_picture.png)
 
-The character animations are also my own work, created in Aseprite and exported as transparent GIFs. The room screenshots show my own game project.
+The character animations are also my own work, created in Aseprite. They were exported as transparent GIFs. <br>
+The room screenshots show my own game project.
 
 ## 🌐 External services
 

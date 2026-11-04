@@ -1,6 +1,6 @@
 # Dawid Głowacki — Strona osobista
 
-Otwórz **Projekt** na **GitHub Pages** : [personal-website](https://dawoll.github.io/personal-website/)
+Otwórz **Projekt** na **GitHub Pages**: [personal-website](https://dawoll.github.io/personal-website/) <br>
 Open **English ReadMe** [EN README](README.md)
 
 
@@ -26,7 +26,7 @@ Możesz również otworzyć główny `index.html` bezpośrednio w przeglądarce.
 
 ## 📖 Dokumentacja
 
-Aby poznać główne **funkcjonalności** i **zastosowane rozwiązania** [przeczytaj dokumentację](docs/documentation.pl.md)
+Aby poznać główne **funkcjonalności** i **zastosowane rozwiązania** [przeczytaj dokumentację](docs/documentation.pl.md) <br>
 Zapoznaj się z **licencjami** użytych materiałów, [licencje oraz pomoc AI](docs/credits.pl.md)
 
 ## 👤 Autor

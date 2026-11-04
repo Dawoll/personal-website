@@ -65,7 +65,8 @@ Plik contact.js obsługuje formularz Web3Forms, korzystając z wygenerowanego ko
 
 ### HTML
 
-- **Semantyka i nagłówki:** **`header`, `nav`, `main`, `section`, `article` i `footer`** opisują role treści. Każda strona ma główny **`h1`**, sekcje **`h2`** i w razie potrzeby **`h3`**.
+- **Semantyka i nagłówki:** **`header`, `nav`, `main`, `section`, `article` i `footer`** opisują role treści. <br>
+  Każda strona ma główny **`h1`**, sekcje **`h2`** i w razie potrzeby **`h3`**.
 - **Dostępność:** zastosowano **`aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`**. Pomagają one czytnikom ekranu.
 - Przypisanie do elementu **ID i klasy jednocześnie:** ID wskazuje konkretny element dla odwołania ARIA, a klasa nadaje wspólne style.
 - **Puste `alt=""`:** dekoracyjne ikony obok równoważnego tekstu są pomijane przez czytnik, żeby nie duplikować informacji.
@@ -90,7 +91,7 @@ Plik contact.js obsługuje formularz Web3Forms, korzystając z wygenerowanego ko
 
 ## 📱 Responsywność
 
-Widoki referencyjne to **390px, 768px, 1366px i 1920px**, z płynnym dopasowaniem pomiędzy nimi.
+Widoki referencyjne to **390px, 768px, 1366px i 1920px**, z płynnym dopasowaniem pomiędzy nimi. <br>
 Oddzielna reguła z **529–900px** centruje trzecią kartę gracza pod dwiema pozostałymi - podstrona z Counter-Strike'iem.
 
 ## 📜 Zasoby i licencje

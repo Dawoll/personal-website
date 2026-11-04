@@ -26,7 +26,8 @@ Następujące zasoby były edytowane lub ulepszane przy użyciu **AI**, zgodnie 
 - [zweih_magnojez.png](../assets/photos/zweih_magnojez.png)
 - [profile_black_picture.png](../assets/photos/profile_black_picture.png)
 
-Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały wyeksportowane do przezroczystych GIF-ów. Zrzuty pomieszczeń przedstawiają mój własny projekt gry.
+Animacje postaci są także moją własnością, utworzoną w Aseprite. Zostały wyeksportowane do przezroczystych GIF-ów. <br>
+Zrzuty pomieszczeń przedstawiają mój własny projekt gry.
 
 ## 🌐 Usługi zewnętrzne
 

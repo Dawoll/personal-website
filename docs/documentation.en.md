@@ -65,7 +65,8 @@ The contact.js file handles the Web3Forms form using generated code and keys fro
 
 ### HTML
 
-- **Semantics and headings:** **`header`, `nav`, `main`, `section`, `article` and `footer`** describe content roles. Each page has a main **`h1`**, section headings using **`h2`** and, where needed, **`h3`**.
+- **Semantics and headings:** **`header`, `nav`, `main`, `section`, `article` and `footer`** describe content roles. <br>
+  Each page has a main **`h1`**, section headings using **`h2`** and, where needed, **`h3`**.
 - **Accessibility:** the site uses **`aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`**. These help screen readers.
 - Assigning **an ID and a class to the same element:** the ID identifies a specific element for an ARIA reference, while the class applies shared styles.
 - **Empty `alt=""`:** decorative icons beside equivalent text are skipped by screen readers to avoid repeating information.
@@ -90,14 +91,15 @@ The contact.js file handles the Web3Forms form using generated code and keys fro
 
 ## 📱 Responsive layout
 
-The reference views are **390px, 768px, 1366px and 1920px**, with fluid adjustments between them.
+The reference views are **390px, 768px, 1366px and 1920px**, with fluid adjustments between them. <br>
 A separate **529–900px** rule centres the third player card below the other two on the Counter-Strike page.
 
 ## 📜 Assets and licenses
 
-Read about the **licenses** of the materials used: [licenses and AI assistance](credits.en.md).
+Read about the **licenses** of the materials used: [licenses and AI assistance](credits.en.md)
 
 ## 👤 Author
 
 **Dawid Głowacki**<br>
 Student at **Lublin University of Technology**, **third** year, semester **5**.
+
